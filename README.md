@@ -9,6 +9,6 @@ If you are interested in contributing to this library, please ask for write acce
 on this FreeCAD forum thread: https://sourceforge.net/apps/phpbb/free-cad/viewtopic.php?f=19&t=4205
 
 Each Part should be correctly named, and placed into subdirectories by family or type. They should also
-be available in both .FcStd and .stp formats, and optionally in .stp format (because github lets you
+be available in both .FcStd and .stp formats, and optionally in .stl format (because github lets you
 visualize them). They should also be as simple as possible, and parametric
 so users can easily change their dimensions.
