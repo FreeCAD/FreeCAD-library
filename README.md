@@ -12,3 +12,7 @@ Each Part should be correctly named, and placed into subdirectories by family or
 be available in both .FcStd and .stp formats, and optionally in .stl format (because github lets you
 visualize them). They should also be as simple as possible, and parametric
 so users can easily change their dimensions.
+
+All Parts in this repository are licensed under CC-BY http://creativecommons.org/licenses/by/3.0/
+Each Part is copyrighted by and should be attributed to its respective author(s).
+See commit details to find the authors of each Part.
