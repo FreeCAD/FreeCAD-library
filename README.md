@@ -27,3 +27,12 @@ See commit details to find the authors of each Part.
 If you are uploading parts to this repository, please make sure you are the author of the model,
 or otherwise that you have right to share it here under the CC-BY 3.0 license, and make sure the author
 is mentioned in the commit message.
+
+Install
+-------
+
+The library is a simple container for FreeCAD (.fcstd) and STEP (.stp) files. You can download it
+anywhere and inport its files in your FreeCAD projects. Inside the library, there is also a FreeCAD
+macro (PartsLibrary.FCMacro) that you can edit (you must change the path to your Library) and 
+place in your FreeCAD macros folder. That macro creates a browser window inside FreeCAD, from which
+you can easily add the parts by double-clicking them.
