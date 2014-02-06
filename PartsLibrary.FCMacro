@@ -1,0 +1,116 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+#***************************************************************************
+#*                                                                         *
+#*   Copyright (c) 2013 Yorik van Havre <yorik@uncreated.net>              *  
+#*                                                                         *
+#*   This program is free software; you can redistribute it and/or modify  *
+#*   it under the terms of the GNU Lesser General Public License (LGPL)    *
+#*   as published by the Free Software Foundation; either version 2 of     *
+#*   the License, or (at your option) any later version.                   *
+#*   for detail see the LICENCE text file.                                 *
+#*                                                                         *
+#*   This program is distributed in the hope that it will be useful,       *
+#*   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+#*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+#*   GNU Library General Public License for more details.                  *
+#*                                                                         *
+#*   You should have received a copy of the GNU Library General Public     *
+#*   License along with this program; if not, write to the Free Software   *
+#*   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  *
+#*   USA                                                                   *
+#*                                                                         *
+#***************************************************************************
+
+__title__="FreeCAD Parts Library Macro"
+__author__ = "Yorik van Havre"
+__url__ = "http://www.freecadweb.org"
+
+'''
+FreeCAD Parts Library import macro
+
+INSTALLATION
+
+This script is made to be used as a FreeCAD macro, and to be placed
+inside your macros folder (default is $HOME/.FreeCAD on mac/linux, 
+C:/Users/youruser/Application Data/FreeCAD on windows).
+
+You must also edit this file and change the configuration line below 
+to reflect the location of your FreeCAD-library folder.
+
+After it is installed on the above location, it will be available
+in the macros menu.
+
+USAGE
+
+This macro adds a browser window to the FreeCAD interface, from
+which you can browse and install items from the library.
+'''
+
+# CONFIGURATION - EDIT THE FOLLOWING LINE TO MATCH YOUR LIBRARY PATH
+LIBRARYPATH = "/home/yorik/Sources/FreeCAD-library"
+# END CONFIGURATION - THAT'S DONE, NO NEED TO EDIT ANYTHING MORE
+
+import FreeCAD, FreeCADGui, Part
+from PySide import QtGui, QtCore
+
+class ExpFileSystemModel(QtGui.QFileSystemModel):
+    "a custom QFileSystemModel that displays freecad file icons"
+    def __init__(self):
+        QtGui.QFileSystemModel.__init__(self)
+
+    def data(self, index, role):
+        if index.column() == 0 and role == QtCore.Qt.DecorationRole:
+            if index.data().lower().endswith('.fcstd'):
+                return QtGui.QIcon(':icons/freecad-doc.png')
+        return super(ExpFileSystemModel, self).data(index, role)
+
+class ExpDockWidget(QtGui.QDockWidget):
+    "a library explorer dock widget"
+
+    def __init__(self):
+        QtGui.QDockWidget.__init__(self)
+
+        self.setObjectName("PartsLibrary")
+        self.setWindowTitle("Parts Library")
+
+        # setting up a directory model that shows only fcstd and step
+        self.dirmodel = ExpFileSystemModel()
+        self.dirmodel.setRootPath(LIBRARYPATH)
+        self.dirmodel.setNameFilters(["*.fcstd","*.FcStd","*.FCSTD","*.stp","*.STP","*.step","*.STEP"])
+        self.dirmodel.setNameFilterDisables(0)
+
+        self.folder_view = QtGui.QTreeView();
+        self.folder_view.setModel(self.dirmodel)
+        self.folder_view.doubleClicked[QtCore.QModelIndex].connect(self.clicked)
+        # Don't show columns for size, file type, and last modified
+        self.folder_view.setHeaderHidden(True)
+        self.folder_view.hideColumn(1)
+        self.folder_view.hideColumn(2)
+        self.folder_view.hideColumn(3)
+        self.folder_view.setRootIndex(self.dirmodel.index(LIBRARYPATH))
+
+        self.setWidget(self.folder_view)
+
+    def clicked(self, index):
+        path = self.dirmodel.filePath(index)
+        if path.lower().endswith(".stp") or path.lower().endswith(".step"):
+            Part.show(Part.read(path))
+        else:
+            FreeCADGui.ActiveDocument.mergeProject(path)
+
+if QtCore.QDir(LIBRARYPATH).exists():
+    m = FreeCADGui.getMainWindow()
+    w = m.findChild(QtGui.QDockWidget,"PartsLibrary")
+    if w:
+        if w.isVisible():
+            w.hide()
+        else:
+            w.show()
+    else:
+        m.addDockWidget(QtCore.Qt.RightDockWidgetArea,ExpDockWidget())
+else:
+    print "Library path ", LIBRARYPATH, "not found."
+    print "Please set the correct path to your Parts library in the macro script"
+
