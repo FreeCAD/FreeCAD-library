@@ -78,7 +78,7 @@ class ExpDockWidget(QtGui.QDockWidget):
         # setting up a directory model that shows only fcstd and step
         self.dirmodel = ExpFileSystemModel()
         self.dirmodel.setRootPath(LIBRARYPATH)
-        self.dirmodel.setNameFilters(["*.fcstd","*.FcStd","*.FCSTD","*.stp","*.STP","*.step","*.STEP"])
+        self.dirmodel.setNameFilters(["*.fcstd","*.FcStd","*.FCSTD","*.stp","*.STP","*.step","*.STEP", "*.brep", "*.BREP"])
         self.dirmodel.setNameFilterDisables(0)
 
         self.folder_view = QtGui.QTreeView();
@@ -95,7 +95,7 @@ class ExpDockWidget(QtGui.QDockWidget):
 
     def clicked(self, index):
         path = self.dirmodel.filePath(index)
-        if path.lower().endswith(".stp") or path.lower().endswith(".step"):
+        if path.lower().endswith(".stp") or path.lower().endswith(".step") or path.lower().endswith(".brep"):
             Part.show(Part.read(path))
         else:
             FreeCADGui.ActiveDocument.mergeProject(path)
