@@ -1,0 +1,3 @@
+All the 3D printer objects were designed by clintonsam75@gmail.com as part of a project to learn FreeCAD. Everybody is free to share and use them. Recognition and thanks are appreciated.
+
+Lead Screw 8mm-2.0 x 500mm.fcstd and Lead Screw 8mm-2.0 x 500mm.stp exceeded GitHub's 120,000 KB maximum file size limit and had to be removed. Lead Screw 8mm-2.0 x 500mm.fcstd is 163,707 KB and Lead Screw 8mm-2.0 x 500mm.stp is 120,614 KB.
