@@ -97,6 +97,7 @@ class ExpDockWidget(QtGui.QDockWidget):
         self.preview = QtGui.QLabel()
         self.preview.setFixedHeight(128)
         layout.addWidget(self.preview)
+        layout.setAlignment(self.preview, QtCore.Qt.AlignHCenter)
         self.setWidget(container)
         
     def clicked(self, index):
