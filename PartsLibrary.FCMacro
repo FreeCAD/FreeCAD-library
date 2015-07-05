@@ -52,9 +52,21 @@ which you can browse and install items from the library.
 LIBRARYPATH = "/home/yorik/Sources/FreeCAD-library"
 # END CONFIGURATION - THAT'S DONE, NO NEED TO EDIT ANYTHING MORE
 
+
+s=FreeCAD.ParamGet('User parameter:Plugins/partlib').GetString('destination')
+print s
+
+if s<>'':
+	LIBRARYPATH = s
+else:
+	pass
+
+
+
 import FreeCAD, FreeCADGui, Part, zipfile, tempfile
 from PySide import QtGui, QtCore
 
+global ExpFileSystemModel
 class ExpFileSystemModel(QtGui.QFileSystemModel):
     "a custom QFileSystemModel that displays freecad file icons"
     def __init__(self):
@@ -69,7 +81,7 @@ class ExpFileSystemModel(QtGui.QFileSystemModel):
 class ExpDockWidget(QtGui.QDockWidget):
     "a library explorer dock widget"
 
-    def __init__(self):
+    def __init__(self,LIBRARYPATH):
         QtGui.QDockWidget.__init__(self)
 
         self.setObjectName("PartsLibrary")
@@ -135,8 +147,9 @@ if QtCore.QDir(LIBRARYPATH).exists():
         else:
             w.show()
     else:
-        m.addDockWidget(QtCore.Qt.RightDockWidgetArea,ExpDockWidget())
+        m.addDockWidget(QtCore.Qt.RightDockWidgetArea,ExpDockWidget(LIBRARYPATH))
 else:
     print "Library path ", LIBRARYPATH, "not found."
     print "Please set the correct path to your Parts library in the macro script"
+
 
