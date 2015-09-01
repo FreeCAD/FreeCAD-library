@@ -52,9 +52,21 @@ which you can browse and install items from the library.
 LIBRARYPATH = "/home/yorik/Sources/FreeCAD-library"
 # END CONFIGURATION - THAT'S DONE, NO NEED TO EDIT ANYTHING MORE
 
-import FreeCAD, FreeCADGui, Part
+
+s=FreeCAD.ParamGet('User parameter:Plugins/partlib').GetString('destination')
+print s
+
+if s<>'':
+	LIBRARYPATH = s
+else:
+	pass
+
+
+
+import FreeCAD, FreeCADGui, Part, zipfile, tempfile
 from PySide import QtGui, QtCore
 
+global ExpFileSystemModel
 class ExpFileSystemModel(QtGui.QFileSystemModel):
     "a custom QFileSystemModel that displays freecad file icons"
     def __init__(self):
@@ -69,7 +81,7 @@ class ExpFileSystemModel(QtGui.QFileSystemModel):
 class ExpDockWidget(QtGui.QDockWidget):
     "a library explorer dock widget"
 
-    def __init__(self):
+    def __init__(self,LIBRARYPATH):
         QtGui.QDockWidget.__init__(self)
 
         self.setObjectName("PartsLibrary")
@@ -78,26 +90,52 @@ class ExpDockWidget(QtGui.QDockWidget):
         # setting up a directory model that shows only fcstd and step
         self.dirmodel = ExpFileSystemModel()
         self.dirmodel.setRootPath(LIBRARYPATH)
-        self.dirmodel.setNameFilters(["*.fcstd","*.FcStd","*.FCSTD","*.stp","*.STP","*.step","*.STEP", "*.brep", "*.BREP"])
+        self.dirmodel.setNameFilters(["*.fcstd","*.FcStd","*.FCSTD","*.stp","*.STP","*.step","*.STEP", "*.brp", "*.BRP", "*.brep", "*.BREP"])
         self.dirmodel.setNameFilterDisables(0)
 
-        self.folder_view = QtGui.QTreeView();
-        self.folder_view.setModel(self.dirmodel)
-        self.folder_view.doubleClicked[QtCore.QModelIndex].connect(self.clicked)
+        container = QtGui.QWidget()
+        layout = QtGui.QVBoxLayout(container)
+        folder = QtGui.QTreeView()
+        folder.setModel(self.dirmodel)
+        folder.clicked[QtCore.QModelIndex].connect(self.clicked)
+        folder.doubleClicked[QtCore.QModelIndex].connect(self.doubleclicked)
         # Don't show columns for size, file type, and last modified
-        self.folder_view.setHeaderHidden(True)
-        self.folder_view.hideColumn(1)
-        self.folder_view.hideColumn(2)
-        self.folder_view.hideColumn(3)
-        self.folder_view.setRootIndex(self.dirmodel.index(LIBRARYPATH))
-
-        self.setWidget(self.folder_view)
-
+        folder.setHeaderHidden(True)
+        folder.hideColumn(1)
+        folder.hideColumn(2)
+        folder.hideColumn(3)
+        folder.setRootIndex(self.dirmodel.index(LIBRARYPATH))
+        layout.addWidget(folder)
+        self.preview = QtGui.QLabel()
+        self.preview.setFixedHeight(128)
+        layout.addWidget(self.preview)
+        layout.setAlignment(self.preview, QtCore.Qt.AlignHCenter)
+        self.setWidget(container)
+        
     def clicked(self, index):
         path = self.dirmodel.filePath(index)
-        if path.lower().endswith(".stp") or path.lower().endswith(".step") or path.lower().endswith(".brep"):
+        if path.lower().endswith(".fcstd"):
+            zfile=zipfile.ZipFile(path)
+            files=zfile.namelist()
+            # check for meta-file if it's really a FreeCAD document
+            if files[0] == "Document.xml":
+                image="thumbnails/Thumbnail.png"
+                if image in files:
+                    image=zfile.read(image)
+                    thumbfile = tempfile.mkstemp(suffix='.png')[1]
+                    thumb = open(thumbfile,"wb")
+                    thumb.write(image)
+                    thumb.close()
+                    im = QtGui.QPixmap(thumbfile)
+                    self.preview.setPixmap(im)
+                    return
+        self.preview.clear()
+
+    def doubleclicked(self, index):
+        path = self.dirmodel.filePath(index)
+        if path.lower().endswith(".stp") or path.lower().endswith(".step") or path.lower().endswith(".brp") or path.lower().endswith(".brep"):
             Part.show(Part.read(path))
-        else:
+        elif path.lower().endswith(".fcstd"):
             FreeCADGui.ActiveDocument.mergeProject(path)
 
 if QtCore.QDir(LIBRARYPATH).exists():
@@ -109,8 +147,9 @@ if QtCore.QDir(LIBRARYPATH).exists():
         else:
             w.show()
     else:
-        m.addDockWidget(QtCore.Qt.RightDockWidgetArea,ExpDockWidget())
+        m.addDockWidget(QtCore.Qt.RightDockWidgetArea,ExpDockWidget(LIBRARYPATH))
 else:
     print "Library path ", LIBRARYPATH, "not found."
     print "Please set the correct path to your Parts library in the macro script"
+
 
