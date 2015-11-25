@@ -1,0 +1,259 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+#***************************************************************************
+#*                                                                         *
+#*   Copyright (c) 2013 Yorik van Havre <yorik@uncreated.net>              *
+#*                                                                         *
+#*   This program is free software; you can redistribute it and/or modify  *
+#*   it under the terms of the GNU Lesser General Public License (LGPL)    *
+#*   as published by the Free Software Foundation; either version 2 of     *
+#*   the License, or (at your option) any later version.                   *
+#*   for detail see the LICENCE text file.                                 *
+#*                                                                         *
+#*   This program is distributed in the hope that it will be useful,       *
+#*   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+#*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+#*   GNU Library General Public License for more details.                  *
+#*                                                                         *
+#*   You should have received a copy of the GNU Library General Public     *
+#*   License along with this program; if not, write to the Free Software   *
+#*   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  *
+#*   USA                                                                   *
+#*                                                                         *
+#***************************************************************************
+
+__title__="FreeCAD Parts Library Macro"
+__author__ = "Yorik van Havre"
+__url__ = "http://www.freecadweb.org"
+
+'''
+FreeCAD Parts Library import macro
+
+INSTALLATION
+
+This script is made to be used as a FreeCAD macro, and to be placed
+inside your macros folder (default is $HOME/.FreeCAD on mac/linux,
+C:/Users/youruser/Application Data/FreeCAD on windows).
+
+After it is installed on the above location, it will be available
+in the macros menu. On first run, it will ask you for the location
+of your library.
+
+USAGE
+
+This macro adds a browser window to the FreeCAD interface, from
+which you can browse and install items from the library.
+'''
+
+
+import FreeCAD, FreeCADGui, Part, zipfile, tempfile, Mesh, os, subprocess
+from PySide import QtGui, QtCore
+from importPart import importPart, PartMover
+
+param = FreeCAD.ParamGet('User parameter:Plugins/partlib')
+s=param.GetString('destination')
+print('User parameter:Plugins/partlib : destination : ',s)
+
+if s<>'':
+    LIBRARYPATH = s
+else:
+    folderDialog = QtGui.QFileDialog.getExistingDirectory(None,u"Choose folder library")
+    param.SetString('destination',folderDialog)
+    s=param.GetString('destination')
+    LIBRARYPATH = s
+
+global ExpFileSystemModel
+class ExpFileSystemModel(QtGui.QFileSystemModel):
+    "a custom QFileSystemModel that displays freecad file icons"
+    def __init__(self):
+        QtGui.QFileSystemModel.__init__(self)
+
+    def data(self, index, role):
+        if index.column() == 0 and role == QtCore.Qt.DecorationRole:
+            if index.data().lower().endswith('.fcstd'):
+                return QtGui.QIcon(':icons/freecad-doc.png')
+        return super(ExpFileSystemModel, self).data(index, role)
+
+class ExpDockWidget(QtGui.QDockWidget):
+    "a library explorer dock widget"
+
+    def __init__(self,LIBRARYPATH):
+        QtGui.QDockWidget.__init__(self)
+
+        self.setObjectName("PartsLibrary")
+        self.setWindowTitle("Parts Library")
+
+        # setting up a directory model that shows only fcstd and step
+        self.dirmodel = ExpFileSystemModel()
+        self.dirmodel.setRootPath(LIBRARYPATH)
+        self.dirmodel.setNameFilters(["*.fcstd","*.FcStd","*.FCSTD","*.stp","*.STP","*.step","*.STEP", "*.brp", "*.BRP", "*.brep", "*.BREP"])
+        self.dirmodel.setNameFilterDisables(0)
+
+        folder = QtGui.QTreeView()
+        folder.setModel(self.dirmodel)
+        folder.clicked[QtCore.QModelIndex].connect(self.clicked)
+        folder.doubleClicked[QtCore.QModelIndex].connect(self.doubleclicked)
+        # Don't show columns for size, file type, and last modified
+        folder.setHeaderHidden(True)
+        folder.hideColumn(1)
+        folder.hideColumn(2)
+        folder.hideColumn(3)
+        folder.setRootIndex(self.dirmodel.index(LIBRARYPATH))
+        self.preview = QtGui.QLabel()
+        self.preview.setFixedHeight(128)
+        formatLabel = QtGui.QLabel("Add to library")
+        savebutton = QtGui.QPushButton("Save")
+        icon = QtGui.QIcon.fromTheme("document-save")
+        savebutton.setIcon(icon)
+        savebutton.clicked.connect(self.addtolibrary)
+        pushbutton = QtGui.QPushButton("Push")
+        icon = QtGui.QIcon.fromTheme("document-export")
+        pushbutton.setIcon(icon)
+        pushbutton.clicked.connect(self.pushlibrary)
+        fcstdCB = QtGui.QCheckBox('FCStd')
+        fcstdCB.setCheckState(QtCore.Qt.Checked)
+        fcstdCB.setEnabled(False)
+        self.stepCB = QtGui.QCheckBox('STEP')
+        self.stepCB.setCheckState(QtCore.Qt.Checked)
+        self.stlCB = QtGui.QCheckBox('STL')
+        self.stlCB.setCheckState(QtCore.Qt.Checked)
+
+        self.radioButton1 = QtGui.QRadioButton("Copy",self)
+ #       self.radioButton1.toggled.connect(self.onRadioButton1)
+        self.radioButton1.move(90,0)
+
+
+        container = QtGui.QWidget()
+        grid = QtGui.QGridLayout()
+        grid.setSpacing(10)
+
+        grid.addWidget(folder,0,0,1,3)
+        grid.addWidget(self.preview,1,0,5,1)
+        grid.addWidget(formatLabel,1,1,1,2)
+        grid.addWidget(fcstdCB,2,1,1,2)
+        grid.addWidget(self.stepCB,3,1,1,2)
+        grid.addWidget(self.stlCB,4,1,1,2)
+        grid.addWidget(savebutton,5,1,1,1)
+        grid.addWidget(pushbutton,5,2,1,1)
+
+        container.setLayout(grid)
+        self.setWidget(container)
+
+    def clicked(self, index):
+        path = self.dirmodel.filePath(index)
+        if path.lower().endswith(".fcstd"):
+            zfile=zipfile.ZipFile(path)
+            files=zfile.namelist()
+            # check for meta-file if it's really a FreeCAD document
+            if files[0] == "Document.xml":
+                image="thumbnails/Thumbnail.png"
+                if image in files:
+                    image=zfile.read(image)
+                    thumbfile = tempfile.mkstemp(suffix='.png')[1]
+                    thumb = open(thumbfile,"wb")
+                    thumb.write(image)
+                    thumb.close()
+                    im = QtGui.QPixmap(thumbfile)
+                    self.preview.setPixmap(im)
+                    return
+        self.preview.clear()
+
+    def doubleclicked(self, index):
+        view = FreeCADGui.activeDocument().activeView()
+        path = self.dirmodel.filePath(index)
+        if self.radioButton1.isChecked():
+          docassy = App.ActiveDocument
+          doc = FreeCAD.openDocument(path)
+          Gui.SendMsgToActiveView("SaveAs")
+          App.ActiveDocument.recompute()
+          path = FreeCAD.ActiveDocument.FileName
+          FreeCAD.closeDocument(FreeCAD.ActiveDocument.Name)
+          FreeCAD.setActiveDocument(docassy.Name)
+          FreeCAD.ActiveDocument = docassy 
+        
+        if path.lower().endswith(".fcstd") or path.lower().endswith(".stp") or path.lower().endswith(".step") or path.lower().endswith(".brep"):
+            importedObject = importPart( path )
+            FreeCAD.ActiveDocument.recompute()
+            if not importedObject.fixedPosition: #will be true for the first imported part 
+                PartMover( view, importedObject )
+            else:
+                from PySide import QtCore
+                self.timer = QtCore.QTimer()
+                QtCore.QObject.connect(self.timer, QtCore.SIGNAL("timeout()"), self.GuiViewFit)
+                self.timer.start( 200 ) #0.2 seconds
+
+    def GuiViewFit(self):
+        FreeCADGui.SendMsgToActiveView("ViewFit")
+        self.timer.stop()
+
+    def addtolibrary(self):
+        fileDialog = QtGui.QFileDialog.getSaveFileName(None,u"Choose category and set a filename without extension", LIBRARYPATH)
+        if fileDialog != '':
+            #filename = fileDialog[0].split("/")[-1]
+            #if filename.split(".")[-1].lowercase == "fcstd" or "stl
+            FCfilename = fileDialog[0] + ".fcstd"
+            FreeCAD.ActiveDocument.saveCopy(FCfilename)
+            if self.stepCB.isChecked() or self.stlCB.isChecked():
+                toexport = []
+                objs = FreeCAD.ActiveDocument.Objects
+                for obj in objs :
+                    if obj.ViewObject.Visibility == True :
+                        toexport.append(obj)
+                if self.stepCB.isChecked() :
+                    STEPfilename = fileDialog[0] + ".step"
+                    Part.export(toexport,STEPfilename)
+                if self.stlCB.isChecked() :
+                    STLfilename = fileDialog[0] + ".stl"
+                    Mesh.export(toexport,STLfilename)
+                    
+    def pushlibrary(self):
+        try:
+            import git
+        except:
+            FreeCAD.Console.PrintError("The Python Git module was not found. Please install the python-git package.\n")
+            return
+        try:
+            repo = git.Repo(LIBRARYPATH)
+        except:
+            FreeCAD.Console.PrintError("Your library is not a valid Git repository. Please fork/clone it first.\n")
+            return
+        pushOK = True
+        if not repo.remotes:
+            FreeCAD.Console.PrintWarning("Arch","Warning: no remote repository set. Unable to push")
+            pushOK = False
+        modified_files = repo.git.diff("--name-only").split()
+        untracked_files = repo.git.ls_files("--other","--exclude-standard").split()
+        import ArchServer
+        d = ArchServer._ArchGitDialog()
+        if not pushOK:
+            d.checkBox.setChecked(False)
+            d.checkBox.setEnabled(False)
+        d.label.setText(str(len(modified_files)+len(untracked_files))+" new and modified file(s)")
+        d.lineEdit.setText("Changed " + str(modified_files))
+        d.checkBox.hide()
+        d.radioButton.hide()
+        d.radioButton_2.hide()
+        r = d.exec_()
+        if r:
+            for o in modified_files + untracked_files:
+                repo.git.add(o)
+            repo.git.commit(m=d.lineEdit.text())
+            if d.checkBox.isChecked():
+                repo.git.push()            
+
+
+if QtCore.QDir(LIBRARYPATH).exists():
+    m = FreeCADGui.getMainWindow()
+    w = m.findChild(QtGui.QDockWidget,"PartsLibrary")
+    if w:
+        if w.isVisible():
+            w.hide()
+        else:
+            w.show()
+    else:
+        m.addDockWidget(QtCore.Qt.RightDockWidgetArea,ExpDockWidget(LIBRARYPATH))
+else:
+    print "Library path ", LIBRARYPATH, "not found."
+    print "Please set the correct path to your Parts library in the macro script"
+
