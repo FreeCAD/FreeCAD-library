@@ -243,7 +243,7 @@ class ExpDockWidget(QtGui.QDockWidget):
                     Mesh.export(toexport,STLfilename)
                     
     def pushlibrary(self):
-        modified_files = [f for f in repo.git.diff("--name-only").split("\n") if f]
+        modified_files = [f for f in repo.git.diff("--name-only").split("\n") if (f and (f != 'PartsLibrary.FCMacro'))]
         #print(modified_files)
         untracked_files = [f for f in repo.git.ls_files("--other","--exclude-standard").split("\n") if f]
         #print(untracked_files)
