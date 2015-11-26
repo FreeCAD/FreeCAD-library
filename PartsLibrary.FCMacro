@@ -243,8 +243,10 @@ class ExpDockWidget(QtGui.QDockWidget):
                     Mesh.export(toexport,STLfilename)
                     
     def pushlibrary(self):
-        modified_files = repo.git.diff("--name-only").split()
-        untracked_files = repo.git.ls_files("--other","--exclude-standard").split()
+        modified_files = repo.git.diff("--name-only").split("\n")
+        print(repo.git.diff("--name-only"))
+        untracked_files = repo.git.ls_files("--other","--exclude-standard").split("\n")
+        print(repo.git.ls_files("--other","--exclude-standard"))
         import ArchServer
         d = ArchServer._ArchGitDialog()
         d.label.setText(str(len(modified_files)+len(untracked_files))+" new and modified file(s)")
