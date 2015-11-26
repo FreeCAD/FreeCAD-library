@@ -255,6 +255,8 @@ class ExpDockWidget(QtGui.QDockWidget):
         r = d.exec_()
         if r:
             for o in modified_files + untracked_files:
+                print(o)
+                print(type(o))
                 repo.git.add(o)
             repo.git.commit(m=d.lineEdit.text())
             if d.checkBox.isChecked():
@@ -332,8 +334,8 @@ class ConfigDialog(QtGui.QDialog):
             cw.set("url", str(self.lineEdit.text()))
         if self.lineEdit_2.text():
             cw.set("pushurl", str(self.lineEdit_2.text()))
-        #cw.release()
-        QtGui.QDialog.accept(self)
+        cw.release()
+        QtGui.QDialog.accept()
 
 if QtCore.QDir(LIBRARYPATH).exists():
     m = FreeCADGui.getMainWindow()
