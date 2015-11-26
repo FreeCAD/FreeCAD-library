@@ -33,6 +33,18 @@ Install
 
 The library is a simple container for FreeCAD (.fcstd) and STEP (.stp) files. You can download it
 anywhere and import its files in your FreeCAD projects. Inside the library, there is also a FreeCAD
-macro (PartsLibrary.FCMacro) that you can edit (you must change the path to your Library) and 
-place in your FreeCAD macros folder. That macro creates a browser window inside FreeCAD, from which
-you can easily add the parts by double-clicking them.
+macro (PartsLibrary.FCMacro) that you can place in your FreeCAD macros folder. That macro creates 
+a browser window inside FreeCAD, from which you can easily add the parts by double-clicking them.
+
+Sharing your models
+-------------------
+
+The macro also allows gives a couple of other possibilities,such as adding new objects to it, and
+sharing your objects with others. To be able to share, you will need the python-git package
+installed on your computer, and an online git repository you have permission to write to. The 
+easiest way to obtain that is using the "fork" button on top of this github page.
+
+Once you have made your fork, you will get an URL from it, that you can use in the macro's
+config dialog. After that, once you have saved your models to the library, you can push them to
+your online git repository, and, if you wish, make a pull request on this page to see your
+models integrated to the official library.
