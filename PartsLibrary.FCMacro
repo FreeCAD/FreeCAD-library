@@ -334,8 +334,8 @@ class ConfigDialog(QtGui.QDialog):
             cw.set("url", str(self.lineEdit.text()))
         if self.lineEdit_2.text():
             cw.set("pushurl", str(self.lineEdit_2.text()))
-        cw.release()
-        QtGui.QDialog.accept()
+        #cw.release()
+        QtGui.QDialog.accept(self)
 
 if QtCore.QDir(LIBRARYPATH).exists():
     m = FreeCADGui.getMainWindow()
