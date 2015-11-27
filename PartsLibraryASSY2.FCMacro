@@ -165,7 +165,12 @@ class ExpDockWidget(QtGui.QDockWidget):
         if self.radioButton1.isChecked():
           docassy = App.ActiveDocument
           doc = FreeCAD.openDocument(path)
-          Gui.SendMsgToActiveView("SaveAs")
+#          Gui.SendMsgToActiveView("SaveAs")
+#          print 'filedialog'
+#          sname=QtGui.QFileDialog.getSaveFileName(self,"SaveAs",App.ActiveDocument.Name)
+#          snames=str(sname[0])
+#          print 'sname: '+snames
+          App.ActiveDocument.saveAs(QtGui.QFileDialog.getSaveFileName(None,"SaveAs",App.ActiveDocument.Name+'.FCStd')[0])
           App.ActiveDocument.recompute()
           path = FreeCAD.ActiveDocument.FileName
           FreeCAD.closeDocument(FreeCAD.ActiveDocument.Name)
