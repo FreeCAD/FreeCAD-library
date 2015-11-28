@@ -77,18 +77,16 @@ import FreeCAD, FreeCADGui, Part, zipfile, tempfile, Mesh, os, subprocess
 from PySide import QtGui, QtCore
 
 param = FreeCAD.ParamGet('User parameter:Plugins/partlib')
-s=param.GetString('destination')
-print('User parameter:Plugins/partlib : destination : ',s)
+s = param.GetString('destination')
+#print('User parameter:Plugins/partlib : destination : ',s)
 
-if s<>'':
+if s:
     LIBRARYPATH = s
 else:
-    folderDialog = QtGui.QFileDialog.getExistingDirectory(None,u"Choose folder library")
+    folderDialog = QtGui.QFileDialog.getExistingDirectory(None,QtGui.QApplication.translate("PartsLibrary", "Location of your existing Parts library", None, QtGui.QApplication.UnicodeUTF8))
     param.SetString('destination',folderDialog)
-    s=param.GetString('destination')
-    LIBRARYPATH = s
+    LIBRARYPATH = param.GetString('destination')
 
-#global ExpFileSystemModel why this line?
 class ExpFileSystemModel(QtGui.QFileSystemModel):
     "a custom QFileSystemModel that displays freecad file icons"
     def __init__(self):
@@ -98,6 +96,8 @@ class ExpFileSystemModel(QtGui.QFileSystemModel):
         if index.column() == 0 and role == QtCore.Qt.DecorationRole:
             if index.data().lower().endswith('.fcstd'):
                 return QtGui.QIcon(':icons/freecad-doc.png')
+            elif index.data().lower() == "private":
+                return QtGui.QIcon.fromTheme("folder-lock")
         return super(ExpFileSystemModel, self).data(index, role)
 
 class ExpDockWidget(QtGui.QDockWidget):
@@ -107,9 +107,8 @@ class ExpDockWidget(QtGui.QDockWidget):
         QtGui.QDockWidget.__init__(self)
 
         self.setObjectName("PartsLibrary")
-        self.setWindowTitle("Parts Library")
 
-        # setting up a directory model that shows only fcstd and step
+        # setting up a directory model that shows only fcstd, step and brep
         self.dirmodel = ExpFileSystemModel()
         self.dirmodel.setRootPath(LIBRARYPATH)
         self.dirmodel.setNameFilters(["*.fcstd","*.FcStd","*.FCSTD","*.stp","*.STP","*.step","*.STEP", "*.brp", "*.BRP", "*.brep", "*.BREP"])
@@ -125,53 +124,66 @@ class ExpDockWidget(QtGui.QDockWidget):
         folder.hideColumn(2)
         folder.hideColumn(3)
         folder.setRootIndex(self.dirmodel.index(LIBRARYPATH))
+        
         self.preview = QtGui.QLabel()
         self.preview.setFixedHeight(128)
         
-        updatebutton = QtGui.QPushButton("Update")
-        icon = QtGui.QIcon.fromTheme("edit-redo")
-        updatebutton.setIcon(icon)
-        updatebutton.clicked.connect(self.updatelibrary)
+        self.updatebutton = QtGui.QPushButton()
+        icon = QtGui.QIcon.fromTheme("emblem-synchronizing")
+        self.updatebutton.setIcon(icon)
+        self.updatebutton.clicked.connect(self.updatelibrary)
+        self.updatebutton.hide()
         
-        configbutton = QtGui.QPushButton()
-        icon = QtGui.QIcon.fromTheme("document-properties")
-        configbutton.setIcon(icon)
-        configbutton.clicked.connect(self.setconfig)
+        self.configbutton = QtGui.QPushButton()
+        icon = QtGui.QIcon.fromTheme("emblem-system")
+        self.configbutton.setIcon(icon)
+        self.configbutton.clicked.connect(self.setconfig)
+        self.configbutton.hide()
         
-        formatLabel = QtGui.QLabel("Add to library")
+        self.formatLabel = QtGui.QLabel()
+        self.formatLabel.hide()
         
-        savebutton = QtGui.QPushButton("Save")
+        self.savebutton = QtGui.QPushButton()
         icon = QtGui.QIcon.fromTheme("document-save")
-        savebutton.setIcon(icon)
-        savebutton.clicked.connect(self.addtolibrary)
+        self.savebutton.setIcon(icon)
+        self.savebutton.clicked.connect(self.addtolibrary)
+        self.savebutton.hide()
         
-        pushbutton = QtGui.QPushButton("Push")
+        self.pushbutton = QtGui.QPushButton()
         icon = QtGui.QIcon.fromTheme("document-export")
-        pushbutton.setIcon(icon)
-        pushbutton.clicked.connect(self.pushlibrary)
+        self.pushbutton.setIcon(icon)
+        self.pushbutton.clicked.connect(self.pushlibrary)
+        self.pushbutton.hide()
         
-        fcstdCB = QtGui.QCheckBox('FCStd')
-        fcstdCB.setCheckState(QtCore.Qt.Checked)
-        fcstdCB.setEnabled(False)
+        self.optbutton = QtGui.QPushButton()
+        self.optbutton.clicked.connect(self.showoptions)
+        
+        self.fcstdCB = QtGui.QCheckBox('FCStd')
+        self.fcstdCB.setCheckState(QtCore.Qt.Checked)
+        self.fcstdCB.setEnabled(False)
+        self.fcstdCB.hide()
         self.stepCB = QtGui.QCheckBox('STEP')
         self.stepCB.setCheckState(QtCore.Qt.Checked)
+        self.stepCB.hide()
         self.stlCB = QtGui.QCheckBox('STL')
         self.stlCB.setCheckState(QtCore.Qt.Checked)
+        self.stlCB.hide()
 
         container = QtGui.QWidget()
         grid = QtGui.QGridLayout()
         grid.setSpacing(10)
 
-        grid.addWidget(updatebutton,0,0,1,2)
-        grid.addWidget(configbutton,0,2,1,1)
-        grid.addWidget(folder,1,0,1,3)
-        grid.addWidget(self.preview,2,0,5,1)
-        grid.addWidget(formatLabel,2,1,1,2)
-        grid.addWidget(fcstdCB,3,1,1,2)
+        grid.addWidget(folder,0,0,1,3)
+        grid.addWidget(self.updatebutton,1,1,1,1)
+        grid.addWidget(self.configbutton,1,2,1,1)
+        grid.addWidget(self.preview,1,0,5,1)
+        grid.addWidget(self.formatLabel,2,1,1,2)
+        grid.addWidget(self.fcstdCB,3,1,1,2)
         grid.addWidget(self.stepCB,4,1,1,2)
         grid.addWidget(self.stlCB,5,1,1,2)
-        grid.addWidget(savebutton,6,1,1,1)
-        grid.addWidget(pushbutton,6,2,1,1)
+        grid.addWidget(self.savebutton,6,1,1,1)
+        grid.addWidget(self.pushbutton,6,2,1,1)
+        grid.addWidget(self.optbutton,6,0,1,1)
         
         global repo
         repo = None
@@ -191,9 +203,19 @@ class ExpDockWidget(QtGui.QDockWidget):
             updatebutton.setEnabled(False)
             configbutton.setEnabled(False)
             pushbutton.setEnabled(False)
-
+            
+        self.retranslateUi()
         container.setLayout(grid)
         self.setWidget(container)
+        
+    def retranslateUi(self):
+        self.setWindowTitle(QtGui.QApplication.translate("PartsLibrary", "PartsLibrary", None, QtGui.QApplication.UnicodeUTF8))
+        self.updatebutton.setText(QtGui.QApplication.translate("PartsLibrary", "Update", None, QtGui.QApplication.UnicodeUTF8))
+        self.configbutton.setText(QtGui.QApplication.translate("PartsLibrary", "Config", None, QtGui.QApplication.UnicodeUTF8))
+        self.formatLabel.setText(QtGui.QApplication.translate("PartsLibrary", "Add to library", None, QtGui.QApplication.UnicodeUTF8))
+        self.savebutton.setText(QtGui.QApplication.translate("PartsLibrary", "Save", None, QtGui.QApplication.UnicodeUTF8))
+        self.pushbutton.setText(QtGui.QApplication.translate("PartsLibrary", "Push", None, QtGui.QApplication.UnicodeUTF8))
+        self.optbutton.setText(QtGui.QApplication.translate("PartsLibrary", "Show options >>", None, QtGui.QApplication.UnicodeUTF8))
 
     def clicked(self, index):
         path = self.dirmodel.filePath(index)
@@ -273,6 +295,19 @@ class ExpDockWidget(QtGui.QDockWidget):
         else:
             d.lineEdit_2.setText(repo.remote().url)
         r = d.exec_()
+        
+    def showoptions(self):
+        controls = [self.updatebutton,self.configbutton,self.formatLabel,
+                    self.fcstdCB,self.stepCB,self.stlCB,self.savebutton,self.pushbutton]
+        if self.updatebutton.isVisible():
+            for c in controls:
+                c.hide()
+            self.optbutton.setText(QtGui.QApplication.translate("PartsLibrary", "Show options >>", None, QtGui.QApplication.UnicodeUTF8))
+        else:
+            for c in controls:
+                c.show()
+            self.optbutton.setText(QtGui.QApplication.translate("PartsLibrary", "Hide options <<", None, QtGui.QApplication.UnicodeUTF8))
+
 
 class ConfigDialog(QtGui.QDialog):
     def __init__(self):
@@ -316,14 +351,14 @@ class ConfigDialog(QtGui.QDialog):
         QtCore.QMetaObject.connectSlotsByName(self)
 
     def retranslateUi(self):
-        self.setWindowTitle(QtGui.QApplication.translate("Dialog", "Dialog", None, QtGui.QApplication.UnicodeUTF8))
-        self.groupBox.setTitle(QtGui.QApplication.translate("Dialog", "pull server (where you get your updates from)", None, QtGui.QApplication.UnicodeUTF8))
-        self.lineEdit.setToolTip(QtGui.QApplication.translate("Dialog", "Enter the URL of the pull server here", None, QtGui.QApplication.UnicodeUTF8))
-        self.pushButton.setToolTip(QtGui.QApplication.translate("Dialog", "Use the official FreeCAD-library repository", None, QtGui.QApplication.UnicodeUTF8))
-        self.pushButton.setText(QtGui.QApplication.translate("Dialog", "use official", None, QtGui.QApplication.UnicodeUTF8))
-        self.groupBox_2.setTitle(QtGui.QApplication.translate("Dialog", "push server (where you push your changes to)", None, QtGui.QApplication.UnicodeUTF8))
-        self.lineEdit_2.setToolTip(QtGui.QApplication.translate("Dialog", "Enter the URL of the push server here", None, QtGui.QApplication.UnicodeUTF8))
-        self.label.setText(QtGui.QApplication.translate("Dialog", "Warning: You need write permission on this server", None, QtGui.QApplication.UnicodeUTF8))
+        self.setWindowTitle(QtGui.QApplication.translate("PartsLibrary", "PartsLibrary", None, QtGui.QApplication.UnicodeUTF8))
+        self.groupBox.setTitle(QtGui.QApplication.translate("PartsLibrary", "pull server (where you get your updates from)", None, QtGui.QApplication.UnicodeUTF8))
+        self.lineEdit.setToolTip(QtGui.QApplication.translate("PartsLibrary", "Enter the URL of the pull server here", None, QtGui.QApplication.UnicodeUTF8))
+        self.pushButton.setToolTip(QtGui.QApplication.translate("PartsLibrary", "Use the official FreeCAD-library repository", None, QtGui.QApplication.UnicodeUTF8))
+        self.pushButton.setText(QtGui.QApplication.translate("PartsLibrary", "use official", None, QtGui.QApplication.UnicodeUTF8))
+        self.groupBox_2.setTitle(QtGui.QApplication.translate("PartsLibrary", "push server (where you push your changes to)", None, QtGui.QApplication.UnicodeUTF8))
+        self.lineEdit_2.setToolTip(QtGui.QApplication.translate("PartsLibrary", "Enter the URL of the push server here", None, QtGui.QApplication.UnicodeUTF8))
+        self.label.setText(QtGui.QApplication.translate("PartsLibrary", "Warning: You need write permission on this server", None, QtGui.QApplication.UnicodeUTF8))
 
     def setdefaulturl(self):
         self.lineEdit.setText("https://github.com/FreeCAD/FreeCAD-library.git")
