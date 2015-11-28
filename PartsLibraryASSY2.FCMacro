@@ -50,6 +50,7 @@ which you can browse and install items from the library.
 import FreeCAD, FreeCADGui, Part, zipfile, tempfile, Mesh, os, subprocess
 from PySide import QtGui, QtCore
 from importPart import importPart, PartMover
+import sys
 
 param = FreeCAD.ParamGet('User parameter:Plugins/partlib')
 s=param.GetString('destination')
@@ -87,7 +88,7 @@ class ExpDockWidget(QtGui.QDockWidget):
         # setting up a directory model that shows only fcstd and step
         self.dirmodel = ExpFileSystemModel()
         self.dirmodel.setRootPath(LIBRARYPATH)
-        self.dirmodel.setNameFilters(["*.fcstd","*.FcStd","*.FCSTD","*.stp","*.STP","*.step","*.STEP", "*.brp", "*.BRP", "*.brep", "*.BREP"])
+        self.dirmodel.setNameFilters(["*.fcstd","*.FcStd","*.FCSTD","*.stp","*.STP","*.step","*.STEP", "*.brp", "*.BRP", "*.brep", "*.BREP", "*.pdf", "*.PDF"])
         self.dirmodel.setNameFilterDisables(0)
 
         folder = QtGui.QTreeView()
@@ -162,6 +163,12 @@ class ExpDockWidget(QtGui.QDockWidget):
     def doubleclicked(self, index):
         view = FreeCADGui.activeDocument().activeView()
         path = self.dirmodel.filePath(index)
+        if path.lower().endswith(".pdf"):
+          if sys.platform == 'linux2':
+             subprocess.call(["xdg-open", path])
+          else:
+             os.startfile(path) 
+
         if self.radioButton1.isChecked():
           docassy = App.ActiveDocument
           doc = FreeCAD.openDocument(path)
