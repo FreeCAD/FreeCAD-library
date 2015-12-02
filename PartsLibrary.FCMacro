@@ -75,6 +75,8 @@ considered when pushing, so you can place private Parts there.
 
 import FreeCAD, FreeCADGui, Part, zipfile, tempfile, Mesh, os, subprocess
 from PySide import QtGui, QtCore
+from importPart import importPart, PartMover
+import sys
 
 param = FreeCAD.ParamGet('User parameter:Plugins/parts_library')
 s = param.GetString('destination')
@@ -111,7 +113,7 @@ class ExpDockWidget(QtGui.QDockWidget):
         # setting up a directory model that shows only fcstd, step and brep
         self.dirmodel = ExpFileSystemModel()
         self.dirmodel.setRootPath(LIBRARYPATH)
-        self.dirmodel.setNameFilters(["*.fcstd","*.FcStd","*.FCSTD","*.stp","*.STP","*.step","*.STEP", "*.brp", "*.BRP", "*.brep", "*.BREP"])
+        self.dirmodel.setNameFilters(["*.fcstd","*.FcStd","*.FCSTD","*.stp","*.STP","*.step","*.STEP", "*.brp", "*.BRP", "*.brep", "*.BREP", "*.pdf", "*.PDF"])
         self.dirmodel.setNameFilterDisables(0)
 
         folder = QtGui.QTreeView()
@@ -168,6 +170,13 @@ class ExpDockWidget(QtGui.QDockWidget):
         self.stlCB = QtGui.QCheckBox('STL')
         self.stlCB.setCheckState(QtCore.Qt.Checked)
         self.stlCB.hide()
+        
+        self.radioButton2 = QtGui.QCheckBox("ASSY2",self)
+        self.radioButton2.move(90,0)
+        self.radioButton2.setChecked(QtCore.Qt.Checked)
+
+        self.radioButton1 = QtGui.QCheckBox("Copy",self)
+        self.radioButton1.move(160,0)
 
         container = QtGui.QWidget()
         grid = QtGui.QGridLayout()
@@ -238,11 +247,42 @@ class ExpDockWidget(QtGui.QDockWidget):
 
     def doubleclicked(self, index):
         path = self.dirmodel.filePath(index)
-        if path.lower().endswith(".stp") or path.lower().endswith(".step") or path.lower().endswith(".brp") or path.lower().endswith(".brep"):
-            Part.show(Part.read(path))
-        elif path.lower().endswith(".fcstd"):
-            FreeCADGui.ActiveDocument.mergeProject(path)
-        FreeCADGui.SendMsgToActiveView("ViewFit")
+        if path.lower().endswith(".pdf"):
+          if sys.platform == 'linux2':
+             subprocess.call(["xdg-open", path])
+          else:
+             os.startfile(path) 
+        view = FreeCADGui.activeDocument().activeView()
+        if self.radioButton2.isChecked():
+
+           if self.radioButton1.isChecked():
+             docassy = App.ActiveDocument
+             doc = FreeCAD.openDocument(path)
+             App.ActiveDocument.saveAs(QtGui.QFileDialog.getSaveFileName(None,"SaveAs",App.ActiveDocument.Name+'.FCStd')[0])
+             App.ActiveDocument.recompute()
+             path = FreeCAD.ActiveDocument.FileName
+             FreeCAD.closeDocument(FreeCAD.ActiveDocument.Name)
+             FreeCAD.setActiveDocument(docassy.Name)
+             FreeCAD.ActiveDocument = docassy 
+        
+           if path.lower().endswith(".fcstd") or path.lower().endswith(".stp") or path.lower().endswith(".step") or path.lower().endswith(".brep"):
+               importedObject = importPart( path )
+               FreeCAD.ActiveDocument.recompute()
+               if not importedObject.fixedPosition: #will be true for the first imported part 
+                   PartMover( view, importedObject )
+               else:
+                   from PySide import QtCore
+                   self.timer = QtCore.QTimer()
+                   QtCore.QObject.connect(self.timer, QtCore.SIGNAL("timeout()"), self.GuiViewFit)
+                   self.timer.start( 200 ) #0.2 seconds
+
+        else:        
+           path = self.dirmodel.filePath(index)
+           if path.lower().endswith(".stp") or path.lower().endswith(".step") or path.lower().endswith(".brp") or path.lower().endswith(".brep"):
+               Part.show(Part.read(path))
+           elif path.lower().endswith(".fcstd"):
+               FreeCADGui.ActiveDocument.mergeProject(path)
+           FreeCADGui.SendMsgToActiveView("ViewFit")
 
     def addtolibrary(self):
         fileDialog = QtGui.QFileDialog.getSaveFileName(None,u"Choose category and set a filename without extension", LIBRARYPATH)
