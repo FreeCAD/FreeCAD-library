@@ -44,6 +44,32 @@ USAGE
 
 This macro adds a browser window to the FreeCAD interface, from
 which you can browse and install items from the library.
+
+ADVANCED USE
+
+The update, config, and push buttons all rely on git, and need the
+python-git package installed. Once that is done, and provided the
+library is a git repository (ie. you cloned it with git instead of
+just downloading it), the above mentioned buttons will be enabled.
+
+The "update" button will simply update your local library with the
+latest contents from the online repository.
+
+CONTRIBUTING
+
+When cloning the official FreeCAD Parts library, you will usually
+not have write permission to it, and therefore cannot push to it.
+
+The best way to proceed is, instead of cloning the FreeCAD library
+directly, to fork it first (for example using the github "fork"
+button), then clone that foked repo instead, where you will have
+the correct permissions.
+
+Once you pushed some contents there, you can make a pull request on
+the official repo to have it merged.
+
+If you create a folder named Private in your library, it won't be
+considered when pushing, so you can place private Parts there.
 '''
 
 
@@ -52,19 +78,17 @@ from PySide import QtGui, QtCore
 from importPart import importPart, PartMover
 import sys
 
-param = FreeCAD.ParamGet('User parameter:Plugins/partlib')
-s=param.GetString('destination')
-print('User parameter:Plugins/partlib : destination : ',s)
+param = FreeCAD.ParamGet('User parameter:Plugins/parts_library')
+s = param.GetString('destination')
+#print('User parameter:Plugins/partlib : destination : ',s)
 
-if s<>'':
+if s:
     LIBRARYPATH = s
 else:
-    folderDialog = QtGui.QFileDialog.getExistingDirectory(None,u"Choose folder library")
+    folderDialog = QtGui.QFileDialog.getExistingDirectory(None,QtGui.QApplication.translate("PartsLibrary", "Location of your existing Parts library", None, QtGui.QApplication.UnicodeUTF8))
     param.SetString('destination',folderDialog)
-    s=param.GetString('destination')
-    LIBRARYPATH = s
+    LIBRARYPATH = param.GetString('destination')
 
-global ExpFileSystemModel
 class ExpFileSystemModel(QtGui.QFileSystemModel):
     "a custom QFileSystemModel that displays freecad file icons"
     def __init__(self):
@@ -74,6 +98,8 @@ class ExpFileSystemModel(QtGui.QFileSystemModel):
         if index.column() == 0 and role == QtCore.Qt.DecorationRole:
             if index.data().lower().endswith('.fcstd'):
                 return QtGui.QIcon(':icons/freecad-doc.png')
+            elif index.data().lower() == "private":
+                return QtGui.QIcon.fromTheme("folder-lock")
         return super(ExpFileSystemModel, self).data(index, role)
 
 class ExpDockWidget(QtGui.QDockWidget):
@@ -83,9 +109,8 @@ class ExpDockWidget(QtGui.QDockWidget):
         QtGui.QDockWidget.__init__(self)
 
         self.setObjectName("PartsLibrary")
-        self.setWindowTitle("Parts Library")
 
-        # setting up a directory model that shows only fcstd and step
+        # setting up a directory model that shows only fcstd, step and brep
         self.dirmodel = ExpFileSystemModel()
         self.dirmodel.setRootPath(LIBRARYPATH)
         self.dirmodel.setNameFilters(["*.fcstd","*.FcStd","*.FCSTD","*.stp","*.STP","*.step","*.STEP", "*.brp", "*.BRP", "*.brep", "*.BREP", "*.pdf", "*.PDF"])
@@ -101,45 +126,105 @@ class ExpDockWidget(QtGui.QDockWidget):
         folder.hideColumn(2)
         folder.hideColumn(3)
         folder.setRootIndex(self.dirmodel.index(LIBRARYPATH))
+        
         self.preview = QtGui.QLabel()
         self.preview.setFixedHeight(128)
-        formatLabel = QtGui.QLabel("Add to library")
-        savebutton = QtGui.QPushButton("Save")
+        
+        self.updatebutton = QtGui.QPushButton()
+        icon = QtGui.QIcon.fromTheme("emblem-synchronizing")
+        self.updatebutton.setIcon(icon)
+        self.updatebutton.clicked.connect(self.updatelibrary)
+        self.updatebutton.hide()
+        
+        self.configbutton = QtGui.QPushButton()
+        icon = QtGui.QIcon.fromTheme("emblem-system")
+        self.configbutton.setIcon(icon)
+        self.configbutton.clicked.connect(self.setconfig)
+        self.configbutton.hide()
+        
+        self.formatLabel = QtGui.QLabel()
+        self.formatLabel.hide()
+        
+        self.savebutton = QtGui.QPushButton()
         icon = QtGui.QIcon.fromTheme("document-save")
-        savebutton.setIcon(icon)
-        savebutton.clicked.connect(self.addtolibrary)
-        pushbutton = QtGui.QPushButton("Push")
+        self.savebutton.setIcon(icon)
+        self.savebutton.clicked.connect(self.addtolibrary)
+        self.savebutton.hide()
+        
+        self.pushbutton = QtGui.QPushButton()
         icon = QtGui.QIcon.fromTheme("document-export")
-        pushbutton.setIcon(icon)
-        pushbutton.clicked.connect(self.pushlibrary)
-        fcstdCB = QtGui.QCheckBox('FCStd')
-        fcstdCB.setCheckState(QtCore.Qt.Checked)
-        fcstdCB.setEnabled(False)
+        self.pushbutton.setIcon(icon)
+        self.pushbutton.clicked.connect(self.pushlibrary)
+        self.pushbutton.hide()
+        
+        self.optbutton = QtGui.QPushButton()
+        self.optbutton.clicked.connect(self.showoptions)
+        
+        self.fcstdCB = QtGui.QCheckBox('FCStd')
+        self.fcstdCB.setCheckState(QtCore.Qt.Checked)
+        self.fcstdCB.setEnabled(False)
+        self.fcstdCB.hide()
         self.stepCB = QtGui.QCheckBox('STEP')
         self.stepCB.setCheckState(QtCore.Qt.Checked)
+        self.stepCB.hide()
         self.stlCB = QtGui.QCheckBox('STL')
         self.stlCB.setCheckState(QtCore.Qt.Checked)
+        self.stlCB.hide()
 
-        self.radioButton1 = QtGui.QRadioButton("Copy",self)
- #       self.radioButton1.toggled.connect(self.onRadioButton1)
-        self.radioButton1.move(90,0)
+        self.radioButton2 = QtGui.QCheckBox("ASSY2",self)
+        self.radioButton2.move(90,0)
+        self.radioButton2.setChecked(QtCore.Qt.Checked)
 
+        self.radioButton1 = QtGui.QCheckBox("Copy",self)
+        self.radioButton1.move(160,0)
 
         container = QtGui.QWidget()
         grid = QtGui.QGridLayout()
         grid.setSpacing(10)
 
         grid.addWidget(folder,0,0,1,3)
+        grid.addWidget(self.updatebutton,1,1,1,1)
+        grid.addWidget(self.configbutton,1,2,1,1)
         grid.addWidget(self.preview,1,0,5,1)
-        grid.addWidget(formatLabel,1,1,1,2)
-        grid.addWidget(fcstdCB,2,1,1,2)
-        grid.addWidget(self.stepCB,3,1,1,2)
-        grid.addWidget(self.stlCB,4,1,1,2)
-        grid.addWidget(savebutton,5,1,1,1)
-        grid.addWidget(pushbutton,5,2,1,1)
-
+        grid.addWidget(self.formatLabel,2,1,1,2)
+        grid.addWidget(self.fcstdCB,3,1,1,2)
+        grid.addWidget(self.stepCB,4,1,1,2)
+        grid.addWidget(self.stlCB,5,1,1,2)
+        grid.addWidget(self.savebutton,6,1,1,1)
+        grid.addWidget(self.pushbutton,6,2,1,1)
+        grid.addWidget(self.optbutton,6,0,1,1)
+        
+        global repo
+        repo = None
+        try:
+            import git
+        except:
+            FreeCAD.Console.PrintWarning("python-git not found. Git-related functions are disabled\n")
+        try:
+            repo = git.Repo(LIBRARYPATH)
+        except:
+            FreeCAD.Console.PrintError("Your library is not a valid Git repository. Please clone it with git first.\n")
+            return
+        if not repo.remotes:
+            FreeCAD.Console.PrintWarning("No remote repository set.\n")
+            return
+        if not repo:
+            updatebutton.setEnabled(False)
+            configbutton.setEnabled(False)
+            pushbutton.setEnabled(False)
+            
+        self.retranslateUi()
         container.setLayout(grid)
         self.setWidget(container)
+        
+    def retranslateUi(self):
+        self.setWindowTitle(QtGui.QApplication.translate("PartsLibrary", "PartsLibrary", None, QtGui.QApplication.UnicodeUTF8))
+        self.updatebutton.setText(QtGui.QApplication.translate("PartsLibrary", "Update", None, QtGui.QApplication.UnicodeUTF8))
+        self.configbutton.setText(QtGui.QApplication.translate("PartsLibrary", "Config", None, QtGui.QApplication.UnicodeUTF8))
+        self.formatLabel.setText(QtGui.QApplication.translate("PartsLibrary", "Add to library", None, QtGui.QApplication.UnicodeUTF8))
+        self.savebutton.setText(QtGui.QApplication.translate("PartsLibrary", "Save", None, QtGui.QApplication.UnicodeUTF8))
+        self.pushbutton.setText(QtGui.QApplication.translate("PartsLibrary", "Push", None, QtGui.QApplication.UnicodeUTF8))
+        self.optbutton.setText(QtGui.QApplication.translate("PartsLibrary", "Show options >>", None, QtGui.QApplication.UnicodeUTF8))
 
     def clicked(self, index):
         path = self.dirmodel.filePath(index)
@@ -161,43 +246,45 @@ class ExpDockWidget(QtGui.QDockWidget):
         self.preview.clear()
 
     def doubleclicked(self, index):
-        view = FreeCADGui.activeDocument().activeView()
         path = self.dirmodel.filePath(index)
         if path.lower().endswith(".pdf"):
           if sys.platform == 'linux2':
              subprocess.call(["xdg-open", path])
           else:
              os.startfile(path) 
+        view = FreeCADGui.activeDocument().activeView()
+        if self.radioButton2.isChecked():
 
-        if self.radioButton1.isChecked():
-          docassy = App.ActiveDocument
-          doc = FreeCAD.openDocument(path)
-#          Gui.SendMsgToActiveView("SaveAs")
-#          print 'filedialog'
-#          sname=QtGui.QFileDialog.getSaveFileName(self,"SaveAs",App.ActiveDocument.Name)
-#          snames=str(sname[0])
-#          print 'sname: '+snames
-          App.ActiveDocument.saveAs(QtGui.QFileDialog.getSaveFileName(None,"SaveAs",App.ActiveDocument.Name+'.FCStd')[0])
-          App.ActiveDocument.recompute()
-          path = FreeCAD.ActiveDocument.FileName
-          FreeCAD.closeDocument(FreeCAD.ActiveDocument.Name)
-          FreeCAD.setActiveDocument(docassy.Name)
-          FreeCAD.ActiveDocument = docassy 
+           if self.radioButton1.isChecked():
+             docassy = App.ActiveDocument
+             doc = FreeCAD.openDocument(path)
+             App.ActiveDocument.saveAs(QtGui.QFileDialog.getSaveFileName(None,"SaveAs",App.ActiveDocument.Name+'.FCStd')[0])
+             App.ActiveDocument.recompute()
+             path = FreeCAD.ActiveDocument.FileName
+             FreeCAD.closeDocument(FreeCAD.ActiveDocument.Name)
+             FreeCAD.setActiveDocument(docassy.Name)
+             FreeCAD.ActiveDocument = docassy 
         
-        if path.lower().endswith(".fcstd") or path.lower().endswith(".stp") or path.lower().endswith(".step") or path.lower().endswith(".brep"):
-            importedObject = importPart( path )
-            FreeCAD.ActiveDocument.recompute()
-            if not importedObject.fixedPosition: #will be true for the first imported part 
-                PartMover( view, importedObject )
-            else:
-                from PySide import QtCore
-                self.timer = QtCore.QTimer()
-                QtCore.QObject.connect(self.timer, QtCore.SIGNAL("timeout()"), self.GuiViewFit)
-                self.timer.start( 200 ) #0.2 seconds
+           if path.lower().endswith(".fcstd") or path.lower().endswith(".stp") or path.lower().endswith(".step") or path.lower().endswith(".brep"):
+               importedObject = importPart( path )
+               FreeCAD.ActiveDocument.recompute()
+               if not importedObject.fixedPosition: #will be true for the first imported part 
+                   PartMover( view, importedObject )
+               else:
+                   from PySide import QtCore
+                   self.timer = QtCore.QTimer()
+                   QtCore.QObject.connect(self.timer, QtCore.SIGNAL("timeout()"), self.GuiViewFit)
+                   self.timer.start( 200 ) #0.2 seconds
 
-    def GuiViewFit(self):
-        FreeCADGui.SendMsgToActiveView("ViewFit")
-        self.timer.stop()
+        else:
+          path = self.dirmodel.filePath(index)
+          if path.lower().endswith(".stp") or path.lower().endswith(".step") or path.lower().endswith(".brp") or path.lower().endswith(".brep"):
+              Part.show(Part.read(path))
+          elif path.lower().endswith(".fcstd"):
+              FreeCADGui.ActiveDocument.mergeProject(path)
+          FreeCADGui.SendMsgToActiveView("ViewFit")
+
+
 
     def addtolibrary(self):
         fileDialog = QtGui.QFileDialog.getSaveFileName(None,u"Choose category and set a filename without extension", LIBRARYPATH)
@@ -220,27 +307,12 @@ class ExpDockWidget(QtGui.QDockWidget):
                     Mesh.export(toexport,STLfilename)
                     
     def pushlibrary(self):
-        try:
-            import git
-        except:
-            FreeCAD.Console.PrintError("The Python Git module was not found. Please install the python-git package.\n")
-            return
-        try:
-            repo = git.Repo(LIBRARYPATH)
-        except:
-            FreeCAD.Console.PrintError("Your library is not a valid Git repository. Please fork/clone it first.\n")
-            return
-        pushOK = True
-        if not repo.remotes:
-            FreeCAD.Console.PrintWarning("Arch","Warning: no remote repository set. Unable to push")
-            pushOK = False
-        modified_files = repo.git.diff("--name-only").split()
-        untracked_files = repo.git.ls_files("--other","--exclude-standard").split()
+        modified_files = [f for f in repo.git.diff("--name-only").split("\n") if (f and (f != 'PartsLibrary.FCMacro'))]
+        #print(modified_files)
+        untracked_files = [f for f in repo.git.ls_files("--other","--exclude-standard").split("\n") if f]
+        #print(untracked_files)
         import ArchServer
         d = ArchServer._ArchGitDialog()
-        if not pushOK:
-            d.checkBox.setChecked(False)
-            d.checkBox.setEnabled(False)
         d.label.setText(str(len(modified_files)+len(untracked_files))+" new and modified file(s)")
         d.lineEdit.setText("Changed " + str(modified_files))
         d.checkBox.hide()
@@ -252,8 +324,96 @@ class ExpDockWidget(QtGui.QDockWidget):
                 repo.git.add(o)
             repo.git.commit(m=d.lineEdit.text())
             if d.checkBox.isChecked():
-                repo.git.push()            
+                repo.git.push()
+                
+    def updatelibrary(self):
+        repo.git.pull()
+        
+    def setconfig(self):
+        d = ConfigDialog()
+        d.lineEdit.setText(repo.remote().url)
+        if hasattr(repo.remote(),"pushurl"):
+            d.lineEdit_2.setText(repo.remote().pushurl)
+        else:
+            d.lineEdit_2.setText(repo.remote().url)
+        r = d.exec_()
+        
+    def showoptions(self):
+        controls = [self.updatebutton,self.configbutton,self.formatLabel,
+                    self.fcstdCB,self.stepCB,self.stlCB,self.savebutton,self.pushbutton]
+        if self.updatebutton.isVisible():
+            for c in controls:
+                c.hide()
+            self.optbutton.setText(QtGui.QApplication.translate("PartsLibrary", "Show options >>", None, QtGui.QApplication.UnicodeUTF8))
+        else:
+            for c in controls:
+                c.show()
+            self.optbutton.setText(QtGui.QApplication.translate("PartsLibrary", "Hide options <<", None, QtGui.QApplication.UnicodeUTF8))
 
+
+class ConfigDialog(QtGui.QDialog):
+    def __init__(self):
+        QtGui.QDialog.__init__(self)
+        self.setObjectName("GitConfig")
+        self.resize(318, 202)
+        self.verticalLayout = QtGui.QVBoxLayout(self)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.groupBox = QtGui.QGroupBox(self)
+        self.groupBox.setObjectName("groupBox")
+        self.horizontalLayout = QtGui.QHBoxLayout(self.groupBox)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.lineEdit = QtGui.QLineEdit(self.groupBox)
+        self.lineEdit.setObjectName("lineEdit")
+        self.horizontalLayout.addWidget(self.lineEdit)
+        self.pushButton = QtGui.QPushButton(self.groupBox)
+        self.pushButton.setObjectName("pushButton")
+        self.horizontalLayout.addWidget(self.pushButton)
+        self.verticalLayout.addWidget(self.groupBox)
+        self.groupBox_2 = QtGui.QGroupBox(self)
+        self.groupBox_2.setObjectName("groupBox_2")
+        self.verticalLayout_2 = QtGui.QVBoxLayout(self.groupBox_2)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.lineEdit_2 = QtGui.QLineEdit(self.groupBox_2)
+        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.verticalLayout_2.addWidget(self.lineEdit_2)
+        self.label = QtGui.QLabel(self.groupBox_2)
+        self.label.setObjectName("label")
+        self.verticalLayout_2.addWidget(self.label)
+        self.verticalLayout.addWidget(self.groupBox_2)
+        self.buttonBox = QtGui.QDialogButtonBox(self)
+        self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
+        self.buttonBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Ok)
+        self.buttonBox.setObjectName("buttonBox")
+        self.verticalLayout.addWidget(self.buttonBox)
+
+        self.retranslateUi()
+        QtCore.QObject.connect(self.buttonBox, QtCore.SIGNAL("accepted()"), self.accept)
+        QtCore.QObject.connect(self.buttonBox, QtCore.SIGNAL("rejected()"), self.reject)
+        QtCore.QObject.connect(self.pushButton, QtCore.SIGNAL("clicked()"), self.setdefaulturl)
+        QtCore.QMetaObject.connectSlotsByName(self)
+
+    def retranslateUi(self):
+        self.setWindowTitle(QtGui.QApplication.translate("PartsLibrary", "PartsLibrary", None, QtGui.QApplication.UnicodeUTF8))
+        self.groupBox.setTitle(QtGui.QApplication.translate("PartsLibrary", "pull server (where you get your updates from)", None, QtGui.QApplication.UnicodeUTF8))
+        self.lineEdit.setToolTip(QtGui.QApplication.translate("PartsLibrary", "Enter the URL of the pull server here", None, QtGui.QApplication.UnicodeUTF8))
+        self.pushButton.setToolTip(QtGui.QApplication.translate("PartsLibrary", "Use the official FreeCAD-library repository", None, QtGui.QApplication.UnicodeUTF8))
+        self.pushButton.setText(QtGui.QApplication.translate("PartsLibrary", "use official", None, QtGui.QApplication.UnicodeUTF8))
+        self.groupBox_2.setTitle(QtGui.QApplication.translate("PartsLibrary", "push server (where you push your changes to)", None, QtGui.QApplication.UnicodeUTF8))
+        self.lineEdit_2.setToolTip(QtGui.QApplication.translate("PartsLibrary", "Enter the URL of the push server here", None, QtGui.QApplication.UnicodeUTF8))
+        self.label.setText(QtGui.QApplication.translate("PartsLibrary", "Warning: You need write permission on this server", None, QtGui.QApplication.UnicodeUTF8))
+
+    def setdefaulturl(self):
+        self.lineEdit.setText("https://github.com/FreeCAD/FreeCAD-library.git")
+        
+    def accept(self):
+        cw = repo.remote().config_writer
+        if self.lineEdit.text():
+            cw.set("url", str(self.lineEdit.text()))
+        if self.lineEdit_2.text():
+            cw.set("pushurl", str(self.lineEdit_2.text()))
+        if hasattr(cw,"release"):
+            cw.release()
+        QtGui.QDialog.accept(self)
 
 if QtCore.QDir(LIBRARYPATH).exists():
     m = FreeCADGui.getMainWindow()
@@ -267,5 +427,4 @@ if QtCore.QDir(LIBRARYPATH).exists():
         m.addDockWidget(QtCore.Qt.RightDockWidgetArea,ExpDockWidget(LIBRARYPATH))
 else:
     print "Library path ", LIBRARYPATH, "not found."
-    print "Please set the correct path to your Parts library in the macro script"
 
