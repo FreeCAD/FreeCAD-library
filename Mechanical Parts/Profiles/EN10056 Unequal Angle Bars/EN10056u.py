@@ -161,7 +161,7 @@ for data in Table:
     myEx.Dir = (0,0,50)
     myEx.Solid = (True)
     myEx.TaperAngle = (0)
-    myEx.Label = 'Extrude'
+    myEx.Label = data[0]
 
     Gui.getDocument(App.ActiveDocument.Name).getObject("Sketch").Visibility=False
     App.ActiveDocument.recompute()

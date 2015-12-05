@@ -4,7 +4,7 @@ FILE_DESCRIPTION(('FreeCAD Model'),'2;1');
 FILE_NAME(
 '/home/petat/0_CAD/STND_LIB/FreeCAD-library/Mechanical 
 Parts/Profiles/EN10056 Equal Angle Bars/Angle Bar L120x120x8 EN10056 
-S235JR.step','2015-12-04T17:52:05',('Author'),(''),
+S235JR.step','2015-12-05T15:43:02',('Author'),(''),
   'Open CASCADE STEP processor 6.8','FreeCAD','Unknown');
 FILE_SCHEMA(('AUTOMOTIVE_DESIGN_CC2 { 1 2 10303 214 -1 1 5 4 }'));
 ENDSEC;
@@ -17,7 +17,8 @@ DATA;
 #4 = PRODUCT_DEFINITION_SHAPE('','',#5);
 #5 = PRODUCT_DEFINITION('design','',#6,#9);
 #6 = PRODUCT_DEFINITION_FORMATION('','',#7);
-#7 = PRODUCT('Extrude','Extrude','',(#8));
+#7 = PRODUCT('Angle_Bar_L120x120x8_EN10056_S235JR',
+  'Angle_Bar_L120x120x8_EN10056_S235JR','',(#8));
 #8 = MECHANICAL_CONTEXT('',#2,'mechanical');
 #9 = PRODUCT_DEFINITION_CONTEXT('part definition',#2,'design');
 #10 = ADVANCED_BREP_SHAPE_REPRESENTATION('',(#11,#15),#741);

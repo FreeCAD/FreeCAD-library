@@ -4,7 +4,7 @@ FILE_DESCRIPTION(('FreeCAD Model'),'2;1');
 FILE_NAME(
 '/home/petat/0_CAD/STND_LIB/FreeCAD-library/Mechanical 
 Parts/Profiles/EN10058 Flat steel bars/Flat Bar 20x3 EN10058 
-S235JR.step','2015-12-02T18:32:37',('Author'),(''),
+S235JR.step','2015-12-05T15:49:41',('Author'),(''),
   'Open CASCADE STEP processor 6.8','FreeCAD','Unknown');
 FILE_SCHEMA(('AUTOMOTIVE_DESIGN_CC2 { 1 2 10303 214 -1 1 5 4 }'));
 ENDSEC;
@@ -17,7 +17,8 @@ DATA;
 #4 = PRODUCT_DEFINITION_SHAPE('','',#5);
 #5 = PRODUCT_DEFINITION('design','',#6,#9);
 #6 = PRODUCT_DEFINITION_FORMATION('','',#7);
-#7 = PRODUCT('Extrude','Extrude','',(#8));
+#7 = PRODUCT('Flat_Bar_20x3_EN10058_S235JR',
+  'Flat_Bar_20x3_EN10058_S235JR','',(#8));
 #8 = MECHANICAL_CONTEXT('',#2,'mechanical');
 #9 = PRODUCT_DEFINITION_CONTEXT('part definition',#2,'design');
 #10 = ADVANCED_BREP_SHAPE_REPRESENTATION('',(#11,#15),#345);
