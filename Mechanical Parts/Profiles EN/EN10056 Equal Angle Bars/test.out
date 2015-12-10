@@ -1,0 +1,2759 @@
+store line 1
+j = 1, p1 = 1, p2 = 2
+segm-trigs: trig1 = 1, trig1b = 1, trig2 = 3, trig2b = 3
+j = 2, p1 = 2, p2 = 3
+segm-trigs: trig1 = 1, trig1b = 1, trig2 = 3, trig2b = 3
+j = 3, p1 = 3, p2 = 4
+segm-trigs: trig1 = 1, trig1b = 1, trig2 = 3, trig2b = 3
+j = 4, p1 = 4, p2 = 5
+segm-trigs: trig1 = 1, trig1b = 1, trig2 = 3, trig2b = 3
+j = 5, p1 = 5, p2 = 6
+segm-trigs: trig1 = 1, trig1b = 1, trig2 = 3, trig2b = 3
+j = 6, p1 = 6, p2 = 7
+segm-trigs: trig1 = 1, trig1b = 1, trig2 = 3, trig2b = 3
+j = 7, p1 = 7, p2 = 8
+segm-trigs: trig1 = 1, trig1b = 1, trig2 = 3, trig2b = 3
+j = 8, p1 = 8, p2 = 9
+segm-trigs: trig1 = 1, trig1b = 1, trig2 = 3, trig2b = 3
+j = 9, p1 = 9, p2 = 10
+segm-trigs: trig1 = 1, trig1b = 1, trig2 = 3, trig2b = 3
+j = 10, p1 = 10, p2 = 11
+segm-trigs: trig1 = 1, trig1b = 1, trig2 = 3, trig2b = 3
+store line 2
+j = 1, p1 = 12, p2 = 13
+segm-trigs: trig1 = 1, trig1b = 1, trig2 = 193, trig2b = 193
+j = 2, p1 = 13, p2 = 14
+segm-trigs: trig1 = 1, trig1b = 1, trig2 = 193, trig2b = 193
+j = 3, p1 = 14, p2 = 15
+segm-trigs: trig1 = 1, trig1b = 1, trig2 = 193, trig2b = 193
+j = 4, p1 = 15, p2 = 16
+segm-trigs: trig1 = 1, trig1b = 1, trig2 = 193, trig2b = 193
+j = 5, p1 = 16, p2 = 17
+segm-trigs: trig1 = 1, trig1b = 1, trig2 = 193, trig2b = 193
+j = 6, p1 = 17, p2 = 1
+segm-trigs: trig1 = 1, trig1b = 1, trig2 = 193, trig2b = 193
+store line 3
+j = 1, p1 = 11, p2 = 18
+segm-trigs: trig1 = 2, trig1b = 2, trig2 = 257, trig2b = 257
+j = 2, p1 = 18, p2 = 19
+segm-trigs: trig1 = 2, trig1b = 2, trig2 = 257, trig2b = 257
+j = 3, p1 = 19, p2 = 20
+segm-trigs: trig1 = 2, trig1b = 2, trig2 = 257, trig2b = 257
+j = 4, p1 = 20, p2 = 21
+segm-trigs: trig1 = 2, trig1b = 2, trig2 = 257, trig2b = 257
+j = 5, p1 = 21, p2 = 22
+segm-trigs: trig1 = 2, trig1b = 2, trig2 = 257, trig2b = 257
+j = 6, p1 = 22, p2 = 23
+segm-trigs: trig1 = 2, trig1b = 2, trig2 = 257, trig2b = 257
+store line 4
+j = 1, p1 = 23, p2 = 24
+segm-trigs: trig1 = 2, trig1b = 2, trig2 = 131, trig2b = 131
+j = 2, p1 = 24, p2 = 25
+segm-trigs: trig1 = 2, trig1b = 2, trig2 = 131, trig2b = 131
+j = 3, p1 = 25, p2 = 26
+segm-trigs: trig1 = 2, trig1b = 2, trig2 = 131, trig2b = 131
+j = 4, p1 = 26, p2 = 27
+segm-trigs: trig1 = 2, trig1b = 2, trig2 = 131, trig2b = 131
+j = 5, p1 = 27, p2 = 28
+segm-trigs: trig1 = 2, trig1b = 2, trig2 = 131, trig2b = 131
+j = 6, p1 = 28, p2 = 29
+segm-trigs: trig1 = 2, trig1b = 2, trig2 = 131, trig2b = 131
+j = 7, p1 = 29, p2 = 30
+segm-trigs: trig1 = 2, trig1b = 2, trig2 = 131, trig2b = 131
+j = 8, p1 = 30, p2 = 31
+segm-trigs: trig1 = 2, trig1b = 2, trig2 = 131, trig2b = 131
+j = 9, p1 = 31, p2 = 32
+segm-trigs: trig1 = 2, trig1b = 2, trig2 = 131, trig2b = 131
+j = 10, p1 = 32, p2 = 33
+segm-trigs: trig1 = 2, trig1b = 2, trig2 = 131, trig2b = 131
+j = 11, p1 = 33, p2 = 34
+segm-trigs: trig1 = 2, trig1b = 2, trig2 = 131, trig2b = 131
+j = 12, p1 = 34, p2 = 35
+segm-trigs: trig1 = 2, trig1b = 2, trig2 = 131, trig2b = 131
+j = 13, p1 = 35, p2 = 36
+segm-trigs: trig1 = 2, trig1b = 2, trig2 = 131, trig2b = 131
+j = 14, p1 = 36, p2 = 37
+segm-trigs: trig1 = 2, trig1b = 2, trig2 = 131, trig2b = 131
+j = 15, p1 = 37, p2 = 38
+segm-trigs: trig1 = 2, trig1b = 2, trig2 = 131, trig2b = 131
+j = 16, p1 = 38, p2 = 39
+segm-trigs: trig1 = 2, trig1b = 2, trig2 = 131, trig2b = 131
+j = 17, p1 = 39, p2 = 40
+segm-trigs: trig1 = 2, trig1b = 2, trig2 = 131, trig2b = 131
+j = 18, p1 = 40, p2 = 41
+segm-trigs: trig1 = 2, trig1b = 2, trig2 = 131, trig2b = 131
+j = 19, p1 = 41, p2 = 42
+segm-trigs: trig1 = 2, trig1b = 2, trig2 = 131, trig2b = 131
+j = 20, p1 = 42, p2 = 43
+segm-trigs: trig1 = 2, trig1b = 2, trig2 = 131, trig2b = 131
+j = 21, p1 = 43, p2 = 44
+segm-trigs: trig1 = 2, trig1b = 2, trig2 = 131, trig2b = 131
+j = 22, p1 = 44, p2 = 12
+segm-trigs: trig1 = 2, trig1b = 2, trig2 = 131, trig2b = 131
+store line 5
+j = 1, p1 = 1, p2 = 45
+segm-trigs: trig1 = 3, trig1b = 3, trig2 = 194, trig2b = 194
+j = 2, p1 = 45, p2 = 46
+segm-trigs: trig1 = 3, trig1b = 3, trig2 = 194, trig2b = 194
+j = 3, p1 = 46, p2 = 47
+segm-trigs: trig1 = 3, trig1b = 3, trig2 = 194, trig2b = 194
+j = 4, p1 = 47, p2 = 48
+segm-trigs: trig1 = 3, trig1b = 3, trig2 = 194, trig2b = 194
+j = 5, p1 = 48, p2 = 49
+segm-trigs: trig1 = 3, trig1b = 3, trig2 = 194, trig2b = 194
+j = 6, p1 = 49, p2 = 50
+segm-trigs: trig1 = 3, trig1b = 3, trig2 = 194, trig2b = 194
+store line 6
+j = 1, p1 = 51, p2 = 52
+segm-trigs: trig1 = 4, trig1b = 4, trig2 = 258, trig2b = 258
+j = 2, p1 = 52, p2 = 53
+segm-trigs: trig1 = 4, trig1b = 4, trig2 = 258, trig2b = 258
+j = 3, p1 = 53, p2 = 54
+segm-trigs: trig1 = 4, trig1b = 4, trig2 = 258, trig2b = 258
+j = 4, p1 = 54, p2 = 55
+segm-trigs: trig1 = 4, trig1b = 4, trig2 = 258, trig2b = 258
+j = 5, p1 = 55, p2 = 56
+segm-trigs: trig1 = 4, trig1b = 4, trig2 = 258, trig2b = 258
+j = 6, p1 = 56, p2 = 11
+segm-trigs: trig1 = 4, trig1b = 4, trig2 = 258, trig2b = 258
+store line 7
+j = 1, p1 = 50, p2 = 57
+segm-trigs: trig1 = 4, trig1b = 4, trig2 = 5, trig2b = 5
+j = 2, p1 = 57, p2 = 58
+segm-trigs: trig1 = 4, trig1b = 4, trig2 = 5, trig2b = 5
+j = 3, p1 = 58, p2 = 59
+segm-trigs: trig1 = 4, trig1b = 4, trig2 = 5, trig2b = 5
+j = 4, p1 = 59, p2 = 60
+segm-trigs: trig1 = 4, trig1b = 4, trig2 = 5, trig2b = 5
+j = 5, p1 = 60, p2 = 61
+segm-trigs: trig1 = 4, trig1b = 4, trig2 = 5, trig2b = 5
+j = 6, p1 = 61, p2 = 62
+segm-trigs: trig1 = 4, trig1b = 4, trig2 = 5, trig2b = 5
+j = 7, p1 = 62, p2 = 63
+segm-trigs: trig1 = 4, trig1b = 4, trig2 = 5, trig2b = 5
+j = 8, p1 = 63, p2 = 64
+segm-trigs: trig1 = 4, trig1b = 4, trig2 = 5, trig2b = 5
+j = 9, p1 = 64, p2 = 65
+segm-trigs: trig1 = 4, trig1b = 4, trig2 = 5, trig2b = 5
+j = 10, p1 = 65, p2 = 66
+segm-trigs: trig1 = 4, trig1b = 4, trig2 = 5, trig2b = 5
+j = 11, p1 = 66, p2 = 67
+segm-trigs: trig1 = 4, trig1b = 4, trig2 = 5, trig2b = 5
+j = 12, p1 = 67, p2 = 68
+segm-trigs: trig1 = 4, trig1b = 4, trig2 = 5, trig2b = 5
+j = 13, p1 = 68, p2 = 69
+segm-trigs: trig1 = 4, trig1b = 4, trig2 = 5, trig2b = 5
+j = 14, p1 = 69, p2 = 70
+segm-trigs: trig1 = 4, trig1b = 4, trig2 = 5, trig2b = 5
+j = 15, p1 = 70, p2 = 71
+segm-trigs: trig1 = 4, trig1b = 4, trig2 = 5, trig2b = 5
+j = 16, p1 = 71, p2 = 72
+segm-trigs: trig1 = 4, trig1b = 4, trig2 = 5, trig2b = 5
+j = 17, p1 = 72, p2 = 73
+segm-trigs: trig1 = 4, trig1b = 4, trig2 = 5, trig2b = 5
+j = 18, p1 = 73, p2 = 74
+segm-trigs: trig1 = 4, trig1b = 4, trig2 = 5, trig2b = 5
+j = 19, p1 = 74, p2 = 51
+segm-trigs: trig1 = 4, trig1b = 4, trig2 = 5, trig2b = 5
+store line 8
+j = 1, p1 = 75, p2 = 51
+segm-trigs: trig1 = 5, trig1b = 5, trig2 = 197, trig2b = 197
+store line 9
+j = 1, p1 = 50, p2 = 76
+segm-trigs: trig1 = 6, trig1b = 6, trig2 = 133, trig2b = 133
+store line 10
+j = 1, p1 = 76, p2 = 77
+segm-trigs: trig1 = 6, trig1b = 6, trig2 = 42, trig2b = 42
+j = 2, p1 = 77, p2 = 78
+segm-trigs: trig1 = 6, trig1b = 6, trig2 = 42, trig2b = 42
+j = 3, p1 = 78, p2 = 79
+segm-trigs: trig1 = 6, trig1b = 6, trig2 = 42, trig2b = 42
+j = 4, p1 = 79, p2 = 80
+segm-trigs: trig1 = 6, trig1b = 6, trig2 = 42, trig2b = 42
+j = 5, p1 = 80, p2 = 81
+segm-trigs: trig1 = 6, trig1b = 6, trig2 = 42, trig2b = 42
+j = 6, p1 = 81, p2 = 82
+segm-trigs: trig1 = 6, trig1b = 6, trig2 = 42, trig2b = 42
+j = 7, p1 = 82, p2 = 83
+segm-trigs: trig1 = 6, trig1b = 6, trig2 = 42, trig2b = 42
+j = 8, p1 = 83, p2 = 84
+segm-trigs: trig1 = 6, trig1b = 6, trig2 = 42, trig2b = 42
+j = 9, p1 = 84, p2 = 85
+segm-trigs: trig1 = 6, trig1b = 6, trig2 = 42, trig2b = 42
+j = 10, p1 = 85, p2 = 86
+segm-trigs: trig1 = 6, trig1b = 6, trig2 = 42, trig2b = 42
+j = 11, p1 = 86, p2 = 87
+segm-trigs: trig1 = 6, trig1b = 6, trig2 = 42, trig2b = 42
+j = 12, p1 = 87, p2 = 88
+segm-trigs: trig1 = 6, trig1b = 6, trig2 = 42, trig2b = 42
+j = 13, p1 = 88, p2 = 89
+segm-trigs: trig1 = 6, trig1b = 6, trig2 = 42, trig2b = 42
+j = 14, p1 = 89, p2 = 90
+segm-trigs: trig1 = 6, trig1b = 6, trig2 = 42, trig2b = 42
+j = 15, p1 = 90, p2 = 91
+segm-trigs: trig1 = 6, trig1b = 6, trig2 = 42, trig2b = 42
+j = 16, p1 = 91, p2 = 92
+segm-trigs: trig1 = 6, trig1b = 6, trig2 = 42, trig2b = 42
+j = 17, p1 = 92, p2 = 93
+segm-trigs: trig1 = 6, trig1b = 6, trig2 = 42, trig2b = 42
+j = 18, p1 = 93, p2 = 94
+segm-trigs: trig1 = 6, trig1b = 6, trig2 = 42, trig2b = 42
+j = 19, p1 = 94, p2 = 75
+segm-trigs: trig1 = 6, trig1b = 6, trig2 = 42, trig2b = 42
+store line 11
+j = 1, p1 = 95, p2 = 96
+segm-trigs: trig1 = 7, trig1b = 23, trig2 = 214, trig2b = 254
+j = 2, p1 = 96, p2 = 75
+segm-trigs: trig1 = 23, trig1b = 42, trig2 = 254, trig2b = 202
+store line 12
+j = 1, p1 = 97, p2 = 98
+segm-trigs: trig1 = 7, trig1b = 7, trig2 = 43, trig2b = 43
+j = 2, p1 = 98, p2 = 99
+segm-trigs: trig1 = 7, trig1b = 7, trig2 = 43, trig2b = 43
+j = 3, p1 = 99, p2 = 100
+segm-trigs: trig1 = 7, trig1b = 7, trig2 = 43, trig2b = 43
+j = 4, p1 = 100, p2 = 101
+segm-trigs: trig1 = 7, trig1b = 7, trig2 = 43, trig2b = 43
+j = 5, p1 = 101, p2 = 102
+segm-trigs: trig1 = 7, trig1b = 7, trig2 = 43, trig2b = 43
+j = 6, p1 = 102, p2 = 103
+segm-trigs: trig1 = 7, trig1b = 7, trig2 = 43, trig2b = 43
+j = 7, p1 = 103, p2 = 104
+segm-trigs: trig1 = 7, trig1b = 7, trig2 = 43, trig2b = 43
+j = 8, p1 = 104, p2 = 105
+segm-trigs: trig1 = 7, trig1b = 7, trig2 = 43, trig2b = 43
+j = 9, p1 = 105, p2 = 106
+segm-trigs: trig1 = 7, trig1b = 7, trig2 = 43, trig2b = 43
+j = 10, p1 = 106, p2 = 107
+segm-trigs: trig1 = 7, trig1b = 7, trig2 = 43, trig2b = 43
+j = 11, p1 = 107, p2 = 108
+segm-trigs: trig1 = 7, trig1b = 7, trig2 = 43, trig2b = 43
+j = 12, p1 = 108, p2 = 109
+segm-trigs: trig1 = 7, trig1b = 7, trig2 = 43, trig2b = 43
+j = 13, p1 = 109, p2 = 110
+segm-trigs: trig1 = 7, trig1b = 7, trig2 = 43, trig2b = 43
+j = 14, p1 = 110, p2 = 111
+segm-trigs: trig1 = 7, trig1b = 7, trig2 = 43, trig2b = 43
+j = 15, p1 = 111, p2 = 112
+segm-trigs: trig1 = 7, trig1b = 7, trig2 = 43, trig2b = 43
+j = 16, p1 = 112, p2 = 113
+segm-trigs: trig1 = 7, trig1b = 7, trig2 = 43, trig2b = 43
+j = 17, p1 = 113, p2 = 114
+segm-trigs: trig1 = 7, trig1b = 7, trig2 = 43, trig2b = 43
+j = 18, p1 = 114, p2 = 115
+segm-trigs: trig1 = 7, trig1b = 7, trig2 = 43, trig2b = 43
+j = 19, p1 = 115, p2 = 95
+segm-trigs: trig1 = 7, trig1b = 7, trig2 = 43, trig2b = 43
+store line 13
+j = 1, p1 = 97, p2 = 116
+segm-trigs: trig1 = 150, trig1b = 190, trig2 = 8, trig2b = 24
+j = 2, p1 = 116, p2 = 76
+segm-trigs: trig1 = 190, trig1b = 138, trig2 = 24, trig2b = 41
+store line 14
+j = 1, p1 = 117, p2 = 118
+segm-trigs: trig1 = 43, trig1b = 43, trig2 = 198, trig2b = 198
+j = 2, p1 = 118, p2 = 119
+segm-trigs: trig1 = 43, trig1b = 43, trig2 = 198, trig2b = 198
+j = 3, p1 = 119, p2 = 120
+segm-trigs: trig1 = 43, trig1b = 43, trig2 = 198, trig2b = 198
+j = 4, p1 = 120, p2 = 121
+segm-trigs: trig1 = 43, trig1b = 43, trig2 = 198, trig2b = 198
+j = 5, p1 = 121, p2 = 95
+segm-trigs: trig1 = 43, trig1b = 43, trig2 = 198, trig2b = 198
+store line 15
+j = 1, p1 = 97, p2 = 122
+segm-trigs: trig1 = 44, trig1b = 44, trig2 = 134, trig2b = 134
+j = 2, p1 = 122, p2 = 123
+segm-trigs: trig1 = 44, trig1b = 44, trig2 = 134, trig2b = 134
+j = 3, p1 = 123, p2 = 124
+segm-trigs: trig1 = 44, trig1b = 44, trig2 = 134, trig2b = 134
+j = 4, p1 = 124, p2 = 125
+segm-trigs: trig1 = 44, trig1b = 44, trig2 = 134, trig2b = 134
+j = 5, p1 = 125, p2 = 126
+segm-trigs: trig1 = 44, trig1b = 44, trig2 = 134, trig2b = 134
+store line 16
+j = 1, p1 = 126, p2 = 127
+segm-trigs: trig1 = 44, trig1b = 44, trig2 = 49, trig2b = 49
+j = 2, p1 = 127, p2 = 128
+segm-trigs: trig1 = 44, trig1b = 44, trig2 = 49, trig2b = 49
+j = 3, p1 = 128, p2 = 129
+segm-trigs: trig1 = 44, trig1b = 44, trig2 = 49, trig2b = 49
+j = 4, p1 = 129, p2 = 130
+segm-trigs: trig1 = 44, trig1b = 44, trig2 = 49, trig2b = 49
+j = 5, p1 = 130, p2 = 131
+segm-trigs: trig1 = 44, trig1b = 44, trig2 = 49, trig2b = 49
+j = 6, p1 = 131, p2 = 132
+segm-trigs: trig1 = 44, trig1b = 44, trig2 = 49, trig2b = 49
+j = 7, p1 = 132, p2 = 133
+segm-trigs: trig1 = 44, trig1b = 44, trig2 = 49, trig2b = 49
+j = 8, p1 = 133, p2 = 134
+segm-trigs: trig1 = 44, trig1b = 44, trig2 = 49, trig2b = 49
+j = 9, p1 = 134, p2 = 135
+segm-trigs: trig1 = 44, trig1b = 44, trig2 = 49, trig2b = 49
+j = 10, p1 = 135, p2 = 136
+segm-trigs: trig1 = 44, trig1b = 44, trig2 = 49, trig2b = 49
+j = 11, p1 = 136, p2 = 137
+segm-trigs: trig1 = 44, trig1b = 44, trig2 = 49, trig2b = 49
+j = 12, p1 = 137, p2 = 138
+segm-trigs: trig1 = 44, trig1b = 44, trig2 = 49, trig2b = 49
+j = 13, p1 = 138, p2 = 139
+segm-trigs: trig1 = 44, trig1b = 44, trig2 = 49, trig2b = 49
+j = 14, p1 = 139, p2 = 140
+segm-trigs: trig1 = 44, trig1b = 44, trig2 = 49, trig2b = 49
+j = 15, p1 = 140, p2 = 141
+segm-trigs: trig1 = 44, trig1b = 44, trig2 = 49, trig2b = 49
+j = 16, p1 = 141, p2 = 142
+segm-trigs: trig1 = 44, trig1b = 44, trig2 = 49, trig2b = 49
+j = 17, p1 = 142, p2 = 117
+segm-trigs: trig1 = 44, trig1b = 44, trig2 = 49, trig2b = 49
+store line 17
+j = 1, p1 = 117, p2 = 143
+segm-trigs: trig1 = 255, trig1b = 200, trig2 = 49, trig2b = 83
+j = 2, p1 = 143, p2 = 144
+segm-trigs: trig1 = 200, trig1b = 256, trig2 = 83, trig2b = 59
+store line 18
+j = 1, p1 = 126, p2 = 145
+segm-trigs: trig1 = 52, trig1b = 80, trig2 = 191, trig2b = 135
+j = 2, p1 = 145, p2 = 146
+segm-trigs: trig1 = 80, trig1b = 63, trig2 = 135, trig2b = 192
+store line 19
+j = 1, p1 = 146, p2 = 147
+segm-trigs: trig1 = 63, trig1b = 63, trig2 = 94, trig2b = 94
+j = 2, p1 = 147, p2 = 148
+segm-trigs: trig1 = 63, trig1b = 63, trig2 = 94, trig2b = 94
+j = 3, p1 = 148, p2 = 149
+segm-trigs: trig1 = 63, trig1b = 63, trig2 = 94, trig2b = 94
+j = 4, p1 = 149, p2 = 150
+segm-trigs: trig1 = 63, trig1b = 63, trig2 = 94, trig2b = 94
+j = 5, p1 = 150, p2 = 151
+segm-trigs: trig1 = 63, trig1b = 63, trig2 = 94, trig2b = 94
+j = 6, p1 = 151, p2 = 152
+segm-trigs: trig1 = 63, trig1b = 63, trig2 = 94, trig2b = 94
+j = 7, p1 = 152, p2 = 153
+segm-trigs: trig1 = 63, trig1b = 63, trig2 = 94, trig2b = 94
+j = 8, p1 = 153, p2 = 154
+segm-trigs: trig1 = 63, trig1b = 63, trig2 = 94, trig2b = 94
+j = 9, p1 = 154, p2 = 155
+segm-trigs: trig1 = 63, trig1b = 63, trig2 = 94, trig2b = 94
+j = 10, p1 = 155, p2 = 156
+segm-trigs: trig1 = 63, trig1b = 63, trig2 = 94, trig2b = 94
+j = 11, p1 = 156, p2 = 157
+segm-trigs: trig1 = 63, trig1b = 63, trig2 = 94, trig2b = 94
+j = 12, p1 = 157, p2 = 158
+segm-trigs: trig1 = 63, trig1b = 63, trig2 = 94, trig2b = 94
+j = 13, p1 = 158, p2 = 159
+segm-trigs: trig1 = 63, trig1b = 63, trig2 = 94, trig2b = 94
+j = 14, p1 = 159, p2 = 160
+segm-trigs: trig1 = 63, trig1b = 63, trig2 = 94, trig2b = 94
+j = 15, p1 = 160, p2 = 161
+segm-trigs: trig1 = 63, trig1b = 63, trig2 = 94, trig2b = 94
+j = 16, p1 = 161, p2 = 144
+segm-trigs: trig1 = 63, trig1b = 63, trig2 = 94, trig2b = 94
+store line 20
+j = 1, p1 = 162, p2 = 163
+segm-trigs: trig1 = 93, trig1b = 93, trig2 = 259, trig2b = 259
+j = 2, p1 = 163, p2 = 164
+segm-trigs: trig1 = 93, trig1b = 93, trig2 = 259, trig2b = 259
+j = 3, p1 = 164, p2 = 165
+segm-trigs: trig1 = 93, trig1b = 93, trig2 = 259, trig2b = 259
+j = 4, p1 = 165, p2 = 144
+segm-trigs: trig1 = 93, trig1b = 93, trig2 = 259, trig2b = 259
+store line 21
+j = 1, p1 = 166, p2 = 167
+segm-trigs: trig1 = 93, trig1b = 93, trig2 = 130, trig2b = 130
+j = 2, p1 = 167, p2 = 168
+segm-trigs: trig1 = 93, trig1b = 93, trig2 = 130, trig2b = 130
+j = 3, p1 = 168, p2 = 169
+segm-trigs: trig1 = 93, trig1b = 93, trig2 = 130, trig2b = 130
+j = 4, p1 = 169, p2 = 170
+segm-trigs: trig1 = 93, trig1b = 93, trig2 = 130, trig2b = 130
+j = 5, p1 = 170, p2 = 171
+segm-trigs: trig1 = 93, trig1b = 93, trig2 = 130, trig2b = 130
+j = 6, p1 = 171, p2 = 172
+segm-trigs: trig1 = 93, trig1b = 93, trig2 = 130, trig2b = 130
+j = 7, p1 = 172, p2 = 173
+segm-trigs: trig1 = 93, trig1b = 93, trig2 = 130, trig2b = 130
+j = 8, p1 = 173, p2 = 174
+segm-trigs: trig1 = 93, trig1b = 93, trig2 = 130, trig2b = 130
+j = 9, p1 = 174, p2 = 175
+segm-trigs: trig1 = 93, trig1b = 93, trig2 = 130, trig2b = 130
+j = 10, p1 = 175, p2 = 176
+segm-trigs: trig1 = 93, trig1b = 93, trig2 = 130, trig2b = 130
+j = 11, p1 = 176, p2 = 177
+segm-trigs: trig1 = 93, trig1b = 93, trig2 = 130, trig2b = 130
+j = 12, p1 = 177, p2 = 178
+segm-trigs: trig1 = 93, trig1b = 93, trig2 = 130, trig2b = 130
+j = 13, p1 = 178, p2 = 179
+segm-trigs: trig1 = 93, trig1b = 93, trig2 = 130, trig2b = 130
+j = 14, p1 = 179, p2 = 180
+segm-trigs: trig1 = 93, trig1b = 93, trig2 = 130, trig2b = 130
+j = 15, p1 = 180, p2 = 181
+segm-trigs: trig1 = 93, trig1b = 93, trig2 = 130, trig2b = 130
+j = 16, p1 = 181, p2 = 182
+segm-trigs: trig1 = 93, trig1b = 93, trig2 = 130, trig2b = 130
+j = 17, p1 = 182, p2 = 183
+segm-trigs: trig1 = 93, trig1b = 93, trig2 = 130, trig2b = 130
+j = 18, p1 = 183, p2 = 184
+segm-trigs: trig1 = 93, trig1b = 93, trig2 = 130, trig2b = 130
+j = 19, p1 = 184, p2 = 185
+segm-trigs: trig1 = 93, trig1b = 93, trig2 = 130, trig2b = 130
+j = 20, p1 = 185, p2 = 186
+segm-trigs: trig1 = 93, trig1b = 93, trig2 = 130, trig2b = 130
+j = 21, p1 = 186, p2 = 187
+segm-trigs: trig1 = 93, trig1b = 93, trig2 = 130, trig2b = 130
+j = 22, p1 = 187, p2 = 188
+segm-trigs: trig1 = 93, trig1b = 93, trig2 = 130, trig2b = 130
+j = 23, p1 = 188, p2 = 189
+segm-trigs: trig1 = 93, trig1b = 93, trig2 = 130, trig2b = 130
+j = 24, p1 = 189, p2 = 162
+segm-trigs: trig1 = 93, trig1b = 93, trig2 = 130, trig2b = 130
+store line 22
+j = 1, p1 = 146, p2 = 190
+segm-trigs: trig1 = 94, trig1b = 94, trig2 = 195, trig2b = 195
+j = 2, p1 = 190, p2 = 191
+segm-trigs: trig1 = 94, trig1b = 94, trig2 = 195, trig2b = 195
+j = 3, p1 = 191, p2 = 192
+segm-trigs: trig1 = 94, trig1b = 94, trig2 = 195, trig2b = 195
+j = 4, p1 = 192, p2 = 166
+segm-trigs: trig1 = 94, trig1b = 94, trig2 = 195, trig2b = 195
+store line 23
+j = 1, p1 = 193, p2 = 194
+segm-trigs: trig1 = 95, trig1b = 113, trig2 = 209, trig2b = 252
+j = 2, p1 = 194, p2 = 162
+segm-trigs: trig1 = 113, trig1b = 130, trig2 = 252, trig2b = 210
+store line 24
+j = 1, p1 = 195, p2 = 196
+segm-trigs: trig1 = 95, trig1b = 95, trig2 = 132, trig2b = 132
+j = 2, p1 = 196, p2 = 197
+segm-trigs: trig1 = 95, trig1b = 95, trig2 = 132, trig2b = 132
+j = 3, p1 = 197, p2 = 198
+segm-trigs: trig1 = 95, trig1b = 95, trig2 = 132, trig2b = 132
+j = 4, p1 = 198, p2 = 199
+segm-trigs: trig1 = 95, trig1b = 95, trig2 = 132, trig2b = 132
+j = 5, p1 = 199, p2 = 200
+segm-trigs: trig1 = 95, trig1b = 95, trig2 = 132, trig2b = 132
+j = 6, p1 = 200, p2 = 201
+segm-trigs: trig1 = 95, trig1b = 95, trig2 = 132, trig2b = 132
+j = 7, p1 = 201, p2 = 202
+segm-trigs: trig1 = 95, trig1b = 95, trig2 = 132, trig2b = 132
+j = 8, p1 = 202, p2 = 203
+segm-trigs: trig1 = 95, trig1b = 95, trig2 = 132, trig2b = 132
+j = 9, p1 = 203, p2 = 204
+segm-trigs: trig1 = 95, trig1b = 95, trig2 = 132, trig2b = 132
+j = 10, p1 = 204, p2 = 205
+segm-trigs: trig1 = 95, trig1b = 95, trig2 = 132, trig2b = 132
+j = 11, p1 = 205, p2 = 206
+segm-trigs: trig1 = 95, trig1b = 95, trig2 = 132, trig2b = 132
+j = 12, p1 = 206, p2 = 207
+segm-trigs: trig1 = 95, trig1b = 95, trig2 = 132, trig2b = 132
+j = 13, p1 = 207, p2 = 208
+segm-trigs: trig1 = 95, trig1b = 95, trig2 = 132, trig2b = 132
+j = 14, p1 = 208, p2 = 209
+segm-trigs: trig1 = 95, trig1b = 95, trig2 = 132, trig2b = 132
+j = 15, p1 = 209, p2 = 210
+segm-trigs: trig1 = 95, trig1b = 95, trig2 = 132, trig2b = 132
+j = 16, p1 = 210, p2 = 211
+segm-trigs: trig1 = 95, trig1b = 95, trig2 = 132, trig2b = 132
+j = 17, p1 = 211, p2 = 212
+segm-trigs: trig1 = 95, trig1b = 95, trig2 = 132, trig2b = 132
+j = 18, p1 = 212, p2 = 213
+segm-trigs: trig1 = 95, trig1b = 95, trig2 = 132, trig2b = 132
+j = 19, p1 = 213, p2 = 214
+segm-trigs: trig1 = 95, trig1b = 95, trig2 = 132, trig2b = 132
+j = 20, p1 = 214, p2 = 215
+segm-trigs: trig1 = 95, trig1b = 95, trig2 = 132, trig2b = 132
+j = 21, p1 = 215, p2 = 216
+segm-trigs: trig1 = 95, trig1b = 95, trig2 = 132, trig2b = 132
+j = 22, p1 = 216, p2 = 217
+segm-trigs: trig1 = 95, trig1b = 95, trig2 = 132, trig2b = 132
+j = 23, p1 = 217, p2 = 218
+segm-trigs: trig1 = 95, trig1b = 95, trig2 = 132, trig2b = 132
+j = 24, p1 = 218, p2 = 219
+segm-trigs: trig1 = 95, trig1b = 95, trig2 = 132, trig2b = 132
+j = 25, p1 = 219, p2 = 220
+segm-trigs: trig1 = 95, trig1b = 95, trig2 = 132, trig2b = 132
+j = 26, p1 = 220, p2 = 221
+segm-trigs: trig1 = 95, trig1b = 95, trig2 = 132, trig2b = 132
+j = 27, p1 = 221, p2 = 222
+segm-trigs: trig1 = 95, trig1b = 95, trig2 = 132, trig2b = 132
+j = 28, p1 = 222, p2 = 193
+segm-trigs: trig1 = 95, trig1b = 95, trig2 = 132, trig2b = 132
+store line 25
+j = 1, p1 = 195, p2 = 223
+segm-trigs: trig1 = 145, trig1b = 188, trig2 = 96, trig2b = 114
+j = 2, p1 = 223, p2 = 166
+segm-trigs: trig1 = 188, trig1b = 146, trig2 = 114, trig2b = 129
+store line 26
+j = 1, p1 = 23, p2 = 193
+segm-trigs: trig1 = 131, trig1b = 131, trig2 = 260, trig2b = 260
+store line 27
+j = 1, p1 = 195, p2 = 12
+segm-trigs: trig1 = 132, trig1b = 132, trig2 = 196, trig2b = 196
+open segments: 
+line seg: 1 - 2 len = 4.8638
+line seg: 2 - 1 len = 4.8638
+line seg: 2 - 3 len = 4.87336
+line seg: 3 - 2 len = 4.87336
+line seg: 3 - 4 len = 5.1291
+line seg: 4 - 3 len = 5.1291
+line seg: 4 - 5 len = 4.87554
+line seg: 5 - 4 len = 4.87554
+line seg: 5 - 6 len = 5.1291
+line seg: 6 - 5 len = 5.1291
+line seg: 6 - 7 len = 5.01227
+line seg: 7 - 6 len = 5.01227
+line seg: 7 - 8 len = 5.24593
+line seg: 8 - 7 len = 5.24593
+line seg: 8 - 9 len = 5.1099
+line seg: 9 - 8 len = 5.1099
+line seg: 17 - 1 len = 4.09493
+line seg: 1 - 17 len = 4.09493
+line seg: 9 - 10 len = 4.89474
+line seg: 10 - 9 len = 4.89474
+line seg: 10 - 11 len = 4.86625
+line seg: 11 - 10 len = 4.86625
+line seg: 12 - 13 len = 2.37055
+line seg: 13 - 12 len = 2.37055
+line seg: 13 - 14 len = 3.21855
+line seg: 14 - 13 len = 3.21855
+line seg: 14 - 15 len = 3.90482
+line seg: 15 - 14 len = 3.90482
+line seg: 11 - 18 len = 4.10047
+line seg: 18 - 11 len = 4.10047
+line seg: 15 - 16 len = 3.28102
+line seg: 16 - 15 len = 3.28102
+line seg: 16 - 17 len = 3.13013
+line seg: 17 - 16 len = 3.13013
+line seg: 18 - 19 len = 3.20185
+line seg: 19 - 18 len = 3.20185
+line seg: 19 - 20 len = 2.95687
+line seg: 20 - 19 len = 2.95687
+line seg: 20 - 21 len = 3.73626
+line seg: 21 - 20 len = 3.73626
+line seg: 21 - 22 len = 3.43355
+line seg: 22 - 21 len = 3.43355
+line seg: 22 - 23 len = 2.57099
+line seg: 23 - 22 len = 2.57099
+line seg: 1 - 45 len = 4.0252
+line seg: 45 - 1 len = 4.0252
+line seg: 23 - 24 len = 2.34995
+line seg: 24 - 23 len = 2.34995
+line seg: 24 - 25 len = 2.44259
+line seg: 25 - 24 len = 2.44259
+line seg: 25 - 26 len = 2.1557
+line seg: 26 - 25 len = 2.1557
+line seg: 26 - 27 len = 2.37994
+line seg: 27 - 26 len = 2.37994
+line seg: 27 - 28 len = 2.31025
+line seg: 28 - 27 len = 2.31025
+line seg: 44 - 12 len = 2.34805
+line seg: 12 - 44 len = 2.34805
+line seg: 28 - 29 len = 2.37276
+line seg: 29 - 28 len = 2.37276
+line seg: 29 - 30 len = 2.13686
+line seg: 30 - 29 len = 2.13686
+line seg: 30 - 31 len = 2.18503
+line seg: 31 - 30 len = 2.18503
+line seg: 31 - 32 len = 2.1782
+line seg: 32 - 31 len = 2.1782
+line seg: 32 - 33 len = 2.29106
+line seg: 33 - 32 len = 2.29106
+line seg: 33 - 34 len = 2.02172
+line seg: 34 - 33 len = 2.02172
+line seg: 56 - 11 len = 4.53993
+line seg: 11 - 56 len = 4.53993
+line seg: 34 - 35 len = 2.30017
+line seg: 35 - 34 len = 2.30017
+line seg: 35 - 36 len = 2.47173
+line seg: 36 - 35 len = 2.47173
+line seg: 36 - 37 len = 2.35866
+line seg: 37 - 36 len = 2.35866
+line seg: 37 - 38 len = 2.24982
+line seg: 38 - 37 len = 2.24982
+line seg: 38 - 39 len = 2.28582
+line seg: 39 - 38 len = 2.28582
+line seg: 39 - 40 len = 2.40437
+line seg: 40 - 39 len = 2.40437
+line seg: 40 - 41 len = 2.27864
+line seg: 41 - 40 len = 2.27864
+line seg: 41 - 42 len = 2.23098
+line seg: 42 - 41 len = 2.23098
+line seg: 42 - 43 len = 2.09091
+line seg: 43 - 42 len = 2.09091
+line seg: 43 - 44 len = 2.15681
+line seg: 44 - 43 len = 2.15681
+line seg: 45 - 46 len = 3.71237
+line seg: 46 - 45 len = 3.71237
+line seg: 46 - 47 len = 4.2635
+line seg: 47 - 46 len = 4.2635
+line seg: 47 - 48 len = 3.23856
+line seg: 48 - 47 len = 3.23856
+line seg: 48 - 49 len = 2.71361
+line seg: 49 - 48 len = 2.71361
+line seg: 49 - 50 len = 2.04676
+line seg: 50 - 49 len = 2.04676
+line seg: 51 - 52 len = 1.76613
+line seg: 52 - 51 len = 1.76613
+line seg: 52 - 53 len = 2.30979
+line seg: 53 - 52 len = 2.30979
+line seg: 53 - 54 len = 2.80115
+line seg: 54 - 53 len = 2.80115
+line seg: 50 - 57 len = 1.68557
+line seg: 57 - 50 len = 1.68557
+line seg: 54 - 55 len = 3.79286
+line seg: 55 - 54 len = 3.79286
+line seg: 55 - 56 len = 4.79014
+line seg: 56 - 55 len = 4.79014
+line seg: 57 - 58 len = 2.01531
+line seg: 58 - 57 len = 2.01531
+line seg: 58 - 59 len = 2.55252
+line seg: 59 - 58 len = 2.55252
+line seg: 59 - 60 len = 2.76953
+line seg: 60 - 59 len = 2.76953
+line seg: 60 - 61 len = 2.60757
+line seg: 61 - 60 len = 2.60757
+line seg: 61 - 62 len = 2.84424
+line seg: 62 - 61 len = 2.84424
+line seg: 62 - 63 len = 2.98018
+line seg: 63 - 62 len = 2.98018
+line seg: 74 - 51 len = 2.11785
+line seg: 51 - 74 len = 2.11785
+line seg: 75 - 51 len = 1
+line seg: 51 - 75 len = 1
+line seg: 50 - 76 len = 1
+line seg: 76 - 50 len = 1
+line seg: 63 - 64 len = 2.72455
+line seg: 64 - 63 len = 2.72455
+line seg: 64 - 65 len = 3.09325
+line seg: 65 - 64 len = 3.09325
+line seg: 65 - 66 len = 2.79474
+line seg: 66 - 65 len = 2.79474
+line seg: 66 - 67 len = 2.53341
+line seg: 67 - 66 len = 2.53341
+line seg: 67 - 68 len = 2.84464
+line seg: 68 - 67 len = 2.84464
+line seg: 68 - 69 len = 2.37946
+line seg: 69 - 68 len = 2.37946
+line seg: 69 - 70 len = 2.9487
+line seg: 70 - 69 len = 2.9487
+line seg: 70 - 71 len = 2.70369
+line seg: 71 - 70 len = 2.70369
+line seg: 71 - 72 len = 2.7796
+line seg: 72 - 71 len = 2.7796
+line seg: 72 - 73 len = 3.04306
+line seg: 73 - 72 len = 3.04306
+line seg: 73 - 74 len = 2.58214
+line seg: 74 - 73 len = 2.58214
+line seg: 76 - 77 len = 1.68557
+line seg: 77 - 76 len = 1.68557
+line seg: 77 - 78 len = 2.01531
+line seg: 78 - 77 len = 2.01531
+line seg: 78 - 79 len = 2.55252
+line seg: 79 - 78 len = 2.55252
+line seg: 79 - 80 len = 2.76953
+line seg: 80 - 79 len = 2.76953
+line seg: 80 - 81 len = 2.60757
+line seg: 81 - 80 len = 2.60757
+line seg: 81 - 82 len = 2.84424
+line seg: 82 - 81 len = 2.84424
+line seg: 82 - 83 len = 2.98018
+line seg: 83 - 82 len = 2.98018
+line seg: 83 - 84 len = 2.72455
+line seg: 84 - 83 len = 2.72455
+line seg: 84 - 85 len = 3.09325
+line seg: 85 - 84 len = 3.09325
+line seg: 94 - 75 len = 2.11785
+line seg: 75 - 94 len = 2.11785
+line seg: 85 - 86 len = 2.79474
+line seg: 86 - 85 len = 2.79474
+line seg: 96 - 75 len = 1.59123
+line seg: 75 - 96 len = 1.59123
+line seg: 86 - 87 len = 2.53341
+line seg: 87 - 86 len = 2.53341
+line seg: 87 - 88 len = 2.84464
+line seg: 88 - 87 len = 2.84464
+line seg: 88 - 89 len = 2.37946
+line seg: 89 - 88 len = 2.37946
+line seg: 89 - 90 len = 2.9487
+line seg: 90 - 89 len = 2.9487
+line seg: 90 - 91 len = 2.70369
+line seg: 91 - 90 len = 2.70369
+line seg: 91 - 92 len = 2.7796
+line seg: 92 - 91 len = 2.7796
+line seg: 92 - 93 len = 3.04306
+line seg: 93 - 92 len = 3.04306
+line seg: 93 - 94 len = 2.58214
+line seg: 94 - 93 len = 2.58214
+line seg: 95 - 96 len = 1.46844
+line seg: 96 - 95 len = 1.46844
+line seg: 116 - 76 len = 1.59123
+line seg: 76 - 116 len = 1.59123
+line seg: 97 - 98 len = 1.73185
+line seg: 98 - 97 len = 1.73185
+line seg: 98 - 99 len = 2.13281
+line seg: 99 - 98 len = 2.13281
+line seg: 99 - 100 len = 2.58245
+line seg: 100 - 99 len = 2.58245
+line seg: 100 - 101 len = 2.90277
+line seg: 101 - 100 len = 2.90277
+line seg: 101 - 102 len = 2.6552
+line seg: 102 - 101 len = 2.6552
+line seg: 102 - 103 len = 2.71863
+line seg: 103 - 102 len = 2.71863
+line seg: 103 - 104 len = 2.95163
+line seg: 104 - 103 len = 2.95163
+line seg: 195 - 12 len = 1
+line seg: 12 - 195 len = 1
+line seg: 104 - 105 len = 2.70586
+line seg: 105 - 104 len = 2.70586
+line seg: 115 - 95 len = 2.176
+line seg: 95 - 115 len = 2.176
+line seg: 105 - 106 len = 2.86022
+line seg: 106 - 105 len = 2.86022
+line seg: 106 - 107 len = 2.74679
+line seg: 107 - 106 len = 2.74679
+line seg: 97 - 116 len = 1.46844
+line seg: 116 - 97 len = 1.46844
+line seg: 107 - 108 len = 2.57428
+line seg: 108 - 107 len = 2.57428
+line seg: 121 - 95 len = 1.50868
+line seg: 95 - 121 len = 1.50868
+line seg: 23 - 193 len = 1
+line seg: 193 - 23 len = 1
+line seg: 108 - 109 len = 2.76696
+line seg: 109 - 108 len = 2.76696
+line seg: 109 - 110 len = 2.43552
+line seg: 110 - 109 len = 2.43552
+line seg: 97 - 122 len = 1.60378
+line seg: 122 - 97 len = 1.60378
+line seg: 110 - 111 len = 2.89355
+line seg: 111 - 110 len = 2.89355
+line seg: 111 - 112 len = 2.75896
+line seg: 112 - 111 len = 2.75896
+line seg: 112 - 113 len = 2.66035
+line seg: 113 - 112 len = 2.66035
+line seg: 113 - 114 len = 3.05553
+line seg: 114 - 113 len = 3.05553
+line seg: 114 - 115 len = 2.69064
+line seg: 115 - 114 len = 2.69064
+line seg: 117 - 118 len = 2.05314
+line seg: 118 - 117 len = 2.05314
+line seg: 118 - 119 len = 2.58955
+line seg: 119 - 118 len = 2.58955
+line seg: 119 - 120 len = 3.22416
+line seg: 120 - 119 len = 3.22416
+line seg: 120 - 121 len = 2.12446
+line seg: 121 - 120 len = 2.12446
+line seg: 122 - 123 len = 1.93193
+line seg: 123 - 122 len = 1.93193
+line seg: 123 - 124 len = 2.63436
+line seg: 124 - 123 len = 2.63436
+line seg: 124 - 125 len = 2.88749
+line seg: 125 - 124 len = 2.88749
+line seg: 125 - 126 len = 2.44243
+line seg: 126 - 125 len = 2.44243
+line seg: 126 - 127 len = 2.16268
+line seg: 127 - 126 len = 2.16268
+line seg: 127 - 128 len = 2.9458
+line seg: 128 - 127 len = 2.9458
+line seg: 128 - 129 len = 3.01908
+line seg: 129 - 128 len = 3.01908
+line seg: 129 - 130 len = 3.01908
+line seg: 130 - 129 len = 3.01908
+line seg: 142 - 117 len = 2.62764
+line seg: 117 - 142 len = 2.62764
+line seg: 117 - 143 len = 2.68354
+line seg: 143 - 117 len = 2.68354
+line seg: 130 - 131 len = 3.01908
+line seg: 131 - 130 len = 3.01908
+line seg: 131 - 132 len = 3.01908
+line seg: 132 - 131 len = 3.01908
+line seg: 132 - 133 len = 3.01908
+line seg: 133 - 132 len = 3.01908
+line seg: 133 - 134 len = 3.01908
+line seg: 134 - 133 len = 3.01908
+line seg: 134 - 135 len = 3.01908
+line seg: 135 - 134 len = 3.01908
+line seg: 135 - 136 len = 3.01908
+line seg: 136 - 135 len = 3.01908
+line seg: 126 - 145 len = 2.58989
+line seg: 145 - 126 len = 2.58989
+line seg: 136 - 137 len = 3.01908
+line seg: 137 - 136 len = 3.01908
+line seg: 137 - 138 len = 3.01908
+line seg: 138 - 137 len = 3.01908
+line seg: 138 - 139 len = 3.01908
+line seg: 139 - 138 len = 3.01908
+line seg: 139 - 140 len = 3.01908
+line seg: 140 - 139 len = 3.01908
+line seg: 140 - 141 len = 3.01908
+line seg: 141 - 140 len = 3.01908
+line seg: 141 - 142 len = 3.01583
+line seg: 142 - 141 len = 3.01583
+line seg: 143 - 144 len = 2.6739
+line seg: 144 - 143 len = 2.6739
+line seg: 145 - 146 len = 2.76579
+line seg: 146 - 145 len = 2.76579
+line seg: 146 - 147 len = 2.21808
+line seg: 147 - 146 len = 2.21808
+line seg: 147 - 148 len = 3.02269
+line seg: 148 - 147 len = 3.02269
+line seg: 148 - 149 len = 2.98321
+line seg: 149 - 148 len = 2.98321
+line seg: 149 - 150 len = 3.1988
+line seg: 150 - 149 len = 3.1988
+line seg: 150 - 151 len = 3.55293
+line seg: 151 - 150 len = 3.55293
+line seg: 151 - 152 len = 2.98321
+line seg: 152 - 151 len = 2.98321
+line seg: 152 - 153 len = 3.32448
+line seg: 153 - 152 len = 3.32448
+line seg: 161 - 144 len = 3.08477
+line seg: 144 - 161 len = 3.08477
+line seg: 153 - 154 len = 3.42724
+line seg: 154 - 153 len = 3.42724
+line seg: 154 - 155 len = 2.98321
+line seg: 155 - 154 len = 2.98321
+line seg: 165 - 144 len = 2.80562
+line seg: 144 - 165 len = 2.80562
+line seg: 155 - 156 len = 3.45016
+line seg: 156 - 155 len = 3.45016
+line seg: 156 - 157 len = 3.03979
+line seg: 157 - 156 len = 3.03979
+line seg: 157 - 158 len = 2.98321
+line seg: 158 - 157 len = 2.98321
+line seg: 158 - 159 len = 3.76851
+line seg: 159 - 158 len = 3.76851
+line seg: 159 - 160 len = 2.98321
+line seg: 160 - 159 len = 2.98321
+line seg: 160 - 161 len = 2.9965
+line seg: 161 - 160 len = 2.9965
+line seg: 162 - 163 len = 1.93938
+line seg: 163 - 162 len = 1.93938
+line seg: 163 - 164 len = 2.98455
+line seg: 164 - 163 len = 2.98455
+line seg: 164 - 165 len = 3.77044
+line seg: 165 - 164 len = 3.77044
+line seg: 166 - 167 len = 1.73252
+line seg: 167 - 166 len = 1.73252
+line seg: 167 - 168 len = 2.03042
+line seg: 168 - 167 len = 2.03042
+line seg: 146 - 190 len = 2.46776
+line seg: 190 - 146 len = 2.46776
+line seg: 168 - 169 len = 1.95598
+line seg: 169 - 168 len = 1.95598
+line seg: 169 - 170 len = 1.90849
+line seg: 170 - 169 len = 1.90849
+line seg: 170 - 171 len = 2.11324
+line seg: 171 - 170 len = 2.11324
+line seg: 171 - 172 len = 2.30507
+line seg: 172 - 171 len = 2.30507
+line seg: 172 - 173 len = 2.25909
+line seg: 173 - 172 len = 2.25909
+line seg: 173 - 174 len = 2.02001
+line seg: 174 - 173 len = 2.02001
+line seg: 174 - 175 len = 2.22275
+line seg: 175 - 174 len = 2.22275
+line seg: 175 - 176 len = 2.07463
+line seg: 176 - 175 len = 2.07463
+line seg: 189 - 162 len = 2.17684
+line seg: 162 - 189 len = 2.17684
+line seg: 176 - 177 len = 2.27407
+line seg: 177 - 176 len = 2.27407
+line seg: 177 - 178 len = 1.93224
+line seg: 178 - 177 len = 1.93224
+line seg: 194 - 162 len = 1.43909
+line seg: 162 - 194 len = 1.43909
+line seg: 178 - 179 len = 2.16137
+line seg: 179 - 178 len = 2.16137
+line seg: 192 - 166 len = 2.35181
+line seg: 166 - 192 len = 2.35181
+line seg: 179 - 180 len = 1.77843
+line seg: 180 - 179 len = 1.77843
+line seg: 180 - 181 len = 2.34114
+line seg: 181 - 180 len = 2.34114
+line seg: 181 - 182 len = 1.83558
+line seg: 182 - 181 len = 1.83558
+line seg: 182 - 183 len = 2.02889
+line seg: 183 - 182 len = 2.02889
+line seg: 183 - 184 len = 1.99284
+line seg: 184 - 183 len = 1.99284
+line seg: 184 - 185 len = 2.54587
+line seg: 185 - 184 len = 2.54587
+line seg: 185 - 186 len = 2.01829
+line seg: 186 - 185 len = 2.01829
+line seg: 186 - 187 len = 2.14041
+line seg: 187 - 186 len = 2.14041
+line seg: 187 - 188 len = 2.11376
+line seg: 188 - 187 len = 2.11376
+line seg: 188 - 189 len = 2.03809
+line seg: 189 - 188 len = 2.03809
+line seg: 190 - 191 len = 3.39125
+line seg: 191 - 190 len = 3.39125
+line seg: 191 - 192 len = 3.28919
+line seg: 192 - 191 len = 3.28919
+line seg: 193 - 194 len = 1.62002
+line seg: 194 - 193 len = 1.62002
+line seg: 223 - 166 len = 1.43909
+line seg: 166 - 223 len = 1.43909
+line seg: 195 - 196 len = 1.70601
+line seg: 196 - 195 len = 1.70601
+line seg: 196 - 197 len = 1.96567
+line seg: 197 - 196 len = 1.96567
+line seg: 197 - 198 len = 1.72558
+line seg: 198 - 197 len = 1.72558
+line seg: 198 - 199 len = 1.50497
+line seg: 199 - 198 len = 1.50497
+line seg: 199 - 200 len = 1.92083
+line seg: 200 - 199 len = 1.92083
+line seg: 200 - 201 len = 1.61292
+line seg: 201 - 200 len = 1.61292
+line seg: 201 - 202 len = 1.93402
+line seg: 202 - 201 len = 1.93402
+line seg: 202 - 203 len = 1.86163
+line seg: 203 - 202 len = 1.86163
+line seg: 203 - 204 len = 1.68531
+line seg: 204 - 203 len = 1.68531
+line seg: 204 - 205 len = 1.94249
+line seg: 205 - 204 len = 1.94249
+line seg: 205 - 206 len = 1.67282
+line seg: 206 - 205 len = 1.67282
+line seg: 206 - 207 len = 1.87412
+line seg: 207 - 206 len = 1.87412
+line seg: 207 - 208 len = 1.92153
+line seg: 208 - 207 len = 1.92153
+line seg: 222 - 193 len = 2.14354
+line seg: 193 - 222 len = 2.14354
+line seg: 208 - 209 len = 1.62541
+line seg: 209 - 208 len = 1.62541
+line seg: 195 - 223 len = 1.62002
+line seg: 223 - 195 len = 1.62002
+line seg: 209 - 210 len = 1.90834
+line seg: 210 - 209 len = 1.90834
+line seg: 210 - 211 len = 1.50497
+line seg: 211 - 210 len = 1.50497
+line seg: 211 - 212 len = 1.73807
+line seg: 212 - 211 len = 1.73807
+line seg: 212 - 213 len = 1.79567
+line seg: 213 - 212 len = 1.79567
+line seg: 213 - 214 len = 1.50497
+line seg: 214 - 213 len = 1.50497
+line seg: 214 - 215 len = 1.85074
+line seg: 215 - 214 len = 1.85074
+line seg: 215 - 216 len = 1.683
+line seg: 216 - 215 len = 1.683
+line seg: 216 - 217 len = 1.86393
+line seg: 217 - 216 len = 1.86393
+line seg: 217 - 218 len = 1.93172
+line seg: 218 - 217 len = 1.93172
+line seg: 218 - 219 len = 1.61522
+line seg: 219 - 218 len = 1.61522
+line seg: 219 - 220 len = 1.94249
+line seg: 220 - 219 len = 1.94249
+line seg: 220 - 221 len = 1.74291
+line seg: 221 - 220 len = 1.74291
+line seg: 221 - 222 len = 1.82111
+line seg: 222 - 221 len = 1.82111
+464 open segments found
+open segments: 
+line seg: 1 - 2 len = 4.8638
+line seg: 2 - 1 len = 4.8638
+line seg: 2 - 3 len = 4.87336
+line seg: 3 - 2 len = 4.87336
+line seg: 3 - 4 len = 5.1291
+line seg: 4 - 3 len = 5.1291
+line seg: 4 - 5 len = 4.87554
+line seg: 5 - 4 len = 4.87554
+line seg: 5 - 6 len = 5.1291
+line seg: 6 - 5 len = 5.1291
+line seg: 6 - 7 len = 5.01227
+line seg: 7 - 6 len = 5.01227
+line seg: 7 - 8 len = 5.24593
+line seg: 8 - 7 len = 5.24593
+line seg: 8 - 9 len = 5.1099
+line seg: 9 - 8 len = 5.1099
+line seg: 17 - 1 len = 4.09493
+line seg: 1 - 17 len = 4.09493
+line seg: 9 - 10 len = 4.89474
+line seg: 10 - 9 len = 4.89474
+line seg: 10 - 11 len = 4.86625
+line seg: 11 - 10 len = 4.86625
+line seg: 12 - 13 len = 2.37055
+line seg: 13 - 12 len = 2.37055
+line seg: 13 - 14 len = 3.21855
+line seg: 14 - 13 len = 3.21855
+line seg: 14 - 15 len = 3.90482
+line seg: 15 - 14 len = 3.90482
+line seg: 11 - 18 len = 4.10047
+line seg: 18 - 11 len = 4.10047
+line seg: 15 - 16 len = 3.28102
+line seg: 16 - 15 len = 3.28102
+line seg: 16 - 17 len = 3.13013
+line seg: 17 - 16 len = 3.13013
+line seg: 18 - 19 len = 3.20185
+line seg: 19 - 18 len = 3.20185
+line seg: 19 - 20 len = 2.95687
+line seg: 20 - 19 len = 2.95687
+line seg: 20 - 21 len = 3.73626
+line seg: 21 - 20 len = 3.73626
+line seg: 21 - 22 len = 3.43355
+line seg: 22 - 21 len = 3.43355
+line seg: 22 - 23 len = 2.57099
+line seg: 23 - 22 len = 2.57099
+line seg: 1 - 45 len = 4.0252
+line seg: 45 - 1 len = 4.0252
+line seg: 23 - 24 len = 2.34995
+line seg: 24 - 23 len = 2.34995
+line seg: 24 - 25 len = 2.44259
+line seg: 25 - 24 len = 2.44259
+line seg: 25 - 26 len = 2.1557
+line seg: 26 - 25 len = 2.1557
+line seg: 26 - 27 len = 2.37994
+line seg: 27 - 26 len = 2.37994
+line seg: 27 - 28 len = 2.31025
+line seg: 28 - 27 len = 2.31025
+line seg: 44 - 12 len = 2.34805
+line seg: 12 - 44 len = 2.34805
+line seg: 28 - 29 len = 2.37276
+line seg: 29 - 28 len = 2.37276
+line seg: 29 - 30 len = 2.13686
+line seg: 30 - 29 len = 2.13686
+line seg: 30 - 31 len = 2.18503
+line seg: 31 - 30 len = 2.18503
+line seg: 31 - 32 len = 2.1782
+line seg: 32 - 31 len = 2.1782
+line seg: 32 - 33 len = 2.29106
+line seg: 33 - 32 len = 2.29106
+line seg: 33 - 34 len = 2.02172
+line seg: 34 - 33 len = 2.02172
+line seg: 56 - 11 len = 4.53993
+line seg: 11 - 56 len = 4.53993
+line seg: 34 - 35 len = 2.30017
+line seg: 35 - 34 len = 2.30017
+line seg: 35 - 36 len = 2.47173
+line seg: 36 - 35 len = 2.47173
+line seg: 36 - 37 len = 2.35866
+line seg: 37 - 36 len = 2.35866
+line seg: 37 - 38 len = 2.24982
+line seg: 38 - 37 len = 2.24982
+line seg: 38 - 39 len = 2.28582
+line seg: 39 - 38 len = 2.28582
+line seg: 39 - 40 len = 2.40437
+line seg: 40 - 39 len = 2.40437
+line seg: 40 - 41 len = 2.27864
+line seg: 41 - 40 len = 2.27864
+line seg: 41 - 42 len = 2.23098
+line seg: 42 - 41 len = 2.23098
+line seg: 42 - 43 len = 2.09091
+line seg: 43 - 42 len = 2.09091
+line seg: 43 - 44 len = 2.15681
+line seg: 44 - 43 len = 2.15681
+line seg: 45 - 46 len = 3.71237
+line seg: 46 - 45 len = 3.71237
+line seg: 46 - 47 len = 4.2635
+line seg: 47 - 46 len = 4.2635
+line seg: 47 - 48 len = 3.23856
+line seg: 48 - 47 len = 3.23856
+line seg: 48 - 49 len = 2.71361
+line seg: 49 - 48 len = 2.71361
+line seg: 49 - 50 len = 2.04676
+line seg: 50 - 49 len = 2.04676
+line seg: 51 - 52 len = 1.76613
+line seg: 52 - 51 len = 1.76613
+line seg: 52 - 53 len = 2.30979
+line seg: 53 - 52 len = 2.30979
+line seg: 53 - 54 len = 2.80115
+line seg: 54 - 53 len = 2.80115
+line seg: 50 - 57 len = 1.68557
+line seg: 57 - 50 len = 1.68557
+line seg: 54 - 55 len = 3.79286
+line seg: 55 - 54 len = 3.79286
+line seg: 55 - 56 len = 4.79014
+line seg: 56 - 55 len = 4.79014
+line seg: 57 - 58 len = 2.01531
+line seg: 58 - 57 len = 2.01531
+line seg: 58 - 59 len = 2.55252
+line seg: 59 - 58 len = 2.55252
+line seg: 59 - 60 len = 2.76953
+line seg: 60 - 59 len = 2.76953
+line seg: 60 - 61 len = 2.60757
+line seg: 61 - 60 len = 2.60757
+line seg: 61 - 62 len = 2.84424
+line seg: 62 - 61 len = 2.84424
+line seg: 62 - 63 len = 2.98018
+line seg: 63 - 62 len = 2.98018
+line seg: 74 - 51 len = 2.11785
+line seg: 51 - 74 len = 2.11785
+line seg: 75 - 51 len = 1
+line seg: 51 - 75 len = 1
+line seg: 50 - 76 len = 1
+line seg: 76 - 50 len = 1
+line seg: 63 - 64 len = 2.72455
+line seg: 64 - 63 len = 2.72455
+line seg: 64 - 65 len = 3.09325
+line seg: 65 - 64 len = 3.09325
+line seg: 65 - 66 len = 2.79474
+line seg: 66 - 65 len = 2.79474
+line seg: 66 - 67 len = 2.53341
+line seg: 67 - 66 len = 2.53341
+line seg: 67 - 68 len = 2.84464
+line seg: 68 - 67 len = 2.84464
+line seg: 68 - 69 len = 2.37946
+line seg: 69 - 68 len = 2.37946
+line seg: 69 - 70 len = 2.9487
+line seg: 70 - 69 len = 2.9487
+line seg: 70 - 71 len = 2.70369
+line seg: 71 - 70 len = 2.70369
+line seg: 71 - 72 len = 2.7796
+line seg: 72 - 71 len = 2.7796
+line seg: 72 - 73 len = 3.04306
+line seg: 73 - 72 len = 3.04306
+line seg: 73 - 74 len = 2.58214
+line seg: 74 - 73 len = 2.58214
+line seg: 76 - 77 len = 1.68557
+line seg: 77 - 76 len = 1.68557
+line seg: 77 - 78 len = 2.01531
+line seg: 78 - 77 len = 2.01531
+line seg: 78 - 79 len = 2.55252
+line seg: 79 - 78 len = 2.55252
+line seg: 79 - 80 len = 2.76953
+line seg: 80 - 79 len = 2.76953
+line seg: 80 - 81 len = 2.60757
+line seg: 81 - 80 len = 2.60757
+line seg: 81 - 82 len = 2.84424
+line seg: 82 - 81 len = 2.84424
+line seg: 82 - 83 len = 2.98018
+line seg: 83 - 82 len = 2.98018
+line seg: 83 - 84 len = 2.72455
+line seg: 84 - 83 len = 2.72455
+line seg: 84 - 85 len = 3.09325
+line seg: 85 - 84 len = 3.09325
+line seg: 94 - 75 len = 2.11785
+line seg: 75 - 94 len = 2.11785
+line seg: 85 - 86 len = 2.79474
+line seg: 86 - 85 len = 2.79474
+line seg: 96 - 75 len = 1.59123
+line seg: 75 - 96 len = 1.59123
+line seg: 86 - 87 len = 2.53341
+line seg: 87 - 86 len = 2.53341
+line seg: 87 - 88 len = 2.84464
+line seg: 88 - 87 len = 2.84464
+line seg: 88 - 89 len = 2.37946
+line seg: 89 - 88 len = 2.37946
+line seg: 89 - 90 len = 2.9487
+line seg: 90 - 89 len = 2.9487
+line seg: 90 - 91 len = 2.70369
+line seg: 91 - 90 len = 2.70369
+line seg: 91 - 92 len = 2.7796
+line seg: 92 - 91 len = 2.7796
+line seg: 92 - 93 len = 3.04306
+line seg: 93 - 92 len = 3.04306
+line seg: 93 - 94 len = 2.58214
+line seg: 94 - 93 len = 2.58214
+line seg: 95 - 96 len = 1.46844
+line seg: 96 - 95 len = 1.46844
+line seg: 116 - 76 len = 1.59123
+line seg: 76 - 116 len = 1.59123
+line seg: 97 - 98 len = 1.73185
+line seg: 98 - 97 len = 1.73185
+line seg: 98 - 99 len = 2.13281
+line seg: 99 - 98 len = 2.13281
+line seg: 99 - 100 len = 2.58245
+line seg: 100 - 99 len = 2.58245
+line seg: 100 - 101 len = 2.90277
+line seg: 101 - 100 len = 2.90277
+line seg: 101 - 102 len = 2.6552
+line seg: 102 - 101 len = 2.6552
+line seg: 102 - 103 len = 2.71863
+line seg: 103 - 102 len = 2.71863
+line seg: 103 - 104 len = 2.95163
+line seg: 104 - 103 len = 2.95163
+line seg: 195 - 12 len = 1
+line seg: 12 - 195 len = 1
+line seg: 104 - 105 len = 2.70586
+line seg: 105 - 104 len = 2.70586
+line seg: 115 - 95 len = 2.176
+line seg: 95 - 115 len = 2.176
+line seg: 105 - 106 len = 2.86022
+line seg: 106 - 105 len = 2.86022
+line seg: 106 - 107 len = 2.74679
+line seg: 107 - 106 len = 2.74679
+line seg: 97 - 116 len = 1.46844
+line seg: 116 - 97 len = 1.46844
+line seg: 107 - 108 len = 2.57428
+line seg: 108 - 107 len = 2.57428
+line seg: 121 - 95 len = 1.50868
+line seg: 95 - 121 len = 1.50868
+line seg: 23 - 193 len = 1
+line seg: 193 - 23 len = 1
+line seg: 108 - 109 len = 2.76696
+line seg: 109 - 108 len = 2.76696
+line seg: 109 - 110 len = 2.43552
+line seg: 110 - 109 len = 2.43552
+line seg: 97 - 122 len = 1.60378
+line seg: 122 - 97 len = 1.60378
+line seg: 110 - 111 len = 2.89355
+line seg: 111 - 110 len = 2.89355
+line seg: 111 - 112 len = 2.75896
+line seg: 112 - 111 len = 2.75896
+line seg: 112 - 113 len = 2.66035
+line seg: 113 - 112 len = 2.66035
+line seg: 113 - 114 len = 3.05553
+line seg: 114 - 113 len = 3.05553
+line seg: 114 - 115 len = 2.69064
+line seg: 115 - 114 len = 2.69064
+line seg: 117 - 118 len = 2.05314
+line seg: 118 - 117 len = 2.05314
+line seg: 118 - 119 len = 2.58955
+line seg: 119 - 118 len = 2.58955
+line seg: 119 - 120 len = 3.22416
+line seg: 120 - 119 len = 3.22416
+line seg: 120 - 121 len = 2.12446
+line seg: 121 - 120 len = 2.12446
+line seg: 122 - 123 len = 1.93193
+line seg: 123 - 122 len = 1.93193
+line seg: 123 - 124 len = 2.63436
+line seg: 124 - 123 len = 2.63436
+line seg: 124 - 125 len = 2.88749
+line seg: 125 - 124 len = 2.88749
+line seg: 125 - 126 len = 2.44243
+line seg: 126 - 125 len = 2.44243
+line seg: 126 - 127 len = 2.16268
+line seg: 127 - 126 len = 2.16268
+line seg: 127 - 128 len = 2.9458
+line seg: 128 - 127 len = 2.9458
+line seg: 128 - 129 len = 3.01908
+line seg: 129 - 128 len = 3.01908
+line seg: 129 - 130 len = 3.01908
+line seg: 130 - 129 len = 3.01908
+line seg: 142 - 117 len = 2.62764
+line seg: 117 - 142 len = 2.62764
+line seg: 117 - 143 len = 2.68354
+line seg: 143 - 117 len = 2.68354
+line seg: 130 - 131 len = 3.01908
+line seg: 131 - 130 len = 3.01908
+line seg: 131 - 132 len = 3.01908
+line seg: 132 - 131 len = 3.01908
+line seg: 132 - 133 len = 3.01908
+line seg: 133 - 132 len = 3.01908
+line seg: 133 - 134 len = 3.01908
+line seg: 134 - 133 len = 3.01908
+line seg: 134 - 135 len = 3.01908
+line seg: 135 - 134 len = 3.01908
+line seg: 135 - 136 len = 3.01908
+line seg: 136 - 135 len = 3.01908
+line seg: 126 - 145 len = 2.58989
+line seg: 145 - 126 len = 2.58989
+line seg: 136 - 137 len = 3.01908
+line seg: 137 - 136 len = 3.01908
+line seg: 137 - 138 len = 3.01908
+line seg: 138 - 137 len = 3.01908
+line seg: 138 - 139 len = 3.01908
+line seg: 139 - 138 len = 3.01908
+line seg: 139 - 140 len = 3.01908
+line seg: 140 - 139 len = 3.01908
+line seg: 140 - 141 len = 3.01908
+line seg: 141 - 140 len = 3.01908
+line seg: 141 - 142 len = 3.01583
+line seg: 142 - 141 len = 3.01583
+line seg: 143 - 144 len = 2.6739
+line seg: 144 - 143 len = 2.6739
+line seg: 145 - 146 len = 2.76579
+line seg: 146 - 145 len = 2.76579
+line seg: 146 - 147 len = 2.21808
+line seg: 147 - 146 len = 2.21808
+line seg: 147 - 148 len = 3.02269
+line seg: 148 - 147 len = 3.02269
+line seg: 148 - 149 len = 2.98321
+line seg: 149 - 148 len = 2.98321
+line seg: 149 - 150 len = 3.1988
+line seg: 150 - 149 len = 3.1988
+line seg: 150 - 151 len = 3.55293
+line seg: 151 - 150 len = 3.55293
+line seg: 151 - 152 len = 2.98321
+line seg: 152 - 151 len = 2.98321
+line seg: 152 - 153 len = 3.32448
+line seg: 153 - 152 len = 3.32448
+line seg: 161 - 144 len = 3.08477
+line seg: 144 - 161 len = 3.08477
+line seg: 153 - 154 len = 3.42724
+line seg: 154 - 153 len = 3.42724
+line seg: 154 - 155 len = 2.98321
+line seg: 155 - 154 len = 2.98321
+line seg: 165 - 144 len = 2.80562
+line seg: 144 - 165 len = 2.80562
+line seg: 155 - 156 len = 3.45016
+line seg: 156 - 155 len = 3.45016
+line seg: 156 - 157 len = 3.03979
+line seg: 157 - 156 len = 3.03979
+line seg: 157 - 158 len = 2.98321
+line seg: 158 - 157 len = 2.98321
+line seg: 158 - 159 len = 3.76851
+line seg: 159 - 158 len = 3.76851
+line seg: 159 - 160 len = 2.98321
+line seg: 160 - 159 len = 2.98321
+line seg: 160 - 161 len = 2.9965
+line seg: 161 - 160 len = 2.9965
+line seg: 162 - 163 len = 1.93938
+line seg: 163 - 162 len = 1.93938
+line seg: 163 - 164 len = 2.98455
+line seg: 164 - 163 len = 2.98455
+line seg: 164 - 165 len = 3.77044
+line seg: 165 - 164 len = 3.77044
+line seg: 166 - 167 len = 1.73252
+line seg: 167 - 166 len = 1.73252
+line seg: 167 - 168 len = 2.03042
+line seg: 168 - 167 len = 2.03042
+line seg: 146 - 190 len = 2.46776
+line seg: 190 - 146 len = 2.46776
+line seg: 168 - 169 len = 1.95598
+line seg: 169 - 168 len = 1.95598
+line seg: 169 - 170 len = 1.90849
+line seg: 170 - 169 len = 1.90849
+line seg: 170 - 171 len = 2.11324
+line seg: 171 - 170 len = 2.11324
+line seg: 171 - 172 len = 2.30507
+line seg: 172 - 171 len = 2.30507
+line seg: 172 - 173 len = 2.25909
+line seg: 173 - 172 len = 2.25909
+line seg: 173 - 174 len = 2.02001
+line seg: 174 - 173 len = 2.02001
+line seg: 174 - 175 len = 2.22275
+line seg: 175 - 174 len = 2.22275
+line seg: 175 - 176 len = 2.07463
+line seg: 176 - 175 len = 2.07463
+line seg: 189 - 162 len = 2.17684
+line seg: 162 - 189 len = 2.17684
+line seg: 176 - 177 len = 2.27407
+line seg: 177 - 176 len = 2.27407
+line seg: 177 - 178 len = 1.93224
+line seg: 178 - 177 len = 1.93224
+line seg: 194 - 162 len = 1.43909
+line seg: 162 - 194 len = 1.43909
+line seg: 178 - 179 len = 2.16137
+line seg: 179 - 178 len = 2.16137
+line seg: 192 - 166 len = 2.35181
+line seg: 166 - 192 len = 2.35181
+line seg: 179 - 180 len = 1.77843
+line seg: 180 - 179 len = 1.77843
+line seg: 180 - 181 len = 2.34114
+line seg: 181 - 180 len = 2.34114
+line seg: 181 - 182 len = 1.83558
+line seg: 182 - 181 len = 1.83558
+line seg: 182 - 183 len = 2.02889
+line seg: 183 - 182 len = 2.02889
+line seg: 183 - 184 len = 1.99284
+line seg: 184 - 183 len = 1.99284
+line seg: 184 - 185 len = 2.54587
+line seg: 185 - 184 len = 2.54587
+line seg: 185 - 186 len = 2.01829
+line seg: 186 - 185 len = 2.01829
+line seg: 186 - 187 len = 2.14041
+line seg: 187 - 186 len = 2.14041
+line seg: 187 - 188 len = 2.11376
+line seg: 188 - 187 len = 2.11376
+line seg: 188 - 189 len = 2.03809
+line seg: 189 - 188 len = 2.03809
+line seg: 190 - 191 len = 3.39125
+line seg: 191 - 190 len = 3.39125
+line seg: 191 - 192 len = 3.28919
+line seg: 192 - 191 len = 3.28919
+line seg: 193 - 194 len = 1.62002
+line seg: 194 - 193 len = 1.62002
+line seg: 223 - 166 len = 1.43909
+line seg: 166 - 223 len = 1.43909
+line seg: 195 - 196 len = 1.70601
+line seg: 196 - 195 len = 1.70601
+line seg: 196 - 197 len = 1.96567
+line seg: 197 - 196 len = 1.96567
+line seg: 197 - 198 len = 1.72558
+line seg: 198 - 197 len = 1.72558
+line seg: 198 - 199 len = 1.50497
+line seg: 199 - 198 len = 1.50497
+line seg: 199 - 200 len = 1.92083
+line seg: 200 - 199 len = 1.92083
+line seg: 200 - 201 len = 1.61292
+line seg: 201 - 200 len = 1.61292
+line seg: 201 - 202 len = 1.93402
+line seg: 202 - 201 len = 1.93402
+line seg: 202 - 203 len = 1.86163
+line seg: 203 - 202 len = 1.86163
+line seg: 203 - 204 len = 1.68531
+line seg: 204 - 203 len = 1.68531
+line seg: 204 - 205 len = 1.94249
+line seg: 205 - 204 len = 1.94249
+line seg: 205 - 206 len = 1.67282
+line seg: 206 - 205 len = 1.67282
+line seg: 206 - 207 len = 1.87412
+line seg: 207 - 206 len = 1.87412
+line seg: 207 - 208 len = 1.92153
+line seg: 208 - 207 len = 1.92153
+line seg: 222 - 193 len = 2.14354
+line seg: 193 - 222 len = 2.14354
+line seg: 208 - 209 len = 1.62541
+line seg: 209 - 208 len = 1.62541
+line seg: 195 - 223 len = 1.62002
+line seg: 223 - 195 len = 1.62002
+line seg: 209 - 210 len = 1.90834
+line seg: 210 - 209 len = 1.90834
+line seg: 210 - 211 len = 1.50497
+line seg: 211 - 210 len = 1.50497
+line seg: 211 - 212 len = 1.73807
+line seg: 212 - 211 len = 1.73807
+line seg: 212 - 213 len = 1.79567
+line seg: 213 - 212 len = 1.79567
+line seg: 213 - 214 len = 1.50497
+line seg: 214 - 213 len = 1.50497
+line seg: 214 - 215 len = 1.85074
+line seg: 215 - 214 len = 1.85074
+line seg: 215 - 216 len = 1.683
+line seg: 216 - 215 len = 1.683
+line seg: 216 - 217 len = 1.86393
+line seg: 217 - 216 len = 1.86393
+line seg: 217 - 218 len = 1.93172
+line seg: 218 - 217 len = 1.93172
+line seg: 218 - 219 len = 1.61522
+line seg: 219 - 218 len = 1.61522
+line seg: 219 - 220 len = 1.94249
+line seg: 220 - 219 len = 1.94249
+line seg: 220 - 221 len = 1.74291
+line seg: 221 - 220 len = 1.74291
+line seg: 221 - 222 len = 1.82111
+line seg: 222 - 221 len = 1.82111
+464 open segments found
+  46 times used rule Free Triangle (1)
+   0 times used rule Free Triangle (5)
+   0 times used rule Free Triangle (10)
+   0 times used rule Free Triangle (20)
+  41 times used rule Right 60 (1)
+  22 times used rule Left 60 (1)
+  12 times used rule Right 120 (1)
+   0 times used rule Left 120 (1)
+  10 times used rule Left Right 120 (1)
+   8 times used rule Fill Triangle
+   7 times used rule Vis A Vis (1)
+   0 times used rule 2 h Vis A Vis (1)
+  37 times used rule Free Triangle (1)
+   0 times used rule Free Triangle (5)
+   0 times used rule Free Triangle (10)
+   0 times used rule Free Triangle (20)
+  27 times used rule Right 60 (1)
+  30 times used rule Left 60 (1)
+  17 times used rule Right 120 (1)
+   0 times used rule Left 120 (1)
+   6 times used rule Left Right 120 (1)
+   7 times used rule Fill Triangle
+   6 times used rule Vis A Vis (1)
+   0 times used rule 2 h Vis A Vis (1)
+   0 times used rule Free Triangle (1)
+   0 times used rule Free Triangle (5)
+   0 times used rule Free Triangle (10)
+   0 times used rule Free Triangle (20)
+  15 times used rule Right 60 (1)
+   8 times used rule Left 60 (1)
+   0 times used rule Right 120 (1)
+   0 times used rule Left 120 (1)
+   0 times used rule Left Right 120 (1)
+   8 times used rule Fill Triangle
+   7 times used rule Vis A Vis (1)
+   0 times used rule 2 h Vis A Vis (1)
+   2 times used rule Free Triangle (1)
+  13 times used rule Free Triangle (5)
+   1 times used rule Free Triangle (10)
+   0 times used rule Free Triangle (20)
+  24 times used rule Right 60 (1)
+  12 times used rule Left 60 (1)
+   0 times used rule Right 120 (1)
+   0 times used rule Left 120 (1)
+   1 times used rule Left Right 120 (1)
+  10 times used rule Fill Triangle
+   9 times used rule Vis A Vis (1)
+   0 times used rule 2 h Vis A Vis (1)
+  18 times used rule Free Triangle (1)
+   0 times used rule Free Triangle (5)
+   0 times used rule Free Triangle (10)
+   0 times used rule Free Triangle (20)
+  26 times used rule Right 60 (1)
+  10 times used rule Left 60 (1)
+  30 times used rule Right 120 (1)
+   0 times used rule Left 120 (1)
+   1 times used rule Left Right 120 (1)
+  13 times used rule Fill Triangle
+  12 times used rule Vis A Vis (1)
+   0 times used rule 2 h Vis A Vis (1)
+   9 times used rule Free Triangle (1)
+   0 times used rule Free Triangle (5)
+   0 times used rule Free Triangle (10)
+   0 times used rule Free Triangle (20)
+  20 times used rule Right 60 (1)
+   6 times used rule Left 60 (1)
+   1 times used rule Right 120 (1)
+   0 times used rule Left 120 (1)
+   5 times used rule Left Right 120 (1)
+   7 times used rule Fill Triangle
+   6 times used rule Vis A Vis (1)
+   0 times used rule 2 h Vis A Vis (1)
+  29 times used rule Free Triangle (1)
+   0 times used rule Free Triangle (5)
+   0 times used rule Free Triangle (10)
+   0 times used rule Free Triangle (20)
+  21 times used rule Right 60 (1)
+  27 times used rule Left 60 (1)
+  17 times used rule Right 120 (1)
+   0 times used rule Left 120 (1)
+   8 times used rule Left Right 120 (1)
+  10 times used rule Fill Triangle
+   9 times used rule Vis A Vis (1)
+   0 times used rule 2 h Vis A Vis (1)
+  12 times used rule Free Triangle (1)
+   0 times used rule Free Triangle (5)
+   0 times used rule Free Triangle (10)
+   0 times used rule Free Triangle (20)
+  15 times used rule Right 60 (1)
+  17 times used rule Left 60 (1)
+   4 times used rule Right 120 (1)
+   0 times used rule Left 120 (1)
+   7 times used rule Left Right 120 (1)
+  14 times used rule Fill Triangle
+  13 times used rule Vis A Vis (1)
+   0 times used rule 2 h Vis A Vis (1)
+   0 times used rule Free Triangle (1)
+   0 times used rule Free Triangle (5)
+   0 times used rule Free Triangle (10)
+   0 times used rule Free Triangle (20)
+  11 times used rule Right 60 (1)
+  12 times used rule Left 60 (1)
+   0 times used rule Right 120 (1)
+   0 times used rule Left 120 (1)
+   0 times used rule Left Right 120 (1)
+  14 times used rule Fill Triangle
+  13 times used rule Vis A Vis (1)
+   0 times used rule 2 h Vis A Vis (1)
+   1 times used rule Free Triangle (1)
+   0 times used rule Free Triangle (5)
+   0 times used rule Free Triangle (10)
+   0 times used rule Free Triangle (20)
+   6 times used rule Right 60 (1)
+   7 times used rule Left 60 (1)
+   0 times used rule Right 120 (1)
+   0 times used rule Left 120 (1)
+   0 times used rule Left Right 120 (1)
+   8 times used rule Fill Triangle
+   7 times used rule Vis A Vis (1)
+   0 times used rule 2 h Vis A Vis (1)
+   0 times used rule Free Triangle (1)
+   0 times used rule Free Triangle (5)
+   0 times used rule Free Triangle (10)
+   0 times used rule Free Triangle (20)
+   4 times used rule Right 60 (1)
+   4 times used rule Left 60 (1)
+   0 times used rule Right 120 (1)
+   0 times used rule Left 120 (1)
+   0 times used rule Left Right 120 (1)
+  10 times used rule Fill Triangle
+   9 times used rule Vis A Vis (1)
+   0 times used rule 2 h Vis A Vis (1)
+open segments: 
+0 open segments found
+open segments: 
+0 open segments found
+open segments: 
+0 open segments found
+open segments: 
+0 open segments found
+open segments: 
+0 open segments found
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+fail, f = 1.22675 f0 = 1.22675
+very very bad badness
+very very bad badness
+very very bad badness
+fail, f = 2.58069 f0 = 2.58069
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+fail, f = 1.22675 f0 = 1.22675
+very very bad badness
+fail, f = 2.58069 f0 = 2.58069
+fail, f = 1.22675 f0 = 1.22675
+fail, f = 2.07055 f0 = 2.07055
+very very bad badness
+fail, f = 2.58069 f0 = 2.58069
+fail, f = 1.22675 f0 = 1.22675
+fail, f = 2.07055 f0 = 2.07055
+very very bad badness
+fail, f = 2.58069 f0 = 2.58069
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+fail, f = 1.22675 f0 = 1.22675
+fail, f = 2.07055 f0 = 2.07055
+fail, f = 2.58069 f0 = 2.58069
+fail, f = 1.22675 f0 = 1.22675
+fail, f = 2.07055 f0 = 2.07055
+fail, f = 2.58069 f0 = 2.58069
+fail, f = 1.22675 f0 = 1.22675
+fail, f = 2.07055 f0 = 2.07055
+fail, f = 2.58069 f0 = 2.58069
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+fail, f = 0.453455 f0 = 0.453455
+fail, f = 0.618526 f0 = 0.618526
+fail, f = 1.22675 f0 = 1.22675
+very very bad badness
+very very bad badness
+fail, f = 2.58069 f0 = 2.58069
+fail, f = 1.02261 f0 = 1.02261
+fail, f = 0.720802 f0 = 0.720802
+fail, f = 0.434832 f0 = 0.434832
+fail, f = 0.766036 f0 = 0.766036
+fail, f = 1.22675 f0 = 1.22675
+very very bad badness
+fail, f = 2.58069 f0 = 2.58069
+fail, f = 0.168227 f0 = 0.168227
+no success with linesearch
+fail, f = 0.453455 f0 = 0.453455
+fail, f = 0.530378 f0 = 0.530378
+fail, f = 1.02261 f0 = 1.02261
+fail, f = 0.421843 f0 = 0.421843
+fail, f = 0.720802 f0 = 0.720802
+fail, f = 0.434832 f0 = 0.434832
+fail, f = 0.766036 f0 = 0.766036
+fail, f = 1.22675 f0 = 1.22675
+fail, f = 2.58069 f0 = 2.58069
+no success with linesearch
+fail, f = 0.141283 f0 = 0.141283
+no success with linesearch
+fail, f = 0.367157 f0 = 0.367157
+fail, f = 1.34357 f0 = 1.34357
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+fail, f = 1.43608 f0 = 1.43608
+no success with linesearch
+fail, f = 0.453455 f0 = 0.453455
+fail, f = 0.421843 f0 = 0.421843
+no success with linesearch
+fail, f = 0.5657 f0 = 0.5657
+no success with linesearch
+fail, f = 0.515235 f0 = 0.515235
+fail, f = 0.766036 f0 = 0.766036
+fail, f = 0.981631 f0 = 0.981631
+fail, f = 0.605672 f0 = 0.605672
+fail, f = 0.868089 f0 = 0.868089
+fail, f = 1.22675 f0 = 1.22675
+fail, f = 1.02099 f0 = 1.02099
+fail, f = 2.58069 f0 = 2.58069
+no success with linesearch
+fail, f = 0.168227 f0 = 0.168227
+fail, f = 0.367157 f0 = 0.367157
+fail, f = 1.34357 f0 = 1.34357
+fail, f = 0.699622 f0 = 0.699622
+fail, f = 1.43608 f0 = 1.43608
+fail, f = 0.453455 f0 = 0.453455
+no success with linesearch
+fail, f = 0.530378 f0 = 0.530378
+fail, f = 0.421843 f0 = 0.421843
+fail, f = 0.5657 f0 = 0.5657
+no success with linesearch
+fail, f = 0.515235 f0 = 0.515235
+fail, f = 0.720802 f0 = 0.720802
+no success with linesearch
+fail, f = 0.464761 f0 = 0.464761
+fail, f = 0.831749 f0 = 0.831749
+fail, f = 0.434832 f0 = 0.434832
+fail, f = 0.452307 f0 = 0.452307
+fail, f = 0.868089 f0 = 0.868089
+fail, f = 1.22675 f0 = 1.22675
+fail, f = 1.02099 f0 = 1.02099
+fail, f = 2.58069 f0 = 2.58069
+fail, f = 0.141283 f0 = 0.141283
+no success with linesearch
+fail, f = 0.168227 f0 = 0.168227
+fail, f = 0.367157 f0 = 0.367157
+no success with linesearch
+fail, f = 0.578423 f0 = 0.578423
+fail, f = 0.48284 f0 = 0.48284
+fail, f = 0.605476 f0 = 0.605476
+fail, f = 0.908536 f0 = 0.908536
+fail, f = 0.530378 f0 = 0.530378
+no success with linesearch
+fail, f = 0.564522 f0 = 0.564522
+fail, f = 0.5657 f0 = 0.5657
+fail, f = 0.515235 f0 = 0.515235
+fail, f = 0.831749 f0 = 0.831749
+fail, f = 0.434832 f0 = 0.434832
+fail, f = 0.981631 f0 = 0.981631
+fail, f = 1.22675 f0 = 1.22675
+fail, f = 1.02099 f0 = 1.02099
+fail, f = 2.58069 f0 = 2.58069
+fail, f = 0.894517 f0 = 0.894517
+no success with linesearch
+fail, f = 0.141283 f0 = 0.141283
+no success with linesearch
+fail, f = 0.0849953 f0 = 0.0849953
+no success with linesearch
+fail, f = 0.168227 f0 = 0.168227
+fail, f = 0.367157 f0 = 0.367157
+fail, f = 0.747073 f0 = 0.747073
+no success with linesearch
+fail, f = 0.578423 f0 = 0.578423
+fail, f = 0.48284 f0 = 0.48284
+fail, f = 0.879965 f0 = 0.879965
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+very very bad badness
+fail, f = 1.43608 f0 = 1.43608
+fail, f = 0.453455 f0 = 0.453455
+no success with linesearch
+fail, f = 0.530378 f0 = 0.530378
+fail, f = 1.02261 f0 = 1.02261
+fail, f = 0.421843 f0 = 0.421843
+fail, f = 0.5657 f0 = 0.5657
+fail, f = 0.515235 f0 = 0.515235
+fail, f = 0.464761 f0 = 0.464761
+fail, f = 0.831749 f0 = 0.831749
+fail, f = 0.766036 f0 = 0.766036
+fail, f = 0.605672 f0 = 0.605672
+fail, f = 0.868089 f0 = 0.868089
+fail, f = 1.22675 f0 = 1.22675
+fail, f = 1.02099 f0 = 1.02099
+fail, f = 2.58069 f0 = 2.58069
+no success with linesearch
+fail, f = 0.141283 f0 = 0.141283
+no success with linesearch
+fail, f = 0.0849953 f0 = 0.0849953
+no success with linesearch
+fail, f = 0.168227 f0 = 0.168227
+fail, f = 0.983836 f0 = 0.983836
+fail, f = 0.747073 f0 = 0.747073
+fail, f = 0.491091 f0 = 0.491091
+fail, f = 1.34357 f0 = 1.34357
+no success with linesearch
+fail, f = 0.578423 f0 = 0.578423
+no success with linesearch
+fail, f = 0.48284 f0 = 0.48284
+fail, f = 0.879965 f0 = 0.879965
+fail, f = 0.3391 f0 = 0.3391
+fail, f = 0.908536 f0 = 0.908536
+fail, f = 1.43608 f0 = 1.43608
+no success with linesearch
+fail, f = 1.02261 f0 = 1.02261
+fail, f = 0.5657 f0 = 0.5657
+fail, f = 0.720802 f0 = 0.720802
+fail, f = 0.831749 f0 = 0.831749
+fail, f = 0.766036 f0 = 0.766036
+fail, f = 0.452307 f0 = 0.452307
+fail, f = 0.981631 f0 = 0.981631
+fail, f = 0.605672 f0 = 0.605672
+fail, f = 1.22675 f0 = 1.22675
+fail, f = 1.02099 f0 = 1.02099
+fail, f = 2.58069 f0 = 2.58069
+fail, f = 0.894517 f0 = 0.894517
+no success with linesearch
+fail, f = 0.141283 f0 = 0.141283
+no success with linesearch
+fail, f = 0.0849953 f0 = 0.0849953
+fail, f = 0.906892 f0 = 0.906892
+fail, f = 0.983836 f0 = 0.983836
+fail, f = 0.747073 f0 = 0.747073
+fail, f = 0.491091 f0 = 0.491091
+fail, f = 0.578423 f0 = 0.578423
+fail, f = 0.879965 f0 = 0.879965
+fail, f = 0.908536 f0 = 0.908536
+fail, f = 1.43608 f0 = 1.43608
+no success with linesearch
+fail, f = 0.530378 f0 = 0.530378
+no success with linesearch
+fail, f = 1.02261 f0 = 1.02261
+fail, f = 0.5657 f0 = 0.5657
+fail, f = 0.831749 f0 = 0.831749
+fail, f = 0.618526 f0 = 0.618526
+fail, f = 0.434832 f0 = 0.434832
+fail, f = 0.766036 f0 = 0.766036
+fail, f = 0.452307 f0 = 0.452307
+fail, f = 0.605672 f0 = 0.605672
+fail, f = 0.714484 f0 = 0.714484
+fail, f = 0.868089 f0 = 0.868089
+fail, f = 1.22675 f0 = 1.22675
+fail, f = 1.02099 f0 = 1.02099
+Meshing subdomain 1
+blockfill local h
+rel filldist = 0.1
+
+
+Points:           603
+Volume Elements:  3326
+
+Volume elements in qualityclasses:
+   0 - 0.05: 287
+0.05 -  0.1: 159
+ 0.1 - 0.15: 65
+0.15 -  0.2: 105
+ 0.2 - 0.25: 106
+0.25 -  0.3: 156
+ 0.3 - 0.35: 160
+0.35 -  0.4: 149
+ 0.4 - 0.45: 148
+0.45 -  0.5: 186
+ 0.5 - 0.55: 194
+0.55 -  0.6: 204
+ 0.6 - 0.65: 169
+0.65 -  0.7: 167
+ 0.7 - 0.75: 148
+0.75 -  0.8: 222
+ 0.8 - 0.85: 215
+0.85 -  0.9: 247
+ 0.9 - 0.95: 195
+0.95 -    1: 44
+total error: 1.2e+11
+free: 321, fixed: 3005
+
+Start SwapImprove
+free: 85, fixed: 3244
+
+Start SwapImprove
+
+
+Points:           603
+Volume Elements:  3328
+
+Volume elements in qualityclasses:
+   0 - 0.05: 287
+0.05 -  0.1: 166
+ 0.1 - 0.15: 64
+0.15 -  0.2: 106
+ 0.2 - 0.25: 109
+0.25 -  0.3: 157
+ 0.3 - 0.35: 157
+0.35 -  0.4: 149
+ 0.4 - 0.45: 149
+0.45 -  0.5: 187
+ 0.5 - 0.55: 195
+0.55 -  0.6: 203
+ 0.6 - 0.65: 168
+0.65 -  0.7: 167
+ 0.7 - 0.75: 145
+0.75 -  0.8: 219
+ 0.8 - 0.85: 213
+0.85 -  0.9: 250
+ 0.9 - 0.95: 193
+0.95 -    1: 44
+total error: 1.2e+11
+   0 times used rule Free Tetrahedron
+   8 times used rule Tetrahedron 60
+  10 times used rule Tetrahedron 60 with edge(1)
+   0 times used rule Tetrahedron Vis a Vis Point (1)
+   1 times used rule Tetrahedron Vis a Vis Point with edge(1)
+   5 times used rule Tetrahedron Vis a Vis Point with 2 edges (1)
+   7 times used rule Tetrahedron Vis a Vis Point with 3 edges (1)
+   0 times used rule Tetrahedron Vis a Vis Triangle (1)
+   0 times used rule Octaeder 1
+   0 times used rule Octaeder 2
+   0 times used rule Octaeder 2a
+   0 times used rule Pyramid 1
+   1 times used rule Tetrahedron 2 times 60
+   2 times used rule Fill Tetrahedron (1)
+   2 times used rule Tetrahedron 120 (1)
+   0 times used rule Tetrahedron 2 times 120 (1)
+   0 times used rule four Tetrahedron non convex (4)
+   0 times used rule five Tetrahedron non convex (4)
+   0 times used rule four Tetrahedron non convex (6)
+   0 times used rule four Tetrahedron non convex (6)
+   0 times used rule three Tetrahedron non convex (4)
+   0 times used rule three Tetrahedron non convex (6)
+   0 times used rule four Tetrahedron non convex (6)
+   0 times used rule Tetrahedron 2 in 60 (12)
+   0 times used rule Tetrahedron 120, but more than 180 (13)
+   0 times used rule Free Tetrahedron (14)
+   0 times used rule Free Tetrahedron (15)
+
+
+Points:           510
+Volume Elements:  1354
+
+Volume elements in qualityclasses:
+   0 - 0.05: 1
+0.05 -  0.1: 1
+ 0.1 - 0.15: 3
+0.15 -  0.2: 4
+ 0.2 - 0.25: 3
+0.25 -  0.3: 8
+ 0.3 - 0.35: 10
+0.35 -  0.4: 15
+ 0.4 - 0.45: 18
+0.45 -  0.5: 22
+ 0.5 - 0.55: 62
+0.55 -  0.6: 78
+ 0.6 - 0.65: 85
+0.65 -  0.7: 102
+ 0.7 - 0.75: 115
+0.75 -  0.8: 182
+ 0.8 - 0.85: 189
+0.85 -  0.9: 225
+ 0.9 - 0.95: 187
+0.95 -    1: 44
+total error: 2e+03
+start SplitImprove
+Splitt - Improve done
+
+Start SwapImprove
+
+Start SwapImprove2
+Total badness = 2.4e+03
+Total badness = 2.4e+03
+swapimprove2 done
+Start CombineImprove
+illegal tet 818
+illegal tet 1355
+illegal tet 50
+illegal tet 1357
+illegal tet 943
+illegal tet 1363
+illegal tet 449
+illegal tet 1366
+illegal tet 64
+illegal tet 1368
+illegal tet 1125
+illegal tet 1375
+illegal tet 112
+illegal tet 1418
+illegal tet 133
+illegal tet 1376
+illegal tet 1306
+illegal tet 1384
+illegal tet 193
+illegal tet 1387
+illegal tet 224
+illegal tet 1392
+illegal tet 256
+illegal tet 1394
+illegal tet 809
+illegal tet 1400
+illegal tet 281
+illegal tet 1401
+illegal tet 294
+illegal tet 1405
+illegal tet 296
+illegal tet 1411
+illegal tet 1045
+illegal tet 1417
+illegal tet 363
+illegal tet 1422
+illegal tet 367
+illegal tet 1426
+illegal tet 385
+illegal tet 1454
+illegal tet 430
+illegal tet 1444
+illegal tet 985
+illegal tet 1436
+illegal tet 421
+illegal tet 1440
+illegal tet 570
+illegal tet 1447
+illegal tet 1448
+illegal tet 1161
+illegal tet 1452
+illegal tet 917
+illegal tet 1458
+illegal tet 934
+illegal tet 1462
+illegal tet 974
+illegal tet 1466
+illegal tet 1096
+illegal tet 1474
+illegal tet 1347
+illegal tet 1477
+CombineImprove done
+Improve Mesh
+Total badness = 2e+03
+Total badness = 2019.1653
+start SplitImprove
+Total badness = 2019.1653
+Splitt - Improve done
+Total badness = 2014.1667
+Improve Mesh
+Total badness = 2014.1667
+fail, f = 33.01832 f0 = 33.01832
+Total badness = 2014.1667
+
+Start SwapImprove
+Total badness = 2014.1667
+
+Start SwapImprove2
+Total badness = 1850.7314
+Total badness = 1850.7314
+swapimprove2 done
+Improve Mesh
+Total badness = 1850.7314
+Total badness = 1848.0243
+
+
+Points:           511
+Volume Elements:  1311
+
+Volume elements in qualityclasses:
+   0 - 0.05: 0
+0.05 -  0.1: 0
+ 0.1 - 0.15: 0
+0.15 -  0.2: 0
+ 0.2 - 0.25: 0
+0.25 -  0.3: 0
+ 0.3 - 0.35: 0
+0.35 -  0.4: 1
+ 0.4 - 0.45: 3
+0.45 -  0.5: 13
+ 0.5 - 0.55: 40
+0.55 -  0.6: 76
+ 0.6 - 0.65: 98
+0.65 -  0.7: 120
+ 0.7 - 0.75: 164
+0.75 -  0.8: 194
+ 0.8 - 0.85: 175
+0.85 -  0.9: 213
+ 0.9 - 0.95: 175
+0.95 -    1: 39
+total error: 1.7e+03
+Start CombineImprove
+illegal tet 386
+illegal tet 663
+illegal tet 815
+illegal tet 916
+CombineImprove done
+Improve Mesh
+Total badness = 1.8e+03
+Total badness = 1839.349
+start SplitImprove
+Total badness = 1839.349
+Splitt - Improve done
+Total badness = 1839.349
+Improve Mesh
+Total badness = 1839.349
+Total badness = 1839.349
+
+Start SwapImprove
+Total badness = 1839.349
+
+Start SwapImprove2
+Total badness = 1839.3097
+Total badness = 1839.3097
+swapimprove2 done
+Improve Mesh
+Total badness = 1839.3097
+Total badness = 1839.3097
+
+
+Points:           510
+Volume Elements:  1306
+
+Volume elements in qualityclasses:
+   0 - 0.05: 0
+0.05 -  0.1: 0
+ 0.1 - 0.15: 0
+0.15 -  0.2: 0
+ 0.2 - 0.25: 0
+0.25 -  0.3: 0
+ 0.3 - 0.35: 0
+0.35 -  0.4: 1
+ 0.4 - 0.45: 3
+0.45 -  0.5: 13
+ 0.5 - 0.55: 40
+0.55 -  0.6: 74
+ 0.6 - 0.65: 96
+0.65 -  0.7: 121
+ 0.7 - 0.75: 163
+0.75 -  0.8: 194
+ 0.8 - 0.85: 175
+0.85 -  0.9: 212
+ 0.9 - 0.95: 175
+0.95 -    1: 39
+total error: 1.7e+03
+Start CombineImprove
+CombineImprove done
+Improve Mesh
+Total badness = 1.8e+03
+Total badness = 1839.3097
+start SplitImprove
+Total badness = 1839.3097
+Splitt - Improve done
+Total badness = 1839.3097
+Improve Mesh
+Total badness = 1839.3097
+Total badness = 1839.3097
+
+Start SwapImprove
+Total badness = 1839.3097
+
+Start SwapImprove2
+Total badness = 1839.3097
+Total badness = 1839.3097
+swapimprove2 done
+Improve Mesh
+Total badness = 1839.3097
+Total badness = 1839.3097
+
+
+Points:           510
+Volume Elements:  1306
+
+Volume elements in qualityclasses:
+   0 - 0.05: 0
+0.05 -  0.1: 0
+ 0.1 - 0.15: 0
+0.15 -  0.2: 0
+ 0.2 - 0.25: 0
+0.25 -  0.3: 0
+ 0.3 - 0.35: 0
+0.35 -  0.4: 1
+ 0.4 - 0.45: 3
+0.45 -  0.5: 13
+ 0.5 - 0.55: 40
+0.55 -  0.6: 74
+ 0.6 - 0.65: 96
+0.65 -  0.7: 121
+ 0.7 - 0.75: 163
+0.75 -  0.8: 194
+ 0.8 - 0.85: 175
+0.85 -  0.9: 212
+ 0.9 - 0.95: 175
+0.95 -    1: 39
+total error: 1.7e+03
