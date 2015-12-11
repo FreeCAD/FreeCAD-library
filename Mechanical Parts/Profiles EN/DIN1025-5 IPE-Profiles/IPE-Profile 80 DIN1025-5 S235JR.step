@@ -4,7 +4,7 @@ FILE_DESCRIPTION(('FreeCAD Model'),'2;1');
 FILE_NAME(
 '/home/petat/0_CAD/STND_LIB/FreeCAD-library/Mechanical Parts/Profiles 
 EN/DIN1025-5 IPE-Profiles/IPE-Profile 80 DIN1025-5 S235JR.step',
-  '2015-12-10T20:16:45',('Author'),(''),
+  '2015-12-10T21:50:18',('Author'),(''),
   'Open CASCADE STEP processor 6.8','FreeCAD','Unknown');
 FILE_SCHEMA(('AUTOMOTIVE_DESIGN_CC2 { 1 2 10303 214 -1 1 5 4 }'));
 ENDSEC;

@@ -3,8 +3,8 @@ HEADER;
 FILE_DESCRIPTION(('FreeCAD Model'),'2;1');
 FILE_NAME(
 '/home/petat/0_CAD/STND_LIB/FreeCAD-library/Mechanical Parts/Profiles 
-EN/EN10059 Recangular steel bars/Square Bar 50 EN10059 S235JR.step',
-  '2015-12-09T19:04:04',('Author'),(''),
+EN/EN10059 Square steel bars/Square Bar 50 EN10059 S235JR.step',
+  '2015-12-10T21:37:28',('Author'),(''),
   'Open CASCADE STEP processor 6.8','FreeCAD','Unknown');
 FILE_SCHEMA(('AUTOMOTIVE_DESIGN_CC2 { 1 2 10303 214 -1 1 5 4 }'));
 ENDSEC;
