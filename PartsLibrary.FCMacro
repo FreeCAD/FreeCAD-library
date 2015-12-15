@@ -200,9 +200,9 @@ class ExpDockWidget(QtGui.QDockWidget):
                 if not repo.remotes:
                     FreeCAD.Console.PrintWarning("No remote repository set.\n")
         if not repo:
-            updatebutton.setEnabled(False)
-            configbutton.setEnabled(False)
-            pushbutton.setEnabled(False)
+            self.updatebutton.setEnabled(False)
+            self.configbutton.setEnabled(False)
+            self.pushbutton.setEnabled(False)
             
         self.retranslateUi()
         container.setLayout(grid)
