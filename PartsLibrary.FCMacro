@@ -191,14 +191,14 @@ class ExpDockWidget(QtGui.QDockWidget):
             import git
         except:
             FreeCAD.Console.PrintWarning("python-git not found. Git-related functions are disabled\n")
-        try:
-            repo = git.Repo(LIBRARYPATH)
-        except:
-            FreeCAD.Console.PrintError("Your library is not a valid Git repository. Please clone it with git first.\n")
-            return
-        if not repo.remotes:
-            FreeCAD.Console.PrintWarning("No remote repository set.\n")
-            return
+        else:
+            try:
+                repo = git.Repo(LIBRARYPATH)
+            except:
+                FreeCAD.Console.PrintError("Your library is not a valid Git repository. Please clone it with git first.\n")
+            else:
+                if not repo.remotes:
+                    FreeCAD.Console.PrintWarning("No remote repository set.\n")
         if not repo:
             updatebutton.setEnabled(False)
             configbutton.setEnabled(False)
