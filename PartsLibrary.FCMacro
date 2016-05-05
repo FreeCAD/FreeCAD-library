@@ -114,16 +114,16 @@ class ExpDockWidget(QtGui.QDockWidget):
         self.dirmodel.setNameFilters(["*.fcstd","*.FcStd","*.FCSTD","*.stp","*.STP","*.step","*.STEP", "*.brp", "*.BRP", "*.brep", "*.BREP"])
         self.dirmodel.setNameFilterDisables(0)
 
-        folder = QtGui.QTreeView()
-        folder.setModel(self.dirmodel)
-        folder.clicked[QtCore.QModelIndex].connect(self.clicked)
-        folder.doubleClicked[QtCore.QModelIndex].connect(self.doubleclicked)
+        self.folder = QtGui.QTreeView()
+        self.folder.setModel(self.dirmodel)
+        self.folder.clicked[QtCore.QModelIndex].connect(self.clicked)
+        self.folder.doubleClicked[QtCore.QModelIndex].connect(self.doubleclicked)
         # Don't show columns for size, file type, and last modified
-        folder.setHeaderHidden(True)
-        folder.hideColumn(1)
-        folder.hideColumn(2)
-        folder.hideColumn(3)
-        folder.setRootIndex(self.dirmodel.index(LIBRARYPATH))
+        self.folder.setHeaderHidden(True)
+        self.folder.hideColumn(1)
+        self.folder.hideColumn(2)
+        self.folder.hideColumn(3)
+        self.folder.setRootIndex(self.dirmodel.index(LIBRARYPATH))
         
         self.preview = QtGui.QLabel()
         self.preview.setFixedHeight(128)
@@ -155,8 +155,13 @@ class ExpDockWidget(QtGui.QDockWidget):
         self.pushbutton.clicked.connect(self.pushlibrary)
         self.pushbutton.hide()
         
+        self.prevbutton = QtGui.QPushButton()
+        self.prevbutton.clicked.connect(self.showpreview)
+        self.prevbutton.setStyleSheet("text-align: left;")
+        
         self.optbutton = QtGui.QPushButton()
         self.optbutton.clicked.connect(self.showoptions)
+        self.optbutton.setStyleSheet("text-align: left;")
         
         self.fcstdCB = QtGui.QCheckBox('FCStd')
         self.fcstdCB.setCheckState(QtCore.Qt.Checked)
@@ -173,35 +178,38 @@ class ExpDockWidget(QtGui.QDockWidget):
         grid = QtGui.QGridLayout()
         grid.setSpacing(10)
 
-        grid.addWidget(folder,0,0,1,3)
-        grid.addWidget(self.updatebutton,1,1,1,1)
-        grid.addWidget(self.configbutton,1,2,1,1)
-        grid.addWidget(self.preview,1,0,5,1)
-        grid.addWidget(self.formatLabel,2,1,1,2)
-        grid.addWidget(self.fcstdCB,3,1,1,2)
-        grid.addWidget(self.stepCB,4,1,1,2)
-        grid.addWidget(self.stlCB,5,1,1,2)
-        grid.addWidget(self.savebutton,6,1,1,1)
-        grid.addWidget(self.pushbutton,6,2,1,1)
-        grid.addWidget(self.optbutton,6,0,1,1)
+        grid.addWidget(self.folder,0,0,1,2)
+        grid.addWidget(self.prevbutton,1,0,1,2)
+        grid.addWidget(self.preview,2,0,1,2)
+        grid.addWidget(self.optbutton,3,0,1,2)
+        
+        grid.addWidget(self.updatebutton,4,0,1,1)
+        grid.addWidget(self.configbutton,4,1,1,1)
+        grid.addWidget(self.formatLabel,5,0,1,2)
+        grid.addWidget(self.fcstdCB,6,0,1,2)
+        grid.addWidget(self.stepCB,7,0,1,2)
+        grid.addWidget(self.stlCB,8,0,1,2)
+        grid.addWidget(self.savebutton,9,0,1,1)
+        grid.addWidget(self.pushbutton,9,1,1,1)
         
         global repo
         repo = None
         try:
             import git
         except:
-            FreeCAD.Console.PrintWarning("python-git not found. Git-related functions are disabled\n")
+            FreeCAD.Console.PrintWarning("python-git not found. Git-related functions will be disabled\n")
         else:
             try:
                 repo = git.Repo(LIBRARYPATH)
             except:
-                FreeCAD.Console.PrintError("Your library is not a valid Git repository. Please clone it with git first.\n")
+                FreeCAD.Console.PrintWarning("Your library is not a valid Git repository. Git-related functions will be disabled\n")
             else:
                 if not repo.remotes:
-                    FreeCAD.Console.PrintWarning("No remote repository set.\n")
+                    FreeCAD.Console.PrintWarning("No remote repository set. Git-related functions will be disabled\n")
+                    repo = None
         if not repo:
             self.updatebutton.setEnabled(False)
-            self.configbutton.setEnabled(False)
+            #self.configbutton.setEnabled(False)
             self.pushbutton.setEnabled(False)
             
         self.retranslateUi()
@@ -209,13 +217,14 @@ class ExpDockWidget(QtGui.QDockWidget):
         self.setWidget(container)
         
     def retranslateUi(self):
-        self.setWindowTitle(QtGui.QApplication.translate("PartsLibrary", "PartsLibrary", None, QtGui.QApplication.UnicodeUTF8))
-        self.updatebutton.setText(QtGui.QApplication.translate("PartsLibrary", "Update", None, QtGui.QApplication.UnicodeUTF8))
+        self.setWindowTitle(QtGui.QApplication.translate("PartsLibrary", "Parts Library", None, QtGui.QApplication.UnicodeUTF8))
+        self.updatebutton.setText(QtGui.QApplication.translate("PartsLibrary", "Update from Git", None, QtGui.QApplication.UnicodeUTF8))
         self.configbutton.setText(QtGui.QApplication.translate("PartsLibrary", "Config", None, QtGui.QApplication.UnicodeUTF8))
         self.formatLabel.setText(QtGui.QApplication.translate("PartsLibrary", "Add to library", None, QtGui.QApplication.UnicodeUTF8))
         self.savebutton.setText(QtGui.QApplication.translate("PartsLibrary", "Save", None, QtGui.QApplication.UnicodeUTF8))
-        self.pushbutton.setText(QtGui.QApplication.translate("PartsLibrary", "Push", None, QtGui.QApplication.UnicodeUTF8))
-        self.optbutton.setText(QtGui.QApplication.translate("PartsLibrary", "Show options >>", None, QtGui.QApplication.UnicodeUTF8))
+        self.pushbutton.setText(QtGui.QApplication.translate("PartsLibrary", "Push to Git", None, QtGui.QApplication.UnicodeUTF8))
+        self.optbutton.setText(QtGui.QApplication.translate("PartsLibrary", "Options ⏷", None, QtGui.QApplication.UnicodeUTF8))
+        self.prevbutton.setText(QtGui.QApplication.translate("PartsLibrary", "Preview ⏶", None, QtGui.QApplication.UnicodeUTF8))
 
     def clicked(self, index):
         path = self.dirmodel.filePath(index)
@@ -289,33 +298,64 @@ class ExpDockWidget(QtGui.QDockWidget):
         
     def setconfig(self):
         d = ConfigDialog()
-        d.lineEdit.setText(repo.remote().url)
-        if hasattr(repo.remote(),"pushurl"):
-            d.lineEdit_2.setText(repo.remote().pushurl)
+        if repo:
+            d.lineEdit.setText(repo.remote().url)
+            if hasattr(repo.remote(),"pushurl"):
+                d.lineEdit_2.setText(repo.remote().pushurl)
+            else:
+                d.lineEdit_2.setText(repo.remote().url)
         else:
-            d.lineEdit_2.setText(repo.remote().url)
+            d.groupBox.setEnabled(False)
+            d.groupBox_2.setEnabled(False)
         r = d.exec_()
         
     def showoptions(self):
         controls = [self.updatebutton,self.configbutton,self.formatLabel,
                     self.fcstdCB,self.stepCB,self.stlCB,self.savebutton,self.pushbutton]
+        tree = [self.preview]
         if self.updatebutton.isVisible():
             for c in controls:
                 c.hide()
-            self.optbutton.setText(QtGui.QApplication.translate("PartsLibrary", "Show options >>", None, QtGui.QApplication.UnicodeUTF8))
+            for c in tree:
+                c.show()
+            self.optbutton.setText(QtGui.QApplication.translate("PartsLibrary", "Options ⏷", None, QtGui.QApplication.UnicodeUTF8))
         else:
             for c in controls:
                 c.show()
-            self.optbutton.setText(QtGui.QApplication.translate("PartsLibrary", "Hide options <<", None, QtGui.QApplication.UnicodeUTF8))
+            for c in tree:
+                c.hide()
+            self.optbutton.setText(QtGui.QApplication.translate("PartsLibrary", "Options ⏶", None, QtGui.QApplication.UnicodeUTF8))
+
+    def showpreview(self):
+        if self.preview.isVisible():
+            self.preview.hide()
+            self.prevbutton.setText(QtGui.QApplication.translate("PartsLibrary", "Preview ⏷", None, QtGui.QApplication.UnicodeUTF8))
+        else:
+            self.preview.show()
+            self.prevbutton.setText(QtGui.QApplication.translate("PartsLibrary", "Preview ⏶", None, QtGui.QApplication.UnicodeUTF8))
+
 
 
 class ConfigDialog(QtGui.QDialog):
     def __init__(self):
         QtGui.QDialog.__init__(self)
         self.setObjectName("GitConfig")
-        self.resize(318, 202)
+        self.resize(420, 250)
         self.verticalLayout = QtGui.QVBoxLayout(self)
         self.verticalLayout.setObjectName("verticalLayout")
+        
+        self.groupBox_3 = QtGui.QGroupBox(self)
+        self.groupBox_3.setObjectName("groupBox_3")
+        self.horizontalLayout_3 = QtGui.QHBoxLayout(self.groupBox_3)
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.lineEdit_3 = QtGui.QLineEdit(self.groupBox_3)
+        self.lineEdit_3.setObjectName("lineEdit_3")
+        self.horizontalLayout_3.addWidget(self.lineEdit_3)
+        self.pushButton_3 = QtGui.QPushButton(self.groupBox_3)
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.horizontalLayout_3.addWidget(self.pushButton_3)
+        self.verticalLayout.addWidget(self.groupBox_3)
+        
         self.groupBox = QtGui.QGroupBox(self)
         self.groupBox.setObjectName("groupBox")
         self.horizontalLayout = QtGui.QHBoxLayout(self.groupBox)
@@ -327,6 +367,7 @@ class ConfigDialog(QtGui.QDialog):
         self.pushButton.setObjectName("pushButton")
         self.horizontalLayout.addWidget(self.pushButton)
         self.verticalLayout.addWidget(self.groupBox)
+        
         self.groupBox_2 = QtGui.QGroupBox(self)
         self.groupBox_2.setObjectName("groupBox_2")
         self.verticalLayout_2 = QtGui.QVBoxLayout(self.groupBox_2)
@@ -338,6 +379,7 @@ class ConfigDialog(QtGui.QDialog):
         self.label.setObjectName("label")
         self.verticalLayout_2.addWidget(self.label)
         self.verticalLayout.addWidget(self.groupBox_2)
+        
         self.buttonBox = QtGui.QDialogButtonBox(self)
         self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
         self.buttonBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Ok)
@@ -348,20 +390,34 @@ class ConfigDialog(QtGui.QDialog):
         QtCore.QObject.connect(self.buttonBox, QtCore.SIGNAL("accepted()"), self.accept)
         QtCore.QObject.connect(self.buttonBox, QtCore.SIGNAL("rejected()"), self.reject)
         QtCore.QObject.connect(self.pushButton, QtCore.SIGNAL("clicked()"), self.setdefaulturl)
+        QtCore.QObject.connect(self.pushButton_3, QtCore.SIGNAL("clicked()"), self.changepath)
         QtCore.QMetaObject.connectSlotsByName(self)
+        
+        librarypath = FreeCAD.ParamGet('User parameter:Plugins/parts_library').GetString('destination','')
+        self.lineEdit_3.setText(librarypath)
 
     def retranslateUi(self):
-        self.setWindowTitle(QtGui.QApplication.translate("PartsLibrary", "PartsLibrary", None, QtGui.QApplication.UnicodeUTF8))
-        self.groupBox.setTitle(QtGui.QApplication.translate("PartsLibrary", "pull server (where you get your updates from)", None, QtGui.QApplication.UnicodeUTF8))
+        self.setWindowTitle(QtGui.QApplication.translate("PartsLibrary", "Parts library configuration", None, QtGui.QApplication.UnicodeUTF8))
+        self.groupBox.setTitle(QtGui.QApplication.translate("PartsLibrary", "Pull server (where you get your updates from)", None, QtGui.QApplication.UnicodeUTF8))
         self.lineEdit.setToolTip(QtGui.QApplication.translate("PartsLibrary", "Enter the URL of the pull server here", None, QtGui.QApplication.UnicodeUTF8))
         self.pushButton.setToolTip(QtGui.QApplication.translate("PartsLibrary", "Use the official FreeCAD-library repository", None, QtGui.QApplication.UnicodeUTF8))
         self.pushButton.setText(QtGui.QApplication.translate("PartsLibrary", "use official", None, QtGui.QApplication.UnicodeUTF8))
-        self.groupBox_2.setTitle(QtGui.QApplication.translate("PartsLibrary", "push server (where you push your changes to)", None, QtGui.QApplication.UnicodeUTF8))
+        self.groupBox_2.setTitle(QtGui.QApplication.translate("PartsLibrary", "Push server (where you push your changes to)", None, QtGui.QApplication.UnicodeUTF8))
         self.lineEdit_2.setToolTip(QtGui.QApplication.translate("PartsLibrary", "Enter the URL of the push server here", None, QtGui.QApplication.UnicodeUTF8))
         self.label.setText(QtGui.QApplication.translate("PartsLibrary", "Warning: You need write permission on this server", None, QtGui.QApplication.UnicodeUTF8))
+        self.groupBox_3.setTitle(QtGui.QApplication.translate("PartsLibrary", "Library path", None, QtGui.QApplication.UnicodeUTF8))
+        self.lineEdit_3.setToolTip(QtGui.QApplication.translate("PartsLibrary", "Enter the path to your parts library", None, QtGui.QApplication.UnicodeUTF8))
+        self.pushButton_3.setToolTip(QtGui.QApplication.translate("PartsLibrary", "Browse to your path library", None, QtGui.QApplication.UnicodeUTF8))
+        self.pushButton_3.setText(QtGui.QApplication.translate("PartsLibrary", "...", None, QtGui.QApplication.UnicodeUTF8))
 
     def setdefaulturl(self):
         self.lineEdit.setText("https://github.com/FreeCAD/FreeCAD-library.git")
+        
+    def changepath(self):
+        librarypath = FreeCAD.ParamGet('User parameter:Plugins/parts_library').GetString('destination','')
+        np = QtGui.QFileDialog.getExistingDirectory(self,"Location of your existing Parts library",librarypath)
+        if np:
+            self.lineEdit_3.setText(librarypath)
         
     def accept(self):
         cw = repo.remote().config_writer
@@ -371,6 +427,8 @@ class ConfigDialog(QtGui.QDialog):
             cw.set("pushurl", str(self.lineEdit_2.text()))
         if hasattr(cw,"release"):
             cw.release()
+        if self.lineEdit_3.text():
+            FreeCAD.ParamGet('User parameter:Plugins/parts_library').SetString('destination',np)
         QtGui.QDialog.accept(self)
 
 if QtCore.QDir(LIBRARYPATH).exists():
