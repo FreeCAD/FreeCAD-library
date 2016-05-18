@@ -46,8 +46,8 @@ anywhere and import its files in your FreeCAD projects. Inside the library, ther
 macro (PartsLibrary.FCMacro) that you can place in your FreeCAD macros folder. That macro creates 
 a browser window inside FreeCAD, from which you can easily add the parts by double-clicking them.
 
-Sharing your models
--------------------
+Sharing your models from the macro
+----------------------------------
 
 The macro also allows gives a couple of other possibilities,such as adding new objects to it, and
 sharing your objects with others. To be able to share, you will need the python-git package
