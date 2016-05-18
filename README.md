@@ -8,14 +8,24 @@ used as a repository of parts by FreeCAD in the future.
 Contributing to the library
 ---------------------------
 
-If you are interested in contributing to this library, please ask for write access to this repository
-on this FreeCAD forum thread: http://forum.freecadweb.org/viewtopic.php?f=19&t=4205
+If you made someinteresting objects with FreeCAD, why not share them here? Others might find them
+useful. The procedure is simple:
+
+1. Create a github account for yourself
+2. Fork this repository using the "Fork" button on the top right corner of this page
+3. Follow the [github instructions](https://help.github.com/articles/fork-a-repo/) to clone your fork on your computer
+4. Make all the change you need, create more folders if necessary, and place your files in them
+5. Upload (push) your changes to your fork on github (refer to the github help for instructions)
+6. When your fork has been updated, you can submit a [pull request](https://help.github.com/articles/creating-a-pull-request/) to have your changes merged into the official library. A member of the community will review your proosed additions andaccept the merge.
 
 Each Part should be correctly named, and placed into subdirectories by family or type. They should also
 be available in both .FcStd and .stp formats, and optionally in .stl format (because github lets you
 visualize them). They should also be as simple as possible, and parametric
 so users can easily change their dimensions. In the file properties of each .FcStd file, the author
 should also be mentioned, and the license information if available.
+
+If you are interested in contributing to this library on a more long-term basis, please ask for write 
+access to this repository on this FreeCAD forum thread: http://forum.freecadweb.org/viewtopic.php?f=19&t=4205
 
 License
 -------
