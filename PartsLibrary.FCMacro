@@ -435,10 +435,15 @@ if QtCore.QDir(LIBRARYPATH).exists():
     m = FreeCADGui.getMainWindow()
     w = m.findChild(QtGui.QDockWidget,"PartsLibrary")
     if w:
-        if w.isVisible():
-            w.hide()
+        if hasattr(w,"isVisible"):
+            if w.isVisible():
+                w.hide()
+            else:
+                w.show()
         else:
-            w.show()
+            # something went wrong with our widget... Recreate it
+            del w
+            m.addDockWidget(QtCore.Qt.RightDockWidgetArea,ExpDockWidget(LIBRARYPATH))
     else:
         m.addDockWidget(QtCore.Qt.RightDockWidgetArea,ExpDockWidget(LIBRARYPATH))
 else:
