@@ -1,4 +1,6 @@
 *.pyc
 *.fcstd1
-*.FcStd1
+*.FCStd1
+*.fcstd2
+*.FCStd2
 Private
