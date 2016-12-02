@@ -417,28 +417,34 @@ class ConfigDialog(QtGui.QDialog):
         librarypath = FreeCAD.ParamGet('User parameter:Plugins/parts_library').GetString('destination','')
         np = QtGui.QFileDialog.getExistingDirectory(self,"Location of your existing Parts library",librarypath)
         if np:
-            self.lineEdit_3.setText(librarypath)
-        
+            self.lineEdit_3.setText(np)
+
     def accept(self):
-        cw = repo.remote().config_writer
-        if self.lineEdit.text():
-            cw.set("url", str(self.lineEdit.text()))
-        if self.lineEdit_2.text():
-            cw.set("pushurl", str(self.lineEdit_2.text()))
-        if hasattr(cw,"release"):
-            cw.release()
+        if repo:
+            cw = repo.remote().config_writer
+            if self.lineEdit.text():
+                cw.set("url", str(self.lineEdit.text()))
+            if self.lineEdit_2.text():
+                cw.set("pushurl", str(self.lineEdit_2.text()))
+            if hasattr(cw,"release"):
+                cw.release()
         if self.lineEdit_3.text():
-            FreeCAD.ParamGet('User parameter:Plugins/parts_library').SetString('destination',np)
+            FreeCAD.ParamGet('User parameter:Plugins/parts_library').SetString('destination',self.lineEdit_3.text())
         QtGui.QDialog.accept(self)
 
 if QtCore.QDir(LIBRARYPATH).exists():
     m = FreeCADGui.getMainWindow()
     w = m.findChild(QtGui.QDockWidget,"PartsLibrary")
     if w:
-        if w.isVisible():
-            w.hide()
+        if hasattr(w,"isVisible"):
+            if w.isVisible():
+                w.hide()
+            else:
+                w.show()
         else:
-            w.show()
+            # something went wrong with our widget... Recreate it
+            del w
+            m.addDockWidget(QtCore.Qt.RightDockWidgetArea,ExpDockWidget(LIBRARYPATH))
     else:
         m.addDockWidget(QtCore.Qt.RightDockWidgetArea,ExpDockWidget(LIBRARYPATH))
 else:

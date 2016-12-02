@@ -41,10 +41,16 @@ is mentioned in the commit message.
 Install
 -------
 
+As the library is part of the [FreeCAD addons](https://github.com/FreeCAD/FreeCAD-addons), the easiest way
+to install and keep the library updated is through the addons installer. But you can also install it
+manually:
+
 The library is a simple container for FreeCAD (.fcstd) and STEP (.stp) files. You can download it
-anywhere and import its files in your FreeCAD projects. Inside the library, there is also a FreeCAD
+anywhere and import its files in your FreeCAD projects. Inside the library, there is a FreeCAD
 macro (PartsLibrary.FCMacro) that you can place in your FreeCAD macros folder. That macro creates 
 a browser window inside FreeCAD, from which you can easily add the parts by double-clicking them.
+
+![](http://www.freecadweb.org/wiki/images/c/c5/Parts-library.jpg)
 
 Sharing your models from the macro
 ----------------------------------
