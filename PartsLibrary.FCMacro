@@ -22,6 +22,7 @@
 #*   USA                                                                   *
 #*                                                                         *
 #***************************************************************************
+from __future__ import print_function
 
 __title__="FreeCAD Parts Library Macro"
 __author__ = "Yorik van Havre"
@@ -448,4 +449,4 @@ if QtCore.QDir(LIBRARYPATH).exists():
     else:
         m.addDockWidget(QtCore.Qt.RightDockWidgetArea,ExpDockWidget(LIBRARYPATH))
 else:
-    print "Library path ", LIBRARYPATH, "not found."
+    print("Library path ", LIBRARYPATH, "not found.")
