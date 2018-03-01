@@ -24,6 +24,8 @@ visualize them). They should also be as simple as possible, and parametric
 so users can easily change their dimensions. In the file properties of each .FcStd file, the author
 should also be mentioned, and the license information if available.
 
+**Note**: Please DO NOT use accented characters in your file names, thanks!!!
+
 If you are interested in contributing to this library on a more long-term basis, please ask for write 
 access to this repository on this FreeCAD forum thread: http://forum.freecadweb.org/viewtopic.php?f=19&t=4205
 
