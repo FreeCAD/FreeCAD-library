@@ -74,7 +74,7 @@ considered when pushing, so you can place private Parts there.
 '''
 
 
-import FreeCAD, FreeCADGui, Part, zipfile, tempfile, Mesh, os, subprocess
+import sys, FreeCAD, FreeCADGui, Part, zipfile, tempfile, Mesh, os, subprocess
 from PySide import QtGui, QtCore
 
 param = FreeCAD.ParamGet('User parameter:Plugins/parts_library')
