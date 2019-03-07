@@ -22,6 +22,7 @@
 #*   USA                                                                   *
 #*                                                                         *
 #***************************************************************************
+from __future__ import print_function
 
 __title__="FreeCAD Parts Library Macro"
 __author__ = "Yorik van Havre"
@@ -73,7 +74,7 @@ considered when pushing, so you can place private Parts there.
 '''
 
 
-import FreeCAD, FreeCADGui, Part, zipfile, tempfile, Mesh, os, subprocess
+import sys, FreeCAD, FreeCADGui, Part, zipfile, tempfile, Mesh, os, subprocess
 from PySide import QtGui, QtCore
 
 param = FreeCAD.ParamGet('User parameter:Plugins/parts_library')
@@ -86,6 +87,24 @@ else:
     folderDialog = QtGui.QFileDialog.getExistingDirectory(None,QtGui.QApplication.translate("PartsLibrary", "Location of your existing Parts library", None, QtGui.QApplication.UnicodeUTF8))
     param.SetString('destination',folderDialog)
     LIBRARYPATH = param.GetString('destination')
+
+
+
+try:
+    _encoding = QtGui.QApplication.UnicodeUTF8
+    def translate(context, text, utf8_decode=True):
+        if sys.version_info.major >= 3:
+            return QtGui.QApplication.translate(context, text, None, _encoding)
+        else:
+            return QtGui.QApplication.translate(context, text, None, _encoding)
+except AttributeError:
+    def translate(context, text, utf8_decode=False):
+        if sys.version_info.major >= 3 or utf8_decode:
+            return QtGui.QApplication.translate(context, text, None)
+        else:
+            return QtGui.QApplication.translate(context, text, None).encode("utf8")
+
+
 
 class ExpFileSystemModel(QtGui.QFileSystemModel):
     "a custom QFileSystemModel that displays freecad file icons"
@@ -217,14 +236,14 @@ class ExpDockWidget(QtGui.QDockWidget):
         self.setWidget(container)
         
     def retranslateUi(self):
-        self.setWindowTitle(QtGui.QApplication.translate("PartsLibrary", "Parts Library", None, QtGui.QApplication.UnicodeUTF8))
-        self.updatebutton.setText(QtGui.QApplication.translate("PartsLibrary", "Update from Git", None, QtGui.QApplication.UnicodeUTF8))
-        self.configbutton.setText(QtGui.QApplication.translate("PartsLibrary", "Config", None, QtGui.QApplication.UnicodeUTF8))
-        self.formatLabel.setText(QtGui.QApplication.translate("PartsLibrary", "Add to library", None, QtGui.QApplication.UnicodeUTF8))
-        self.savebutton.setText(QtGui.QApplication.translate("PartsLibrary", "Save", None, QtGui.QApplication.UnicodeUTF8))
-        self.pushbutton.setText(QtGui.QApplication.translate("PartsLibrary", "Push to Git", None, QtGui.QApplication.UnicodeUTF8))
-        self.optbutton.setText(QtGui.QApplication.translate("PartsLibrary", "Options ⏷", None, QtGui.QApplication.UnicodeUTF8))
-        self.prevbutton.setText(QtGui.QApplication.translate("PartsLibrary", "Preview ⏶", None, QtGui.QApplication.UnicodeUTF8))
+        self.setWindowTitle(translate("PartsLibrary", "Parts Library"))
+        self.updatebutton.setText(translate("PartsLibrary", "Update from Git"))
+        self.configbutton.setText(translate("PartsLibrary", "Config"))
+        self.formatLabel.setText(translate("PartsLibrary", "Add to library"))
+        self.savebutton.setText(translate("PartsLibrary", "Save"))
+        self.pushbutton.setText(translate("PartsLibrary", "Push to Git"))
+        self.optbutton.setText(translate("PartsLibrary", "Options ⏷"))
+        self.prevbutton.setText(translate("PartsLibrary", "Preview ⏶"))
 
     def clicked(self, index):
         path = self.dirmodel.filePath(index)
@@ -448,4 +467,4 @@ if QtCore.QDir(LIBRARYPATH).exists():
     else:
         m.addDockWidget(QtCore.Qt.RightDockWidgetArea,ExpDockWidget(LIBRARYPATH))
 else:
-    print "Library path ", LIBRARYPATH, "not found."
+    print("Library path ", LIBRARYPATH, "not found.")
