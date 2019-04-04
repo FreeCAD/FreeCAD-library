@@ -44,7 +44,8 @@ Install
 -------
 
 As the library is part of the [FreeCAD addons](https://github.com/FreeCAD/FreeCAD-addons), the easiest way
-to install and keep the library updated is through the addons installer. But you can also install it
+to install and keep the library updated is through the addons installer, where you will find it there
+under the name 'parts_library'. But you can also install it
 manually:
 
 The library is a simple container for FreeCAD (.fcstd) and STEP (.stp) files. You can download it
