@@ -45,8 +45,18 @@ Install
 
 As the library is part of the [FreeCAD addons](https://github.com/FreeCAD/FreeCAD-addons), the easiest way
 to install and keep the library updated is through the addons installer, where you will find it there
-under the name 'parts_library'. But you can also install it
-manually.
+under the name 'parts_library'.
+
+**Warning: the library is huge in size (+/- 1 Gb) and therefore might take a very long time to download**
+
+We are trying to find ways to workaround this. If the Addons Manager takes too long to download, you can also download and install it manually by following these steps:
+
+* In FreeCAD, find which is your user **modules folder** by entering or pasting `App.getUserAppDataDir()+"Mod"` and your usr **macros folder** by entering `App.getUserMacroDir()` in the Python console (found under menu View->Panels)
+* Download the library as a zip file using the green "clone or download" button in the top right corner of this page
+* Unzip the zip file you just downloaded. You will get a "FreeCAD-library" folder
+* Move that folder to the **modules folder** location that we got above
+* Inside the FreeCAD-library folder, you will find a PartsLibrary.FCMacro file. Copy that file to the **macros folder** that we got above
+* Restart FreeCAD. The parts library will be installed, and the addons manager will recognize it as installed. You can launch and use the library by executing the PartsLibrary macro  from menu Macro -> Macros...
 
 The library is a simple container for FreeCAD (.fcstd) and STEP (.stp) files. You can download it
 anywhere and import its files in your FreeCAD projects. Inside the library, there is a FreeCAD
