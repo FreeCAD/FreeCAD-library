@@ -54,7 +54,8 @@ We are trying to find ways to workaround this. If the Addons Manager takes too l
 * In FreeCAD, find which is your user **modules folder** by entering or pasting `App.getUserAppDataDir()+"Mod"` and your usr **macros folder** by entering `App.getUserMacroDir()` in the Python console (found under menu View->Panels)
 * Download the library as a zip file using the green "clone or download" button in the top right corner of this page
 * Unzip the zip file you just downloaded. You will get a "FreeCAD-library" folder
-* Move that folder to the **modules folder** location that we got above
+* Rename that folder from "FreeCAD-library" to "parts_library"
+* Move that renamed folder to the **modules folder** location that we got above
 * Inside the FreeCAD-library folder, you will find a PartsLibrary.FCMacro file. Copy that file to the **macros folder** that we got above
 * Restart FreeCAD. The parts library will be installed, and the addons manager will recognize it as installed. You can launch and use the library by executing the PartsLibrary macro  from menu Macro -> Macros...
 
