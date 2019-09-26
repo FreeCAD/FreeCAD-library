@@ -81,27 +81,24 @@ param = FreeCAD.ParamGet('User parameter:Plugins/parts_library')
 s = param.GetString('destination')
 #print('User parameter:Plugins/partlib : destination : ',s)
 
-#encoding error trap
-_encoding = None
-
 try:
-    _encoding = QtGui.QApplication.UnicodeUTF8
-except AttributeError:
-    _encoding = -1
+    QtCore.QTextCodec.setCodecForTr(QTextCodec.codecForName("UTF-8"))
+except:
+    pass # Will fallback to Latin-1
 
 if s:
     LIBRARYPATH = s
 else:
 
-    folderDialog = QtGui.QFileDialog.getExistingDirectory(None,QtGui.QApplication.translate("PartsLibrary", "Location of your existing Parts library", None, _encoding))
+    folderDialog = QtGui.QFileDialog.getExistingDirectory(None,QtGui.QApplication.translate("PartsLibrary", "Location of your existing Parts library"))
     param.SetString('destination',folderDialog)
     LIBRARYPATH = param.GetString('destination')
 
 
-def translate(context, text, utf8_decode = _encoding):
+def translate(context, text):
 
-    #added compare to ensure utf8 encoding is skipped if not available
-    return QtGui.QApplication.translate(context, text, None, utf8_decode & _encoding)
+    # Will fallback to Latin-1
+    return QtGui.QApplication.translate(context, text)
 
 class ExpFileSystemModel(QtGui.QFileSystemModel):
     "a custom QFileSystemModel that displays freecad file icons"
@@ -334,21 +331,21 @@ class ExpDockWidget(QtGui.QDockWidget):
                 c.hide()
             for c in tree:
                 c.show()
-            self.optbutton.setText(QtGui.QApplication.translate("PartsLibrary", "Options ⏷", None, _encoding))
+            self.optbutton.setText(translate("PartsLibrary", "Options ⏷"))
         else:
             for c in controls:
                 c.show()
             for c in tree:
                 c.hide()
-            self.optbutton.setText(QtGui.QApplication.translate("PartsLibrary", "Options ⏶", None, _encoding))
+            self.optbutton.setText(translate("PartsLibrary", "Options ⏶"))
 
     def showpreview(self):
         if self.preview.isVisible():
             self.preview.hide()
-            self.prevbutton.setText(QtGui.QApplication.translate("PartsLibrary", "Preview ⏷", None, _encoding))
+            self.prevbutton.setText(translate("PartsLibrary", "Preview ⏷"))
         else:
             self.preview.show()
-            self.prevbutton.setText(QtGui.QApplication.translate("PartsLibrary", "Preview ⏶", None, _encoding))
+            self.prevbutton.setText(translate("PartsLibrary", "Preview ⏶"))
 
 
 
@@ -413,18 +410,18 @@ class ConfigDialog(QtGui.QDialog):
         self.lineEdit_3.setText(librarypath)
 
     def retranslateUi(self):
-        self.setWindowTitle(QtGui.QApplication.translate("PartsLibrary", "Parts library configuration", None, _encoding))
-        self.groupBox.setTitle(QtGui.QApplication.translate("PartsLibrary", "Pull server (where you get your updates from)", None, _encoding))
-        self.lineEdit.setToolTip(QtGui.QApplication.translate("PartsLibrary", "Enter the URL of the pull server here", None, _encoding))
-        self.pushButton.setToolTip(QtGui.QApplication.translate("PartsLibrary", "Use the official FreeCAD-library repository", None, _encoding))
-        self.pushButton.setText(QtGui.QApplication.translate("PartsLibrary", "use official", None, _encoding))
-        self.groupBox_2.setTitle(QtGui.QApplication.translate("PartsLibrary", "Push server (where you push your changes to)", None, _encoding))
-        self.lineEdit_2.setToolTip(QtGui.QApplication.translate("PartsLibrary", "Enter the URL of the push server here", None, _encoding))
-        self.label.setText(QtGui.QApplication.translate("PartsLibrary", "Warning: You need write permission on this server", None, _encoding))
-        self.groupBox_3.setTitle(QtGui.QApplication.translate("PartsLibrary", "Library path", None, _encoding))
-        self.lineEdit_3.setToolTip(QtGui.QApplication.translate("PartsLibrary", "Enter the path to your parts library", None, _encoding))
-        self.pushButton_3.setToolTip(QtGui.QApplication.translate("PartsLibrary", "Browse to your path library", None, _encoding))
-        self.pushButton_3.setText(QtGui.QApplication.translate("PartsLibrary", "...", None, _encoding))
+        self.setWindowTitle(QtGui.QApplication.translate("PartsLibrary", "Parts library configuration"))
+        self.groupBox.setTitle(QtGui.QApplication.translate("PartsLibrary", "Pull server (where you get your updates from)"))
+        self.lineEdit.setToolTip(QtGui.QApplication.translate("PartsLibrary", "Enter the URL of the pull server here"))
+        self.pushButton.setToolTip(QtGui.QApplication.translate("PartsLibrary", "Use the official FreeCAD-library repository"))
+        self.pushButton.setText(QtGui.QApplication.translate("PartsLibrary", "use official"))
+        self.groupBox_2.setTitle(QtGui.QApplication.translate("PartsLibrary", "Push server (where you push your changes to)"))
+        self.lineEdit_2.setToolTip(QtGui.QApplication.translate("PartsLibrary", "Enter the URL of the push server here"))
+        self.label.setText(QtGui.QApplication.translate("PartsLibrary", "Warning: You need write permission on this server"))
+        self.groupBox_3.setTitle(QtGui.QApplication.translate("PartsLibrary", "Library path"))
+        self.lineEdit_3.setToolTip(QtGui.QApplication.translate("PartsLibrary", "Enter the path to your parts library"))
+        self.pushButton_3.setToolTip(QtGui.QApplication.translate("PartsLibrary", "Browse to your path library"))
+        self.pushButton_3.setText(QtGui.QApplication.translate("PartsLibrary", "..."))
 
     def setdefaulturl(self):
         self.lineEdit.setText("https://github.com/FreeCAD/FreeCAD-library.git")
