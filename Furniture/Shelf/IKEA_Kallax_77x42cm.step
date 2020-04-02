@@ -2,8 +2,8 @@ ISO-10303-21;
 HEADER;
 FILE_DESCRIPTION(('FreeCAD Model'),'2;1');
 FILE_NAME(
-'/home/pablo/Workspace/FreeCAD/FreeCAD-library/Furniture/Shelf/IKEA_
-Kallax_77x42cm.step','2020-03-30T12:18:11',('Author'),(''),
+'IKEA_
+Kallax_77x42cm.step','2020-03-30T14:48:23',(''),(''),
   'Open CASCADE STEP processor 7.3','FreeCAD','Unknown');
 FILE_SCHEMA(('AUTOMOTIVE_DESIGN { 1 0 10303 214 1 1 1 1 }'));
 ENDSEC;
