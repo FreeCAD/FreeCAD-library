@@ -1,0 +1,1 @@
+Surgical mask strap (updated 08/04/2020) by marslam on Thingiverse: https://www.thingiverse.com/thing:4202906
