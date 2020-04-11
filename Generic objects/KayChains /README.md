@@ -1,1 +1,4 @@
-.I have decided to combine this project with the library maintained by the FreeCAD community (FreeCAD-library) I think and hope to help more so
+Based on Obijuan's initiative   (https://github.com/Obijuan/freecad-key-chain-library)  from your github course
+ 
+ 
+ It will be interesting to have them at hand
