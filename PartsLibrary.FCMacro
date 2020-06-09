@@ -91,7 +91,7 @@ if s:
 else:
 
     folderDialog = QtGui.QFileDialog.getExistingDirectory(None,QtGui.QApplication.translate("PartsLibrary", "Location of your existing Parts library"))
-    param.SetString('destination',folderDialog)
+    param.SetString('destination',folderDialog.replace("\\","/")) # forward slashes apparently work on windows too
     LIBRARYPATH = param.GetString('destination')
 
 
