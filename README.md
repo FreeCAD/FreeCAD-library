@@ -49,7 +49,9 @@ under the name 'parts_library'.
 
 **Warning: the library is huge in size (+/- 1 Gb) and therefore might take a very long time to download**
 
-We are trying to find ways to workaround this. If the Addons Manager takes too long to download, you can also download and install it manually by following these steps:
+There are currently two workarounds to this problem: 
+
+1. You can download and install this library manually by following these steps:
 
 * In FreeCAD, find which is your user **modules folder** by entering or pasting `App.getUserAppDataDir()+"Mod"` and your usr **macros folder** by entering `App.getUserMacroDir()` in the Python console (found under menu View->Panels)
 * Download the library as a zip file using the green "clone or download" button in the top right corner of this page
@@ -58,6 +60,8 @@ We are trying to find ways to workaround this. If the Addons Manager takes too l
 * Move that renamed folder to the **modules folder** location that we got above
 * Inside the FreeCAD-library folder, you will find a PartsLibrary.FCMacro file. Copy that file to the **macros folder** that we got above
 * Restart FreeCAD. The parts library will be installed, and the addons manager will recognize it as installed. You can launch and use the library by executing the PartsLibrary macro  from menu Macro -> Macros...
+
+2. The [BIM addon](https://github.com/yorikvanhavre/BIM_Workbench) has a **Library** tool that features an experimental "online" option. With that option enabled, the BIM Library tool is able to access and use this library online, without the need to install it.
 
 The library is a simple container for FreeCAD (.fcstd) and STEP (.stp) files. You can download it
 anywhere and import its files in your FreeCAD projects. Inside the library, there is a FreeCAD
