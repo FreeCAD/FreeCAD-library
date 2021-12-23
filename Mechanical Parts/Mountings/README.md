@@ -10,7 +10,7 @@ Feel free to change it to your needs and share it with us. 😀
 
 This files have a wrong name. They are named as `v-slot_20mm` but are a gantry plate.
 
-![Gantry_plate](Gantry_plate/v-slot_20mm.png)
+![Gantry_plate](Gantry_plate/Gantry_plate_20mm_v_slot.png)
 
 
 ## Corner bracket
