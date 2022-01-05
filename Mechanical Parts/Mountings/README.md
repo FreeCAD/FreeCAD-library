@@ -8,7 +8,7 @@ Feel free to change it to your needs and share it with us. 😀
 
 ## Gantry plate
 
-This files have a wrong name. They are named as `v-slot_20mm` but are a gantry plate.
+Gantry plate used as mounting place over a 2020 aluminum profile.
 
 ![Gantry_plate](Gantry_plate/Gantry_plate_20mm_v_slot.png)
 
@@ -46,6 +46,18 @@ For joining 2020 profiles in 90 degrees with extra support
 ### L shape
 
 ![L5](Joining_plate/L_5_holes.png)
+
+## Bearings
+
+These bearing are usually used in assemblies with 2020 profiles. You can find more specialized bearing in the `Mechanical Parts/Bearings` folder.
+
+### LM8UU
+
+![LM8UU](LM8UU/LM8UU.png)
+
+### SC8UU
+
+![SC8UU](SC8UU/SC8UU.png)
 
 
 
