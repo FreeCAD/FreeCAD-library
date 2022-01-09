@@ -12,7 +12,7 @@ The parameters refer to the plate wheel dimensions as in the drawing below:
 Table of dimensions in millimeters:
 
 P (Pitch)|Wc (Chain width)|Dr (Roller diameter)|Tr (Tooth radius)|Rw (Radius width)|Wt (Tooth width)|z (Number of teeth)|De (External Diameter)|Dp (Pitch diameter)|D (Hole diameter)|H (Total height)
----|---|---|---|---|---|---|---|---|---|---|---
+---|---|---|---|---|---|---|---|---|---|---
 5|2,5|3,2|5|0,6|2,3|8|15,2|13,06|4|2,3
 5|2,5|3,2|5|0,6|2,3|9|16,8|14,62|4|2,3
 5|2,5|3,2|5|0,6|2,3|10|18,3|16,18|4|2,3
