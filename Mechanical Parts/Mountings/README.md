@@ -12,22 +12,19 @@ Gantry plate used as mounting place over a 2020 aluminum profile.
 
 ![Gantry_plate](Gantry_plate/Gantry_plate_20mm_v_slot.png)
 
+## Generic 2020 profile extrusion
+
+A simple generic 2020 V-slot Aluminium profile extrusion.
+
+You can find more profile extrusions in the `Mechanical Parts/Profiles EN` folder.
+
+![Aluminium extrusion](2020_V-slot_Al_extrusion/2020x50_V_slot_profile.png)
 
 ## Corner bracket
 
 A simple corner bracket for joining 2020 profiles
 
 ![Corner bracket](Corner/2020_corner_bracket.png)
-
-
-## Generic 2020 profile extrusion
-
-A simple generic 2020 profile extrusion.
-
-You can find more profile extrusions in the `Mechanical Parts/Profiles EN` folder.
-
-![Extrusion](Extrusion/2020_V_Slot_profile.png)
-
 
 ## Linear Shaft Support
 
