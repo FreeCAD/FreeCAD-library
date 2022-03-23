@@ -76,4 +76,35 @@ The very-detailed bearing model is a courtesy of [Jimmi Henry](https://grabcad.c
 ![KFL08](KFL08/KFL08.png)
 
 
+## Leadscrews
+
+Some leadscrew related parts.
+
+### Tr8x8 leadscrew
+
+* Thread: Tr8x8
+* Starts: 4
+* Lead: 8mm
+
+The first 8 of Tr8 means it is to indicate the *diameter* (8mm) and the second 8 means the *lead*.
+8mm lead means when drive by a stepper driver in *Full Step mode*, it moves 8mm per revolution.
+
+![T8_leadscrew](T8_leadscrew/T8_leadscrew_150mm.png)
+
+
+### T8 housing bracket
+
+![T8_housing_bracket](T8_housing_bracket/T8_housing_bracket.png)
+
+
+### Nuts
+
+#### Tr8x8 flange nut
+
+![Flange_nut](T8_screw_nut/Flange_nut/T8_Flange_nut.png)
+
+#### Tr8x8 anti backlash nut
+
+![Anti_backlash_nut](T8_screw_nut/Anti_backlash_nut/T8_antibacklash_nut.png)
+
 Don´t forget to share your modifications with the community.
