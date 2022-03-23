@@ -101,9 +101,13 @@ The first 8 of Tr8 means it is to indicate the *diameter* (8mm) and the second 8
 
 #### Tr8x8 flange nut
 
+**IMPORTANT! Don't open this file in FreeCAD Link Branch from realthunder because of [this bug](https://github.com/realthunder/FreeCAD_assembly3/issues/1120).**
+
 ![Flange_nut](T8_screw_nut/Flange_nut/T8_Flange_nut.png)
 
 #### Tr8x8 anti backlash nut
+
+**IMPORTANT! Don't open this file in FreeCAD Link Branch from realthunder because of [this bug](https://github.com/realthunder/FreeCAD_assembly3/issues/1120).**
 
 ![Anti_backlash_nut](T8_screw_nut/Anti_backlash_nut/T8_antibacklash_nut.png)
 
