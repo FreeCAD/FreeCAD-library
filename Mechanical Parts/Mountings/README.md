@@ -112,3 +112,9 @@ The first 8 of Tr8 means it is to indicate the *diameter* (8mm) and the second 8
 ![Anti_backlash_nut](T8_screw_nut/Anti_backlash_nut/T8_antibacklash_nut.png)
 
 Don´t forget to share your modifications with the community.
+
+## T-slot sliding nut
+
+Sliding nut, there is a spreadsheet with data for different sizes.
+
+![Slot T nut](Slot_T_nuts/Slot_T_nut.png)
