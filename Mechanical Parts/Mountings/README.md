@@ -30,9 +30,13 @@ A simple corner bracket for joining 2020 profiles
 
 Precision stand up linear shaft support. Bore 8[mm].
 
-### SK08
+### SK08, SKXX
+
+Now with the 0.20 version is possible to use a `Configuration table`  to create multiple variants of the same model. In the `SKXX.FCStd` file you will find the SK08, SK10, SK12, SK13, SK16, SK20, SK25, SK30, SK35, SK40, SK50, SK60 models (configurations) in the same file. Learn more about the [Configuration tables here](https://wiki.freecadweb.org/Spreadsheet_Workbench#Configuration_tables).
 
 ![SK08](SK08/SK08.png)
+
+![SKXX](SK08/SKXX.png)
 
 ### SHF08
 
