@@ -60,7 +60,11 @@ These bearing are usually used in assemblies with 2020 profiles. You can find mo
 
 ### LM8UU
 
+Now with the 0.20 version is possible to use a `Configuration table`  to create multiple variants of the same model. In the `LMXXXUU.FCStd` file you will find the LM6UU, LM6LUU, LM8SUU, LM8UU, LM8LUU, LM10UU, LM10LUU, LM12LUU, LM13LUU, LM16LUU, LM20LUU, LM25LUU, LM30LUU, LM35LUU, LM40LUU, LM50LUU and LM60LUU models (configurations) in the same file. Learn more about the [Configuration tables here](https://wiki.freecadweb.org/)
+
 ![LM8UU](LM8UU/LM8UU.png)
+
+![LMXXXUU](LM8UU/LMXXXUU.png)
 
 ### SC8UU
 
