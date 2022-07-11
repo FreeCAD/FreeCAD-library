@@ -60,7 +60,7 @@ These bearing are usually used in assemblies with 2020 profiles. You can find mo
 
 ### LM8UU
 
-Now with the 0.20 version is possible to use a `Configuration table`  to create multiple variants of the same model. In the `LMXXXUU.FCStd` file you will find the LM6UU, LM6LUU, LM8SUU, LM8UU, LM8LUU, LM10UU, LM10LUU, LM12LUU, LM13LUU, LM16LUU, LM20LUU, LM25LUU, LM30LUU, LM35LUU, LM40LUU, LM50LUU and LM60LUU models (configurations) in the same file. Learn more about the [Configuration tables here](https://wiki.freecadweb.org/)
+Now with the 0.20 version is possible to use a `Configuration table`  to create multiple variants of the same model. In the `LMXXXUU.FCStd` file you will find the LM6UU, LM6LUU, LM8SUU, LM8UU, LM8LUU, LM10UU, LM10LUU, LM12LUU, LM13LUU, LM16LUU, LM20LUU, LM25LUU, LM30LUU, LM35LUU, LM40LUU, LM50LUU and LM60LUU models (configurations) in the same file. Learn more about the [Configuration tables here](https://wiki.freecadweb.org/Spreadsheet_Workbench#Configuration_tables).
 
 ![LM8UU](LM8UU/LM8UU.png)
 
@@ -121,8 +121,8 @@ The first 8 of Tr8 means it is to indicate the *diameter* (8mm) and the second 8
 
 Don´t forget to share your modifications with the community.
 
-## T-slot sliding nut
+## T-slot nut
 
-Sliding nut, there is a spreadsheet with data for different sizes.
+In the `T_type_square_nut.FCStd` file you will find the 20S-M3, 20S-M4, 20S-M5, 20S-M6, 30S-M4, 30S-M5, 30S-M6, 30S-M8, 40S-M4, 40S-M5, 40S-M6, 40S-M8, 45S-M4, 45S-M5, 45S-M6, 45S-M8 and 45S-M10 models (configurations) in the same file. Learn more about the [Configuration tables here](https://wiki.freecadweb.org/Spreadsheet_Workbench#Configuration_tables).
 
-![Slot T nut](Slot_T_nuts/Slot_T_nut.png)
+![Slot T square nut](Slot_T_nuts/T_type_square_nut.png)
