@@ -16,7 +16,7 @@ Gantry plate used as mounting place over a 2020 aluminum profile.
 
 A simple generic 2020 V-slot Aluminium profile extrusion.
 
-You can find more profile extrusions in the `Mechanical Parts/Profiles EN` folder.
+You can find more specific profile extrusions in the `Mechanical Parts/Profiles EN` folder.
 
 ![Aluminium extrusion](2020_V-slot_Al_extrusion/2020x50_V_slot_profile.png)
 
@@ -32,7 +32,7 @@ Precision stand up linear shaft support. Bore 8[mm].
 
 ### SK08, SKXX
 
-Now with the 0.20 version is possible to use a `Configuration table`  to create multiple variants of the same model. In the `SKXX.FCStd` file you will find the SK08, SK10, SK12, SK13, SK16, SK20, SK25, SK30, SK35, SK40, SK50, SK60 models (configurations) in the same file. Learn more about the [Configuration tables here](https://wiki.freecadweb.org/Spreadsheet_Workbench#Configuration_tables).
+Now with the 0.20 version is possible to use a `Configuration table`  to create multiple variants of the same model. In the `SKXX.FCStd` file you will find the SK08, SK10, SK12, SK13, SK16, SK20, SK25, SK30, SK35, SK40, SK50, SK60 models (configurations). Learn more about the [Configuration tables here](https://wiki.freecadweb.org/Spreadsheet_Workbench#Configuration_tables). Also watch [this video](https://youtu.be/D0f7bkNGAOg) to learn how this model was made.
 
 ![SK08](SK08/SK08.png)
 
@@ -58,9 +58,13 @@ For joining 2020 profiles in 90 degrees with extra support
 
 These bearing are usually used in assemblies with 2020 profiles. You can find more specialized bearing in the `Mechanical Parts/Bearings` folder.
 
-### LM8UU
+### LM8UU, LMXXXUU
+
+Now with the 0.20 version is possible to use a `Configuration table`  to create multiple variants of the same model. In the `LMXXXUU.FCStd` file you will find the LM6UU, LM6LUU, LM8SUU, LM8UU, LM8LUU, LM10UU, LM10LUU, LM12LUU, LM13LUU, LM16LUU, LM20LUU, LM25LUU, LM30LUU, LM35LUU, LM40LUU, LM50LUU and LM60LUU models (configurations). Learn more about the [Configuration tables here](https://wiki.freecadweb.org/Spreadsheet_Workbench#Configuration_tables).
 
 ![LM8UU](LM8UU/LM8UU.png)
+
+![LMXXXUU](LM8UU/LMXXXUU.png)
 
 ### SC8UU
 
@@ -117,8 +121,8 @@ The first 8 of Tr8 means it is to indicate the *diameter* (8mm) and the second 8
 
 Don´t forget to share your modifications with the community.
 
-## T-slot sliding nut
+## T-slot nut
 
-Sliding nut, there is a spreadsheet with data for different sizes.
+In the `T_type_square_nut.FCStd` file you will find the 20S-M3, 20S-M4, 20S-M5, 20S-M6, 30S-M4, 30S-M5, 30S-M6, 30S-M8, 40S-M4, 40S-M5, 40S-M6, 40S-M8, 45S-M4, 45S-M5, 45S-M6, 45S-M8 and 45S-M10 models (configurations). Learn more about the [Configuration tables here](https://wiki.freecadweb.org/Spreadsheet_Workbench#Configuration_tables).
 
-![Slot T nut](Slot_T_nuts/Slot_T_nut.png)
+![Slot T square nut](Slot_T_nuts/T_type_square_nut.png)
