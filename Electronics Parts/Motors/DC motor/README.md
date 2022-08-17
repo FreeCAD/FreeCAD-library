@@ -13,11 +13,29 @@ Check this video of the motor showcasing FreeCAD: https://youtu.be/-KUMqJL786w
 
 ![FAULHABER 2342L-012CPR](FAULHABER%202342L-012CPR/FAULHABER_2342L-012CPR.png)
 
+## Yellow gear motor straigth
+
+Yellow gear motor straigth with double axis
+
+![Yellow_Straight](Yellow_gearmotor/straight/Yellow_gearmotor_straight.png)
+
+## Yellow gear motor L shape
+
+Yellow gear motor L shape with single axis
+
+![Yellow_L](Yellow_gearmotor/L_shape/Yellow_gearmotor_L.png)
+
 ## Mabuchi FA_130RA
 
 Mabuchi FA_130RA motor with enconder and worm included. Very cool.
 
 ![Mabuchi](Mabuchi-Encoder/Mabuchi14.png)
+
+## Cheap 6V motor 
+
+Yellow gear motor straigth with double axis
+
+![Cheap_6V](Motors/Motor-CC-6V.png)
 
 ## Pololu 298:1
 
@@ -38,4 +56,10 @@ Simplified version of Pololu Micro Metal Gearmotor 298:1.
 ![Servo-2](Motors/Motor-CC-6V-Servo-2.png)
 
 ![Servo](Motors/Motor-CC-6V-Servo.png)
+
+## Wheels
+
+65mm yellow wheel
+
+![Yellow_Wheel](Yellow_wheel_65mm/Yellow_wheel_65mm.png)
 
