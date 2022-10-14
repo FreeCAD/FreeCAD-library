@@ -22,9 +22,13 @@ You can find more specific profile extrusions in the `Mechanical Parts/Profiles 
 
 ## Corner bracket
 
-A simple corner bracket for joining 2020 profiles
+A simple corner bracket for joining 2020 profiles.
 
-![Corner bracket](Corner/2020_corner_bracket.png)
+![2020 Corner bracket](Corner/2020_corner_bracket.png)
+
+Also there is a file with multiple variants available in a `Configuration table`. In `Corner_bracket.FCStd` you will find the 20x20, 28x28, 30x30, 40x40, 58x58 models.
+
+![Corner brackets, 5 variants](Corner/Corner_bracket.png)
 
 ## Linear Shaft Support
 
@@ -53,6 +57,13 @@ For joining 2020 profiles in 90 degrees with extra support
 ### L shape
 
 ![L5](Joining_plate/L_5_holes.png)
+
+### Multiple variants
+
+Inspired by [Customizable Plate Bracket for Aluminium Extrusion Profiles](https://www.thingiverse.com/thing:2503622) by mightynozzle I decided to make some `Configuration tables` with various models, 6 types per shape.
+
+![Plate brackets](Joining_plate/Brackets.png)
+
 
 ## Bearings
 
