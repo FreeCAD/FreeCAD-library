@@ -15,7 +15,7 @@ Feel free to change it to your needs and share it with us. 😀
 
 ## Parametric LiPo batteries
 
-A small set of different 3.7 [V] LiPo batteries, check them in the `Spreadsheet` and modify to your needs.
+A small set of different 3.7 [V] LiPo batteries, check them in the `Spreadsheet` and modify to your needs. It features a `Configuration Table`  to change the size without opening the Spreadsheet.
 
 These are the provided dimensions.
 

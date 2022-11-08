@@ -1,0 +1,4 @@
+# Fiducials
+
+![Fiducials](Fiducials.png)
+
