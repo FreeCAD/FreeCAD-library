@@ -47,7 +47,7 @@ As the library is part of the [FreeCAD addons](https://github.com/FreeCAD/FreeCA
 to install and keep the library updated is through the addons installer, where you will find it there
 under the name 'parts_library'.
 
-**Warning: the library is huge in size (+/- 1 Gb) and therefore might take a very long time to download**
+**Warning: the library is huge in size (+/- 5 Gb) and therefore might take a very long time to download**
 
 There are currently two workarounds to this problem: 
 
