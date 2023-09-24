@@ -4,12 +4,13 @@ This folder contains the 3D models of the plate wheels for ISO 606 chains simple
 
 ![Image](screenshot.png "Plate Wheel Simplex")
 
-All models are parametric and the values are contained in the spreadsheet `Data`.
+The model is parametric and the values are contained in the spreadsheet `Data`.
+
 The parameters refer to the plate wheel dimensions as in the drawing below:
 
 ![Drawing](drawing.png "Drawing")
 
-Table of dimensions in millimeters:
+### Table of dimensions in millimeters:
 
 P (Pitch)|Wc (Chain width)|Dr (Roller diameter)|Tr (Tooth radius)|Rw (Radius width)|Wt (Tooth width)|z (Number of teeth)|De (External Diameter)|Dp (Pitch diameter)|D (Hole diameter)|H (Total height)
 ---|---|---|---|---|---|---|---|---|---|---
@@ -57,3 +58,14 @@ P (Pitch)|Wc (Chain width)|Dr (Roller diameter)|Tr (Tooth radius)|Rw (Radius wid
 9,525|5,72|6,35|10|1|5,3|49|152,7|148,66|16|5,3
 9,525|5,72|6,35|10|1|5,3|50|155,7|151,69|16|5,3
 
+The 3D model configuration of each plate wheel can be dynamically retrieved using a preset `Configuration table`.
+The file name of the 3D model containing the `Configuration table` is **`Plate Wheel simplex ⅜x⁷⁄₃₂.FCStd`**.
+
+To obtain the 3D model of the desidered plate wheel, click the spreadsheet `Data` in the Tree View and then select the `Teeth Number` in the property editor. If nothing changes try to `Refresh` the model.
+
+See the following image for details
+
+![Drawing](configuration.png "Configuration")
+
+### Notes for developers
+If you add a row in the `Configuration table` of the `Data` spreadsheet, then add that row in the above table of this `README.md` file, without the first cell.
