@@ -77,9 +77,13 @@ Now with the 0.20 version is possible to use a `Configuration table`  to create 
 
 ![LMXXXUU](LM8UU/LMXXXUU.png)
 
-### SC8UU
+### SC8UU, SCXXXUU
+
+Parametric design using a `Configuration table`  to create multiple variants of the same model. Read about [Configuration tables here](https://wiki.freecadweb.org/Spreadsheet_Workbench#Configuration_tables).
 
 ![SC8UU](SC8UU/SC8UU.png)
+
+![SCXXXUU](SC8UU/SCXXXUU.png)
 
 ## Pillow blocks
 
@@ -135,5 +139,7 @@ Don´t forget to share your modifications with the community.
 ## T-slot nut
 
 In the `T_type_square_nut.FCStd` file you will find the 20S-M3, 20S-M4, 20S-M5, 20S-M6, 30S-M4, 30S-M5, 30S-M6, 30S-M8, 40S-M4, 40S-M5, 40S-M6, 40S-M8, 45S-M4, 45S-M5, 45S-M6, 45S-M8 and 45S-M10 models (configurations). Learn more about the [Configuration tables here](https://wiki.freecadweb.org/Spreadsheet_Workbench#Configuration_tables).
+
+This T-nut and other are now available in the [Fasteners WB](https://www.freecadweb.org/wiki/Fasteners_Workbench).
 
 ![Slot T square nut](Slot_T_nuts/T_type_square_nut.png)
