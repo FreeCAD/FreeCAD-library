@@ -47,10 +47,10 @@ P (Pitch)|Wc (Chain width)|Dr (Roller diameter)|Tr (Tooth radius)|Rw (Radius wid
 38,1|25,4|25,4|38|4|23,6|72|39|488,5|473,5|170|30|100
 38,1|25,4|25,4|38|4|23,6|72|40|500,6|485,62|170|30|100
 
-The 3D model configuration of each plate wheel can be dynamically retrieved using a preset `Configuration table`.
-The file name of the 3D model containing the `Configuration table` is **`Plate Wheel simplex ½x1 z08.FCStd`**.
+The 3D model configuration of each sprocket can be dynamically retrieved using a preset `Configuration table`.
+The file name of the 3D model containing the `Configuration table` is **`Sprocket ANSI duplex 1 ½x1.FCStd`**.
 
-To obtain the 3D model of the desidered plate wheel, click the spreadsheet `Data` in the Tree View and then select the `Teeth Number` in the property editor. If nothing changes try to `Refresh` the model.
+To obtain the 3D model of the desidered sprocket, click the spreadsheet `Data` in the Tree View and then select the `Teeth Number` in the property editor. If nothing changes try to `Refresh` the model.
 
 See the following image for details
 
