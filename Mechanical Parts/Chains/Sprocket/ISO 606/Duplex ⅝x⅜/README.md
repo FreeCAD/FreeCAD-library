@@ -4,12 +4,12 @@ This folder contains the 3D models of the sprockets for ISO 606 chains duplex 5/
 
 ![Image](screenshot.png "Sprocket Duplex")
 
-All models are parametric and the values are contained in the spreadsheet `Data`.
+The model is parametric and the values are contained in the spreadsheet `Data`.
 The parameters refer to the sprocket dimensions as in the drawing below:
 
 ![Drawing](drawing.png "Drawing")
 
-Table of dimensions in millimeters:
+### Table of dimensions in millimeters:
 
 P (Pitch)|Wc (Chain width)|Dr (Roller diameter)|Tr (Tooth radius)|Rw (Radius width)|Wt1 (Tooth width 1)|Wt2 (Tooth width 2)|z (Number of teeth)|De (External Diameter)|Dp (pitch diameter)|d (Hub diameter)|D (Hole diameter)|H (Total height)
 ---|---|---|---|---|---|---|---|---|---|---|---|---
@@ -51,3 +51,15 @@ P (Pitch)|Wc (Chain width)|Dr (Roller diameter)|Tr (Tooth radius)|Rw (Radius wid
 15,875|9,65|10,16|16|1,6|9|25,5|57|296|288,18|130|20|50
 15,875|9,65|10,16|16|1,6|9|25,5|76|392,1|384,15|130|20|63
 15,875|9,65|10,16|16|1,6|9|25,5|95|488,5|480,14|130|20|63
+
+The 3D model configuration of each sprocket can be dynamically retrieved using a preset `Configuration table`.
+The file name of the 3D model containing the `Configuration table` is **`Sprocket ANSI duplex ⅝x⅜.FCStd`**.
+
+To obtain the 3D model of the desidered sprocket, click the spreadsheet `Data` in the Tree View and then select the `Teeth Number` in the property editor. If nothing changes try to `Refresh` the model.
+
+See the following image for details
+
+![Drawing](https://github.com/FreeCAD/FreeCAD-library/raw/master/Mechanical%20Parts/Chains/Plate%20Wheel/ISO%20606/Simplex%201%20½%20x%201/configuration.png)
+
+### Notes for developers
+If you add a row in the `Configuration table` of the `Data` spreadsheet, then add that row in the above table of this `README.md` file, without the first cell.
