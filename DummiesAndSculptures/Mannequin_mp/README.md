@@ -24,7 +24,7 @@ There is more versions od the Mannequin in different possitions.
 Just select some file .FCStd and open it, or add it into an assembly
 (Assembly4).
 
-![Set of Mannequins 29.11.2023](./picture-of-mannequins_mp.png "Set of Mannequins 29.11.2023")
+![Set of Mannequins 29.11.2023](./picture-set-of-mannequins_mp.png "Set of Mannequins 29.11.2023")
 
 
 ## Changing of possition
