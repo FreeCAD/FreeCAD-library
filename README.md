@@ -69,7 +69,16 @@ macro (PartsLibrary.FCMacro) that you can place in your FreeCAD macros folder. T
 a browser window inside FreeCAD, from which you can easily add the parts by double-clicking them.
 
 ![](http://www.freecadweb.org/wiki/images/c/c5/Parts-library.jpg)
+Usage
+-----
 
+1. Make sure FreeCAD was restarted after installing the PartsLibrary addon
+2. Launch the execute macro window (Macro menu => macros...)
+3. Execute the PartsLibrary.FCMacro
+4. If the macro asks for the folder for the Parts Library point it in to the right folder (under Windows11 it should be under C:\Users\%username%\AppData\Roaming\FreeCAD\Mod\parts_library or %appdata%\FreeCAD\Mod\parts_library)
+5. The parts library should open on the right side, double click on a part to add it to your current model
+
+Start the PartsLibrary.FCMacro from 
 Sharing your models from the macro
 ----------------------------------
 
