@@ -2,13 +2,13 @@
 
 This folder contains the 3D models of the plate wheels for ISO 606 chains simplex ⅝ x ⅜ with number of teeth ranging from z=8 to z=30.
 
-![Image](screenshot.png "Plate Wheel Simplex")
+![Image](../images/simplex_screenshot.png "Plate Wheel Simplex")
 
 The model is parametric and the values are contained in the spreadsheet `Data`.
 
 The parameters refer to the plate wheel dimensions as in the drawing below:
 
-![Drawing](drawing.png "Drawing")
+![Drawing](../images/simplex_drawing.png "Drawing")
 
 ### Table of dimensions in millimeters:
 
@@ -45,7 +45,7 @@ To obtain the 3D model of the desidered plate wheel, click the spreadsheet `Data
 
 See the following image for details
 
-![Drawing](configuration.png "Configuration")
+![Drawing](../images/configuration.png "Configuration")
 
 ### Notes for developers
 If you add a row in the `Configuration table` of the `Data` spreadsheet, then add that row in the above table of this `README.md` file, without the first cell.
