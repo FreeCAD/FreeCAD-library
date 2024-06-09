@@ -2,12 +2,12 @@
 
 This folder contains the 3D models of the sprockets for ISO 606 chains duplex 3/8" x 7/32" with number of teeth ranging from z=8 to z=114.
 
-![Image](screenshot.png "Sprocket Duplex")
+![Image](../images/duplex_screenshot.png "Sprocket Duplex")
 
 The model is parametric and the values are contained in the spreadsheet `Data`.
 The parameters refer to the sprocket dimensions as in the drawing below:
 
-![Drawing](drawing.png "Drawing")
+![Drawing](../images/duplex_drawing.png "Drawing")
 
 ### Table of dimensions in millimeters:
 
@@ -60,7 +60,7 @@ To obtain the 3D model of the desidered sprocket, click the spreadsheet `Data` i
 
 See the following image for details
 
-![Drawing](https://github.com/FreeCAD/FreeCAD-library/raw/master/Mechanical%20Parts/Chains/Plate%20Wheel/ISO%20606/Simplex%201%20½%20x%201/configuration.png)
+![Drawing](../images/configuration.png)
 
 ### Notes for developers
 If you add a row in the `Configuration table` of the `Data` spreadsheet, then add that row in the above table of this `README.md` file, without the first cell.
