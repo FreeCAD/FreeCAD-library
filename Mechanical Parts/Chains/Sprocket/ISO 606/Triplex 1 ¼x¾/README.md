@@ -1,13 +1,13 @@
 # Chain Sprockets ISO606 triplex 1 1/4" x 3/4" from z 8 to z 40
 
-This folder contains the 3D models of the sprockets for ISO 606 chains triplex 1 1/4" x 3/4" with number of teeth ranging from z=8 to z=40.
+This folder contains the 3D models of the sprockets for ISO 606 chains triplex 1 1/4" x 3/4" with number of teeth ranging from $z=8$ to $z=40$.
 
-![Image](screenshot.png "Sprocket Triplex")
+![Image](../images/triplex_screenshot.png "Sprocket Triplex")
 
 All models are parametric and the values are contained in the spreadsheet `Data`.
 The parameters refer to the sprocket dimensions as in the drawing below:
 
-![Drawing](drawing.png "Drawing")
+![Drawing](../images/triplex_drawing.png "Drawing")
 
 Table of dimensions in millimeters:
 
