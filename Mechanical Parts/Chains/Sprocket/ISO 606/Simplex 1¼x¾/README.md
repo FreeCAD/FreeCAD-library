@@ -2,14 +2,15 @@
 
 This folder contains the 3D models of the sprockets for ISO 606 chains simplex 1 1/4" x 3/4" with number of teeth ranging from z=8 to z=76.
 
-![Image](screenshot.png "Sprocket Simplex")
+![Image](../images/simplex_screenshot.png "Sprocket Simplex")
 
-All models are parametric and the values are contained in the spreadsheet `Data`.
+The model is parametric and the values are contained in the spreadsheet `Data`.
+
 The parameters refer to the sprocket dimensions as in the drawing below:
 
-![Drawing](drawing.png "Drawing")
+![Drawing](../images/simplex_drawing.png "Drawing")
 
-Table of dimensions in millimeters:
+### Table of dimensions in millimeters:
 
 P (Pitch)|Wc (Chain width)|Dr (Roller diameter)|Tr (Tooth radius)|Rw (Radius width)|Wt (Tooth width)|z (Number of teeth)|De (External Diameter)|Dp (pitch diameter)|d (Hub diameter)|D (Hole diameter)|H (Total height)
 ---|---|---|---|---|---|---|---|---|---|---|---
@@ -50,3 +51,15 @@ P (Pitch)|Wc (Chain width)|Dr (Roller diameter)|Tr (Tooth radius)|Rw (Radius wid
 31,75|19,56|19,05|32|3,5|18,5|50|520,8|505,65|150|25|70
 31,75|19,56|19,05|32|3,5|18,5|57|591,5|576,35|150|25|80
 31,75|19,56|19,05|32|3,5|18,5|76|783,5|768,32|150|25|80
+
+The 3D model configuration of each sprocket can be dynamically retrieved using a preset `Configuration table`.
+The file name of the 3D model containing the `Configuration table` is **`Sprocket ANSI simplex 1x17,02.FCStd`**.
+
+To obtain the 3D model of the desidered sprocket, click the spreadsheet `Data` in the Tree View and then select the `Teeth Number` in the property editor. If nothing changes try to `Refresh` the model.
+
+See the following image for details
+
+![Drawing](../images/configuration.png "Configuration")
+
+### Notes for developers
+If you add a row in the `Configuration table` of the `Data` spreadsheet, then add that row in the above table of this `README.md` file, without the first cell.
