@@ -5,3 +5,6 @@
 *.FCStd2
 *.FCBak
 Private
+
+# Installation files
+AM_INSTALLATION_DIGEST.txt

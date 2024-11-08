@@ -1,0 +1,3 @@
+# Local ,gitignore for loacl edtion with Kate editor.
+# NOT TO BE MERGEED in `master`!!!
+*.kate-swp
