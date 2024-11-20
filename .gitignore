@@ -6,3 +6,4 @@
 *.FCBak
 Private
 *.bak
+.DS_Store
