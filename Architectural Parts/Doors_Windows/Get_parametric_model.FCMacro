@@ -1,0 +1,115 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+#***************************************************************************
+#*                                                                         *
+#*   Copyright (c) 2024 Francisco Rosa                                     *
+#*                                                                         *
+#*   This program is free software; you can redistribute it and/or modify  *
+#*   it under the terms of the GNU Lesser General Public License (LGPL)    *
+#*   as published by the Free Software Foundation; either version 2 of     *
+#*   the License, or (at your option) any later version.                   *
+#*   for detail see the LICENCE text file.                                 *
+#*                                                                         *
+#*   This program is distributed in the hope that it will be useful,       *
+#*   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+#*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+#*   GNU Library General Public License for more details.                  *
+#*                                                                         *
+#*   You should have received a copy of the GNU Library General Public     *
+#*   License along with this program; if not, write to the Free Software   *
+#*   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  *
+#*   USA                                                                   *
+#*                                                                         *
+#***************************************************************************
+
+# Macro get model +++++++++++++++++++++++++++++++++++++++++++++++++
+
+import FreeCAD
+import FreeCADGui as Gui
+import Spreadsheet
+
+# ----------------------------------------------------------------------
+## GET MODEL FROM SPREADSHEET
+# ----------------------------------------------------------------------
+name = "None"
+value = None
+cellName = "None"
+cellRows = []
+cellValue = "None"
+obj = "None"
+propertyType = None
+propName = "None"
+objects = []
+column = None
+SpreadsheetModels = None
+propertyRows = {}
+
+# Get the property name with the initial information
+
+propName = input("Confirme the name of the properties set or VarSet wich Label is 'Initial_information' (Ex.: Prop, Prop001, Prop002...or Varset, Varset001, Varset002...)")
+
+if not FreeCAD.ActiveDocument.getObject(propName):
+    print(str(propName) + " is not correct!" + "\n")
+
+# Get the spreadsheet name for saving model
+
+SpreadsheetModels = FreeCAD.ActiveDocument.getObject(propName).A_Spreadsheet_models
+
+objects  = FreeCAD.ActiveDocument.getObject(propName).L_Property_objects_list
+
+CellRows_Lists = []
+CellRows_Lists = objects[0].L_Props_list
+
+# propertyRows
+for i in range(len(objects)):
+    propertyRows [objects[i].Name] = objects[0].getPropertyByName(CellRows_Lists[i])
+
+# 2. Get properties
+def getComponentModel(column = "None", objects = None, propertyRows = None, SpreadsheetModels = None):
+    for i in range(len(objects)):
+        # Prop, Prop001, ...or VarSet, Varset001...
+        obj = objects[i]
+        cellRows = propertyRows[obj.Name]
+        for n in range(len(cellRows)):
+            cellValue = column + cellRows[n]
+            value = str(SpreadsheetModels.get(cellValue))
+            if value == "Not used":
+                continue
+            cellName = "A" + cellRows[n]
+            name = SpreadsheetModels.get(cellName)
+            propertyType = obj.getTypeIdOfProperty(name)
+            if propertyType == "App::PropertyBool":
+                value = str(SpreadsheetModels.get(cellValue))
+                if value == "True":
+                    value = 1
+                else:
+                    value = 0
+                setattr(obj, name, value)
+                continue
+            if propertyType == "App::PropertyInteger":
+                value = SpreadsheetModels.get(cellValue)        
+                setattr(obj, name, value)
+                continue            
+            setattr(obj, name, value)   
+
+    App.ActiveDocument.recompute()
+
+# 1. Models spreadsheet - get model column
+# Condition to get model
+if objects[0].B_Confirm_model == True:
+    objects  = FreeCAD.ActiveDocument.getObject(propName).L_Property_objects_list
+    column = objects[0].A_Model_name[0]
+    getComponentModel(column, objects, propertyRows, SpreadsheetModels)
+    objects[0].B_Confirm_model = False
+    App.ActiveDocument.recompute()
+    # Select the Prop or VarSet
+    Gui.Selection.clearSelection()
+    Gui.Selection.addSelection(SpreadsheetModels)
+    Gui.Selection.clearSelection()  
+    Gui.Selection.addSelection(objects[0])
+    App.ActiveDocument.recompute()
+else:
+    print("First you must choose or confirm the ​model name in 'Prop_General_configurations or Varset_General_configurations > I1-Get model configurations'> A_Model_name', then choose 'true' in 'B_Confirm_model!")
+
+#-----------------------------------------------------------------------
