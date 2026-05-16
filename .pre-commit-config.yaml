@@ -1,0 +1,4 @@
+# Pre-commit hooks configuration for FreeCAD Library
+# See https://pre-commit.com for more information
+
+repos: []
