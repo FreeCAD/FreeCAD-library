@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<package format="1" xmlns="https://wiki.freecad.org/Package_Metadata">
+  <name>Parts Library</name>
+  <description>A community-maintained library of ready-made parts for FreeCAD, in FCStd, STEP, STL and BREP formats, organized by family: mechanical, electrical, electronic, architectural, medical, hydraulic, HVAC, piping and more. Includes the PartsLibrary macro, which adds a browser panel to FreeCAD from which parts can be inserted into the active document by double-clicking them. Note that the library is very large (several gigabytes) and may take a long time to download.</description>
+  <version>2026.07.30</version>
+  <date>2026-07-30</date>
+  <maintainer email="no-one@freecad.org">FreeCAD Community</maintainer>
+  <author email="yorik@uncreated.net">Yorik van Havre</author>
+  <license file="LICENSE-Assets">CC-BY-3.0</license>
+  <license file="LICENSE-Code">LGPL-2.1-or-later</license>
+  <icon>thumbnails/icon-grid.svg</icon>
+
+  <url type="repository" branch="master">https://github.com/FreeCAD/FreeCAD-library</url>
+  <url type="readme">https://github.com/FreeCAD/FreeCAD-library/blob/master/README.md</url>
+  <url type="bugtracker">https://github.com/FreeCAD/FreeCAD-library/issues</url>
+  <url type="discussion">https://forum.freecad.org/viewtopic.php?f=19&amp;t=4205</url>
+
+  <tag>Models</tag>
+  <tag>STEP</tag>
+  <tag>Fasteners</tag>
+  <tag>Electronics</tag>
+  <tag>Architecture</tag>
+
+  <content>
+    <other>
+      <name>Parts</name>
+      <description>The parts themselves, as FCStd documents with STEP, STL and BREP exports alongside them, grouped into per-family subdirectories. Each part is copyrighted by its own author under CC-BY 3.0; see the repository history for attribution.</description>
+      <subdirectory>./</subdirectory>
+    </other>
+    <macro>
+      <name>PartsLibrary</name>
+      <description>Adds a dockable browser panel to the FreeCAD interface for browsing the library and inserting parts into the active document. Its update, config and push buttons additionally require the GitPython package.</description>
+      <subdirectory>./</subdirectory>
+      <file>PartsLibrary.FCMacro</file>
+    </macro>
+  </content>
+
+</package>
