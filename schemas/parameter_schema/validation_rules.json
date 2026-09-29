@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "phase2.v1",
+  "requiredTemplateFields": [
+    "id",
+    "elementType",
+    "category",
+    "displayName",
+    "originalPath",
+    "sourceFiles",
+    "fileTypes",
+    "editability",
+    "parameters"
+  ],
+  "parameterRules": {
+    "mustExistInCatalogUnlessCustom": true,
+    "requiredParametersMustExist": true,
+    "nameStyle": "camelCase"
+  },
+  "namingRules": {
+    "assetIdStyle": "snake_case",
+    "categoryStyle": "dot_notation",
+    "categoryExample": "architecture.doors.wood"
+  },
+  "editabilityStatusAllowedValues": [
+    "static_reference",
+    "parametric_source_available",
+    "generator_ready",
+    "fully_parametric",
+    "unsupported"
+  ]
+}
