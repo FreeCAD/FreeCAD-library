@@ -1,0 +1,7 @@
+L298N motor driver module 3D model (make_l298n.py, L298N.FCStd, L298N.step, L298N.stl, L298N.png)
+
+This work is licensed under the Creative Commons Attribution 3.0 Unported License (CC BY 3.0).
+To view a copy of this license, visit https://creativecommons.org/licenses/by/3.0/
+
+You are free to share and adapt this work for any purpose, including commercially,
+provided you give appropriate credit, link to the license, and indicate if changes were made.
