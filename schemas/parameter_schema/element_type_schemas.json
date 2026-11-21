@@ -1,0 +1,893 @@
+{
+  "Door": {
+    "elementType": "Door",
+    "displayName": "Door",
+    "description": "Parametric schema for architectural door assets.",
+    "requiredParameters": [
+      "width",
+      "height",
+      "thickness"
+    ],
+    "optionalParameters": [
+      "frameWidth",
+      "swingDirection",
+      "openingAngle",
+      "leafCount",
+      "hingeSide",
+      "material",
+      "finish",
+      "fireRating",
+      "acousticRating",
+      "ifcClass"
+    ],
+    "allowedFileTypes": [
+      "source_model",
+      "exchange_geometry",
+      "kernel_geometry",
+      "preview_mesh",
+      "preview_or_documentation_image",
+      "documentation",
+      "macro_or_parametric_tool"
+    ],
+    "toolbarGroups": [
+      {
+        "groupId": "dimensions",
+        "label": "Dimensions",
+        "parameters": [
+          "width",
+          "height",
+          "thickness",
+          "frameWidth"
+        ]
+      },
+      {
+        "groupId": "operation",
+        "label": "Operation",
+        "parameters": [
+          "swingDirection",
+          "openingAngle",
+          "leafCount",
+          "hingeSide"
+        ]
+      },
+      {
+        "groupId": "materials",
+        "label": "Materials",
+        "parameters": [
+          "material",
+          "finish"
+        ]
+      }
+    ]
+  },
+  "Window": {
+    "elementType": "Window",
+    "displayName": "Window",
+    "description": "Parametric schema for architectural window assets.",
+    "requiredParameters": [
+      "width",
+      "height"
+    ],
+    "optionalParameters": [
+      "frameDepth",
+      "sillHeight",
+      "headHeight",
+      "glazingType",
+      "openingType",
+      "panelCount",
+      "material",
+      "finish",
+      "thermalRating",
+      "acousticRating",
+      "ifcClass"
+    ],
+    "allowedFileTypes": [
+      "source_model",
+      "exchange_geometry",
+      "kernel_geometry",
+      "preview_mesh",
+      "preview_or_documentation_image",
+      "documentation",
+      "macro_or_parametric_tool"
+    ],
+    "toolbarGroups": [
+      {
+        "groupId": "dimensions",
+        "label": "Dimensions",
+        "parameters": [
+          "width",
+          "height",
+          "frameDepth",
+          "sillHeight",
+          "headHeight"
+        ]
+      },
+      {
+        "groupId": "operation",
+        "label": "Operation",
+        "parameters": [
+          "openingType",
+          "panelCount"
+        ]
+      },
+      {
+        "groupId": "materials",
+        "label": "Materials",
+        "parameters": [
+          "material",
+          "finish",
+          "thermalRating"
+        ]
+      }
+    ]
+  },
+  "Beam": {
+    "elementType": "Beam",
+    "displayName": "Beam",
+    "description": "Schema for horizontal structural framing members.",
+    "requiredParameters": [
+      "length",
+      "width",
+      "height"
+    ],
+    "optionalParameters": [
+      "profileType",
+      "structuralMaterial",
+      "loadBearing",
+      "fireRating",
+      "ifcClass"
+    ],
+    "allowedFileTypes": [
+      "source_model",
+      "exchange_geometry",
+      "kernel_geometry",
+      "preview_mesh",
+      "preview_or_documentation_image",
+      "documentation",
+      "macro_or_parametric_tool"
+    ],
+    "toolbarGroups": [
+      {
+        "groupId": "dimensions",
+        "label": "Dimensions",
+        "parameters": [
+          "length",
+          "width",
+          "height"
+        ]
+      },
+      {
+        "groupId": "classification",
+        "label": "Classification",
+        "parameters": [
+          "profileType",
+          "loadBearing",
+          "ifcClass"
+        ]
+      },
+      {
+        "groupId": "materials",
+        "label": "Materials",
+        "parameters": [
+          "structuralMaterial",
+          "fireRating"
+        ]
+      }
+    ]
+  },
+  "Roof": {
+    "elementType": "Roof",
+    "displayName": "Roof",
+    "description": "Schema for roof components and roof reference assets.",
+    "requiredParameters": [
+      "length",
+      "width",
+      "thickness"
+    ],
+    "optionalParameters": [
+      "slope",
+      "material",
+      "thermalRating",
+      "ifcClass"
+    ],
+    "allowedFileTypes": [
+      "source_model",
+      "exchange_geometry",
+      "kernel_geometry",
+      "preview_mesh",
+      "preview_or_documentation_image",
+      "documentation",
+      "macro_or_parametric_tool"
+    ],
+    "toolbarGroups": [
+      {
+        "groupId": "dimensions",
+        "label": "Dimensions",
+        "parameters": [
+          "length",
+          "width",
+          "thickness",
+          "slope"
+        ]
+      },
+      {
+        "groupId": "materials",
+        "label": "Materials",
+        "parameters": [
+          "material",
+          "thermalRating"
+        ]
+      }
+    ]
+  },
+  "ConstructionBlock": {
+    "elementType": "ConstructionBlock",
+    "displayName": "Construction Block",
+    "description": "Schema for blocks and modular construction pieces.",
+    "requiredParameters": [
+      "length",
+      "width",
+      "height"
+    ],
+    "optionalParameters": [
+      "material",
+      "loadBearing",
+      "fireRating",
+      "categoryCode",
+      "ifcClass"
+    ],
+    "allowedFileTypes": [
+      "source_model",
+      "exchange_geometry",
+      "kernel_geometry",
+      "preview_mesh",
+      "preview_or_documentation_image",
+      "documentation",
+      "macro_or_parametric_tool"
+    ],
+    "toolbarGroups": [
+      {
+        "groupId": "dimensions",
+        "label": "Dimensions",
+        "parameters": [
+          "length",
+          "width",
+          "height"
+        ]
+      },
+      {
+        "groupId": "materials",
+        "label": "Materials",
+        "parameters": [
+          "material",
+          "fireRating"
+        ]
+      },
+      {
+        "groupId": "classification",
+        "label": "Classification",
+        "parameters": [
+          "loadBearing",
+          "categoryCode",
+          "ifcClass"
+        ]
+      }
+    ]
+  },
+  "Wall": {
+    "elementType": "Wall",
+    "displayName": "Wall",
+    "description": "Schema for wall objects prepared for future generators.",
+    "requiredParameters": [
+      "length",
+      "height",
+      "thickness"
+    ],
+    "optionalParameters": [
+      "material",
+      "loadBearing",
+      "fireRating",
+      "acousticRating",
+      "thermalRating",
+      "ifcClass"
+    ],
+    "allowedFileTypes": [
+      "source_model",
+      "exchange_geometry",
+      "kernel_geometry",
+      "preview_mesh",
+      "preview_or_documentation_image",
+      "documentation",
+      "macro_or_parametric_tool"
+    ],
+    "toolbarGroups": [
+      {
+        "groupId": "dimensions",
+        "label": "Dimensions",
+        "parameters": [
+          "length",
+          "height",
+          "thickness"
+        ]
+      },
+      {
+        "groupId": "materials",
+        "label": "Materials",
+        "parameters": [
+          "material"
+        ]
+      },
+      {
+        "groupId": "classification",
+        "label": "Classification",
+        "parameters": [
+          "loadBearing",
+          "fireRating",
+          "acousticRating",
+          "thermalRating",
+          "ifcClass"
+        ]
+      }
+    ]
+  },
+  "Slab": {
+    "elementType": "Slab",
+    "displayName": "Slab",
+    "description": "Schema for slab objects prepared for future generators.",
+    "requiredParameters": [
+      "length",
+      "width",
+      "thickness"
+    ],
+    "optionalParameters": [
+      "structuralMaterial",
+      "loadBearing",
+      "fireRating",
+      "ifcClass"
+    ],
+    "allowedFileTypes": [
+      "source_model",
+      "exchange_geometry",
+      "kernel_geometry",
+      "preview_mesh",
+      "preview_or_documentation_image",
+      "documentation",
+      "macro_or_parametric_tool"
+    ],
+    "toolbarGroups": [
+      {
+        "groupId": "dimensions",
+        "label": "Dimensions",
+        "parameters": [
+          "length",
+          "width",
+          "thickness"
+        ]
+      },
+      {
+        "groupId": "materials",
+        "label": "Materials",
+        "parameters": [
+          "structuralMaterial"
+        ]
+      },
+      {
+        "groupId": "classification",
+        "label": "Classification",
+        "parameters": [
+          "loadBearing",
+          "fireRating",
+          "ifcClass"
+        ]
+      }
+    ]
+  },
+  "Floor": {
+    "elementType": "Floor",
+    "displayName": "Floor",
+    "description": "Schema for floor finish or floor assembly objects.",
+    "requiredParameters": [
+      "length",
+      "width",
+      "thickness"
+    ],
+    "optionalParameters": [
+      "material",
+      "finish",
+      "fireRating",
+      "acousticRating",
+      "ifcClass"
+    ],
+    "allowedFileTypes": [
+      "source_model",
+      "exchange_geometry",
+      "kernel_geometry",
+      "preview_mesh",
+      "preview_or_documentation_image",
+      "documentation",
+      "macro_or_parametric_tool"
+    ],
+    "toolbarGroups": [
+      {
+        "groupId": "dimensions",
+        "label": "Dimensions",
+        "parameters": [
+          "length",
+          "width",
+          "thickness"
+        ]
+      },
+      {
+        "groupId": "materials",
+        "label": "Materials",
+        "parameters": [
+          "material",
+          "finish"
+        ]
+      },
+      {
+        "groupId": "classification",
+        "label": "Classification",
+        "parameters": [
+          "fireRating",
+          "acousticRating",
+          "ifcClass"
+        ]
+      }
+    ]
+  },
+  "Column": {
+    "elementType": "Column",
+    "displayName": "Column",
+    "description": "Schema for vertical structural members.",
+    "requiredParameters": [
+      "height",
+      "width",
+      "depth"
+    ],
+    "optionalParameters": [
+      "diameter",
+      "profileType",
+      "structuralMaterial",
+      "loadBearing",
+      "fireRating",
+      "ifcClass"
+    ],
+    "allowedFileTypes": [
+      "source_model",
+      "exchange_geometry",
+      "kernel_geometry",
+      "preview_mesh",
+      "preview_or_documentation_image",
+      "documentation",
+      "macro_or_parametric_tool"
+    ],
+    "toolbarGroups": [
+      {
+        "groupId": "dimensions",
+        "label": "Dimensions",
+        "parameters": [
+          "height",
+          "width",
+          "depth",
+          "diameter"
+        ]
+      },
+      {
+        "groupId": "classification",
+        "label": "Classification",
+        "parameters": [
+          "profileType",
+          "loadBearing",
+          "ifcClass"
+        ]
+      },
+      {
+        "groupId": "materials",
+        "label": "Materials",
+        "parameters": [
+          "structuralMaterial",
+          "fireRating"
+        ]
+      }
+    ]
+  },
+  "Pipe": {
+    "elementType": "Pipe",
+    "displayName": "Pipe",
+    "description": "Schema for plumbing or mechanical pipe assets.",
+    "requiredParameters": [
+      "diameter",
+      "length"
+    ],
+    "optionalParameters": [
+      "innerDiameter",
+      "outerDiameter",
+      "thickness",
+      "bendAngle",
+      "flowDirection",
+      "connectionType",
+      "pressureClass",
+      "pipeSchedule",
+      "insulationThickness",
+      "material",
+      "ifcClass"
+    ],
+    "allowedFileTypes": [
+      "source_model",
+      "exchange_geometry",
+      "kernel_geometry",
+      "preview_mesh",
+      "preview_or_documentation_image",
+      "documentation",
+      "macro_or_parametric_tool"
+    ],
+    "toolbarGroups": [
+      {
+        "groupId": "dimensions",
+        "label": "Dimensions",
+        "parameters": [
+          "diameter",
+          "innerDiameter",
+          "outerDiameter",
+          "length",
+          "thickness",
+          "bendAngle"
+        ]
+      },
+      {
+        "groupId": "mep",
+        "label": "MEP",
+        "parameters": [
+          "flowDirection",
+          "connectionType",
+          "pressureClass",
+          "pipeSchedule",
+          "insulationThickness"
+        ]
+      },
+      {
+        "groupId": "materials",
+        "label": "Materials",
+        "parameters": [
+          "material"
+        ]
+      }
+    ]
+  },
+  "Duct": {
+    "elementType": "Duct",
+    "displayName": "Duct",
+    "description": "Schema for HVAC duct assets.",
+    "requiredParameters": [
+      "width",
+      "height",
+      "length"
+    ],
+    "optionalParameters": [
+      "diameter",
+      "ductShape",
+      "bendAngle",
+      "flowDirection",
+      "connectionType",
+      "pressureClass",
+      "insulationThickness",
+      "material",
+      "ifcClass"
+    ],
+    "allowedFileTypes": [
+      "source_model",
+      "exchange_geometry",
+      "kernel_geometry",
+      "preview_mesh",
+      "preview_or_documentation_image",
+      "documentation",
+      "macro_or_parametric_tool"
+    ],
+    "toolbarGroups": [
+      {
+        "groupId": "dimensions",
+        "label": "Dimensions",
+        "parameters": [
+          "width",
+          "height",
+          "diameter",
+          "length",
+          "bendAngle"
+        ]
+      },
+      {
+        "groupId": "mep",
+        "label": "MEP",
+        "parameters": [
+          "ductShape",
+          "flowDirection",
+          "connectionType",
+          "pressureClass",
+          "insulationThickness"
+        ]
+      },
+      {
+        "groupId": "materials",
+        "label": "Materials",
+        "parameters": [
+          "material"
+        ]
+      }
+    ]
+  },
+  "Furniture": {
+    "elementType": "Furniture",
+    "displayName": "Furniture",
+    "description": "Schema for movable or built-in furniture assets.",
+    "requiredParameters": [
+      "width",
+      "depth",
+      "height"
+    ],
+    "optionalParameters": [
+      "material",
+      "finish",
+      "color",
+      "manufacturer",
+      "model",
+      "tags"
+    ],
+    "allowedFileTypes": [
+      "source_model",
+      "exchange_geometry",
+      "kernel_geometry",
+      "preview_mesh",
+      "preview_or_documentation_image",
+      "documentation",
+      "macro_or_parametric_tool"
+    ],
+    "toolbarGroups": [
+      {
+        "groupId": "dimensions",
+        "label": "Dimensions",
+        "parameters": [
+          "width",
+          "depth",
+          "height"
+        ]
+      },
+      {
+        "groupId": "materials",
+        "label": "Materials",
+        "parameters": [
+          "material",
+          "finish",
+          "color"
+        ]
+      },
+      {
+        "groupId": "metadata",
+        "label": "Metadata",
+        "parameters": [
+          "manufacturer",
+          "model",
+          "tags"
+        ]
+      }
+    ]
+  },
+  "Fixture": {
+    "elementType": "Fixture",
+    "displayName": "Fixture",
+    "description": "Schema for bathroom, kitchen, and equipment fixtures.",
+    "requiredParameters": [
+      "width",
+      "depth",
+      "height"
+    ],
+    "optionalParameters": [
+      "connectionType",
+      "flowDirection",
+      "material",
+      "finish",
+      "manufacturer",
+      "model",
+      "ifcClass"
+    ],
+    "allowedFileTypes": [
+      "source_model",
+      "exchange_geometry",
+      "kernel_geometry",
+      "preview_mesh",
+      "preview_or_documentation_image",
+      "documentation",
+      "macro_or_parametric_tool"
+    ],
+    "toolbarGroups": [
+      {
+        "groupId": "dimensions",
+        "label": "Dimensions",
+        "parameters": [
+          "width",
+          "depth",
+          "height"
+        ]
+      },
+      {
+        "groupId": "mep",
+        "label": "MEP",
+        "parameters": [
+          "connectionType",
+          "flowDirection"
+        ]
+      },
+      {
+        "groupId": "materials",
+        "label": "Materials",
+        "parameters": [
+          "material",
+          "finish"
+        ]
+      }
+    ]
+  },
+  "Foundation": {
+    "elementType": "Foundation",
+    "displayName": "Foundation",
+    "description": "Schema for foundation and footing assets.",
+    "requiredParameters": [
+      "length",
+      "width",
+      "height"
+    ],
+    "optionalParameters": [
+      "structuralMaterial",
+      "loadBearing",
+      "categoryCode",
+      "ifcClass"
+    ],
+    "allowedFileTypes": [
+      "source_model",
+      "exchange_geometry",
+      "kernel_geometry",
+      "preview_mesh",
+      "preview_or_documentation_image",
+      "documentation",
+      "macro_or_parametric_tool"
+    ],
+    "toolbarGroups": [
+      {
+        "groupId": "dimensions",
+        "label": "Dimensions",
+        "parameters": [
+          "length",
+          "width",
+          "height"
+        ]
+      },
+      {
+        "groupId": "materials",
+        "label": "Materials",
+        "parameters": [
+          "structuralMaterial"
+        ]
+      },
+      {
+        "groupId": "classification",
+        "label": "Classification",
+        "parameters": [
+          "loadBearing",
+          "categoryCode",
+          "ifcClass"
+        ]
+      }
+    ]
+  },
+  "Vegetation": {
+    "elementType": "Vegetation",
+    "displayName": "Vegetation",
+    "description": "Schema for site vegetation and landscape symbols.",
+    "requiredParameters": [
+      "height"
+    ],
+    "optionalParameters": [
+      "width",
+      "depth",
+      "radius",
+      "species",
+      "color",
+      "tags"
+    ],
+    "allowedFileTypes": [
+      "source_model",
+      "exchange_geometry",
+      "kernel_geometry",
+      "preview_mesh",
+      "preview_or_documentation_image",
+      "documentation",
+      "macro_or_parametric_tool"
+    ],
+    "toolbarGroups": [
+      {
+        "groupId": "dimensions",
+        "label": "Dimensions",
+        "parameters": [
+          "height",
+          "width",
+          "depth",
+          "radius"
+        ]
+      },
+      {
+        "groupId": "materials",
+        "label": "Appearance",
+        "parameters": [
+          "color"
+        ]
+      },
+      {
+        "groupId": "metadata",
+        "label": "Metadata",
+        "parameters": [
+          "species",
+          "tags"
+        ]
+      }
+    ]
+  },
+  "GenericBIMObject": {
+    "elementType": "GenericBIMObject",
+    "displayName": "Generic BIM Object",
+    "description": "Fallback schema for useful BIM assets without a dedicated schema yet.",
+    "requiredParameters": [
+      "width",
+      "depth",
+      "height"
+    ],
+    "optionalParameters": [
+      "material",
+      "manufacturer",
+      "model",
+      "description",
+      "tags",
+      "sourceLicense",
+      "sourceUrl",
+      "ifcClass"
+    ],
+    "allowedFileTypes": [
+      "source_model",
+      "exchange_geometry",
+      "kernel_geometry",
+      "preview_mesh",
+      "preview_or_documentation_image",
+      "documentation",
+      "macro_or_parametric_tool"
+    ],
+    "toolbarGroups": [
+      {
+        "groupId": "dimensions",
+        "label": "Dimensions",
+        "parameters": [
+          "width",
+          "depth",
+          "height"
+        ]
+      },
+      {
+        "groupId": "materials",
+        "label": "Materials",
+        "parameters": [
+          "material"
+        ]
+      },
+      {
+        "groupId": "metadata",
+        "label": "Metadata",
+        "parameters": [
+          "manufacturer",
+          "model",
+          "description",
+          "tags",
+          "sourceLicense",
+          "sourceUrl"
+        ]
+      }
+    ]
+  }
+}

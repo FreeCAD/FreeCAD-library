@@ -1,0 +1,851 @@
+{
+  "width": {
+    "name": "width",
+    "label": "Width",
+    "description": "Overall horizontal size of the object.",
+    "type": "number",
+    "unit": "mm",
+    "default": null,
+    "min": 0,
+    "max": null,
+    "options": null,
+    "uiControl": "number_input",
+    "toolbarGroup": "dimensions",
+    "validation": {
+      "required": false,
+      "positive": true
+    }
+  },
+  "height": {
+    "name": "height",
+    "label": "Height",
+    "description": "Overall vertical size of the object.",
+    "type": "number",
+    "unit": "mm",
+    "default": null,
+    "min": 0,
+    "max": null,
+    "options": null,
+    "uiControl": "number_input",
+    "toolbarGroup": "dimensions",
+    "validation": {
+      "required": false,
+      "positive": true
+    }
+  },
+  "depth": {
+    "name": "depth",
+    "label": "Depth",
+    "description": "Overall front-to-back size of the object.",
+    "type": "number",
+    "unit": "mm",
+    "default": null,
+    "min": 0,
+    "max": null,
+    "options": null,
+    "uiControl": "number_input",
+    "toolbarGroup": "dimensions",
+    "validation": {
+      "required": false,
+      "positive": true
+    }
+  },
+  "length": {
+    "name": "length",
+    "label": "Length",
+    "description": "Overall longitudinal size of the object.",
+    "type": "number",
+    "unit": "mm",
+    "default": null,
+    "min": 0,
+    "max": null,
+    "options": null,
+    "uiControl": "number_input",
+    "toolbarGroup": "dimensions",
+    "validation": {
+      "required": false,
+      "positive": true
+    }
+  },
+  "thickness": {
+    "name": "thickness",
+    "label": "Thickness",
+    "description": "Material or assembly thickness.",
+    "type": "number",
+    "unit": "mm",
+    "default": null,
+    "min": 0,
+    "max": null,
+    "options": null,
+    "uiControl": "number_input",
+    "toolbarGroup": "dimensions",
+    "validation": {
+      "required": false,
+      "positive": true
+    }
+  },
+  "radius": {
+    "name": "radius",
+    "label": "Radius",
+    "description": "Radius of a curved or circular feature.",
+    "type": "number",
+    "unit": "mm",
+    "default": null,
+    "min": 0,
+    "max": null,
+    "options": null,
+    "uiControl": "number_input",
+    "toolbarGroup": "dimensions",
+    "validation": {
+      "required": false,
+      "positive": true
+    }
+  },
+  "diameter": {
+    "name": "diameter",
+    "label": "Diameter",
+    "description": "Overall outside diameter for a circular object.",
+    "type": "number",
+    "unit": "mm",
+    "default": null,
+    "min": 0,
+    "max": null,
+    "options": null,
+    "uiControl": "number_input",
+    "toolbarGroup": "dimensions",
+    "validation": {
+      "required": false,
+      "positive": true
+    }
+  },
+  "innerDiameter": {
+    "name": "innerDiameter",
+    "label": "Inner Diameter",
+    "description": "Inside diameter for hollow circular components.",
+    "type": "number",
+    "unit": "mm",
+    "default": null,
+    "min": 0,
+    "max": null,
+    "options": null,
+    "uiControl": "number_input",
+    "toolbarGroup": "dimensions",
+    "validation": {
+      "required": false,
+      "positive": true
+    }
+  },
+  "outerDiameter": {
+    "name": "outerDiameter",
+    "label": "Outer Diameter",
+    "description": "Outside diameter for hollow circular components.",
+    "type": "number",
+    "unit": "mm",
+    "default": null,
+    "min": 0,
+    "max": null,
+    "options": null,
+    "uiControl": "number_input",
+    "toolbarGroup": "dimensions",
+    "validation": {
+      "required": false,
+      "positive": true
+    }
+  },
+  "frameWidth": {
+    "name": "frameWidth",
+    "label": "Frame Width",
+    "description": "Width of a surrounding frame member.",
+    "type": "number",
+    "unit": "mm",
+    "default": null,
+    "min": 0,
+    "max": null,
+    "options": null,
+    "uiControl": "number_input",
+    "toolbarGroup": "dimensions",
+    "validation": {
+      "required": false,
+      "positive": true
+    }
+  },
+  "frameDepth": {
+    "name": "frameDepth",
+    "label": "Frame Depth",
+    "description": "Depth of a surrounding frame member.",
+    "type": "number",
+    "unit": "mm",
+    "default": null,
+    "min": 0,
+    "max": null,
+    "options": null,
+    "uiControl": "number_input",
+    "toolbarGroup": "dimensions",
+    "validation": {
+      "required": false,
+      "positive": true
+    }
+  },
+  "sillHeight": {
+    "name": "sillHeight",
+    "label": "Sill Height",
+    "description": "Height from floor datum to the window sill.",
+    "type": "number",
+    "unit": "mm",
+    "default": null,
+    "min": 0,
+    "max": null,
+    "options": null,
+    "uiControl": "number_input",
+    "toolbarGroup": "dimensions",
+    "validation": {
+      "required": false,
+      "positive": true
+    }
+  },
+  "headHeight": {
+    "name": "headHeight",
+    "label": "Head Height",
+    "description": "Height from floor datum to the top of an opening.",
+    "type": "number",
+    "unit": "mm",
+    "default": null,
+    "min": 0,
+    "max": null,
+    "options": null,
+    "uiControl": "number_input",
+    "toolbarGroup": "dimensions",
+    "validation": {
+      "required": false,
+      "positive": true
+    }
+  },
+  "slope": {
+    "name": "slope",
+    "label": "Slope",
+    "description": "Inclination angle or pitch of a sloped object.",
+    "type": "number",
+    "unit": "deg",
+    "default": null,
+    "min": 0,
+    "max": null,
+    "options": null,
+    "uiControl": "number_input",
+    "toolbarGroup": "dimensions",
+    "validation": {
+      "required": false,
+      "positive": true
+    }
+  },
+  "angle": {
+    "name": "angle",
+    "label": "Angle",
+    "description": "General angular value.",
+    "type": "number",
+    "unit": "deg",
+    "default": null,
+    "min": 0,
+    "max": null,
+    "options": null,
+    "uiControl": "number_input",
+    "toolbarGroup": "dimensions",
+    "validation": {
+      "required": false,
+      "positive": true
+    }
+  },
+  "bendAngle": {
+    "name": "bendAngle",
+    "label": "Bend Angle",
+    "description": "Angle of a bend in a pipe or duct.",
+    "type": "number",
+    "unit": "deg",
+    "default": null,
+    "min": 0,
+    "max": null,
+    "options": null,
+    "uiControl": "number_input",
+    "toolbarGroup": "dimensions",
+    "validation": {
+      "required": false,
+      "positive": true
+    }
+  },
+  "swingDirection": {
+    "name": "swingDirection",
+    "label": "Swing Direction",
+    "description": "Direction a hinged leaf swings.",
+    "type": "text",
+    "unit": null,
+    "default": null,
+    "min": null,
+    "max": null,
+    "options": [
+      "left",
+      "right",
+      "inward",
+      "outward",
+      "unknown"
+    ],
+    "uiControl": "select",
+    "toolbarGroup": "operation",
+    "validation": {
+      "required": false,
+      "positive": false
+    }
+  },
+  "openingType": {
+    "name": "openingType",
+    "label": "Opening Type",
+    "description": "Operating style for a door or window.",
+    "type": "text",
+    "unit": null,
+    "default": null,
+    "min": null,
+    "max": null,
+    "options": [
+      "fixed",
+      "swing",
+      "sliding",
+      "tilt",
+      "casement",
+      "unknown"
+    ],
+    "uiControl": "select",
+    "toolbarGroup": "operation",
+    "validation": {
+      "required": false,
+      "positive": false
+    }
+  },
+  "slidingDirection": {
+    "name": "slidingDirection",
+    "label": "Sliding Direction",
+    "description": "Direction of sliding operation.",
+    "type": "text",
+    "unit": null,
+    "default": null,
+    "min": null,
+    "max": null,
+    "options": [
+      "left",
+      "right",
+      "bi_parting",
+      "unknown"
+    ],
+    "uiControl": "select",
+    "toolbarGroup": "operation",
+    "validation": {
+      "required": false,
+      "positive": false
+    }
+  },
+  "hingeSide": {
+    "name": "hingeSide",
+    "label": "Hinge Side",
+    "description": "Side where hinges are located.",
+    "type": "text",
+    "unit": null,
+    "default": null,
+    "min": null,
+    "max": null,
+    "options": [
+      "left",
+      "right",
+      "unknown"
+    ],
+    "uiControl": "select",
+    "toolbarGroup": "operation",
+    "validation": {
+      "required": false,
+      "positive": false
+    }
+  },
+  "openingAngle": {
+    "name": "openingAngle",
+    "label": "Opening Angle",
+    "description": "Maximum opening angle for hinged operation.",
+    "type": "number",
+    "unit": "deg",
+    "default": null,
+    "min": 0,
+    "max": 180,
+    "options": null,
+    "uiControl": "number_input",
+    "toolbarGroup": "operation",
+    "validation": {
+      "required": false,
+      "positive": true
+    }
+  },
+  "panelCount": {
+    "name": "panelCount",
+    "label": "Panel Count",
+    "description": "Number of visible panels.",
+    "type": "integer",
+    "unit": null,
+    "default": null,
+    "min": 0,
+    "max": null,
+    "options": null,
+    "uiControl": "number_input",
+    "toolbarGroup": "operation",
+    "validation": {
+      "required": false,
+      "positive": false
+    }
+  },
+  "leafCount": {
+    "name": "leafCount",
+    "label": "Leaf Count",
+    "description": "Number of door or gate leaves.",
+    "type": "integer",
+    "unit": null,
+    "default": null,
+    "min": 0,
+    "max": null,
+    "options": null,
+    "uiControl": "number_input",
+    "toolbarGroup": "operation",
+    "validation": {
+      "required": false,
+      "positive": false
+    }
+  },
+  "material": {
+    "name": "material",
+    "label": "Material",
+    "description": "Primary visible or functional material.",
+    "type": "text",
+    "unit": null,
+    "default": null,
+    "min": null,
+    "max": null,
+    "options": null,
+    "uiControl": "text_input",
+    "toolbarGroup": "materials",
+    "validation": {
+      "required": false,
+      "positive": false
+    }
+  },
+  "finish": {
+    "name": "finish",
+    "label": "Finish",
+    "description": "Surface finish or coating.",
+    "type": "text",
+    "unit": null,
+    "default": null,
+    "min": null,
+    "max": null,
+    "options": null,
+    "uiControl": "text_input",
+    "toolbarGroup": "materials",
+    "validation": {
+      "required": false,
+      "positive": false
+    }
+  },
+  "color": {
+    "name": "color",
+    "label": "Color",
+    "description": "Display or finish color.",
+    "type": "text",
+    "unit": null,
+    "default": null,
+    "min": null,
+    "max": null,
+    "options": null,
+    "uiControl": "color_picker",
+    "toolbarGroup": "materials",
+    "validation": {
+      "required": false,
+      "positive": false
+    }
+  },
+  "fireRating": {
+    "name": "fireRating",
+    "label": "Fire Rating",
+    "description": "Fire-resistance classification.",
+    "type": "text",
+    "unit": null,
+    "default": null,
+    "min": null,
+    "max": null,
+    "options": null,
+    "uiControl": "text_input",
+    "toolbarGroup": "classification",
+    "validation": {
+      "required": false,
+      "positive": false
+    }
+  },
+  "acousticRating": {
+    "name": "acousticRating",
+    "label": "Acoustic Rating",
+    "description": "Sound reduction or acoustic performance rating.",
+    "type": "text",
+    "unit": null,
+    "default": null,
+    "min": null,
+    "max": null,
+    "options": null,
+    "uiControl": "text_input",
+    "toolbarGroup": "classification",
+    "validation": {
+      "required": false,
+      "positive": false
+    }
+  },
+  "thermalRating": {
+    "name": "thermalRating",
+    "label": "Thermal Rating",
+    "description": "Thermal performance rating.",
+    "type": "text",
+    "unit": null,
+    "default": null,
+    "min": null,
+    "max": null,
+    "options": null,
+    "uiControl": "text_input",
+    "toolbarGroup": "classification",
+    "validation": {
+      "required": false,
+      "positive": false
+    }
+  },
+  "loadBearing": {
+    "name": "loadBearing",
+    "label": "Load Bearing",
+    "description": "Whether the element can be load bearing.",
+    "type": "boolean",
+    "unit": null,
+    "default": null,
+    "min": null,
+    "max": null,
+    "options": null,
+    "uiControl": "checkbox",
+    "toolbarGroup": "classification",
+    "validation": {
+      "required": false,
+      "positive": false
+    }
+  },
+  "structuralMaterial": {
+    "name": "structuralMaterial",
+    "label": "Structural Material",
+    "description": "Primary structural material.",
+    "type": "text",
+    "unit": null,
+    "default": null,
+    "min": null,
+    "max": null,
+    "options": null,
+    "uiControl": "text_input",
+    "toolbarGroup": "materials",
+    "validation": {
+      "required": false,
+      "positive": false
+    }
+  },
+  "categoryCode": {
+    "name": "categoryCode",
+    "label": "Category Code",
+    "description": "Internal or external classification code.",
+    "type": "text",
+    "unit": null,
+    "default": null,
+    "min": null,
+    "max": null,
+    "options": null,
+    "uiControl": "text_input",
+    "toolbarGroup": "classification",
+    "validation": {
+      "required": false,
+      "positive": false
+    }
+  },
+  "ifcClass": {
+    "name": "ifcClass",
+    "label": "IFC Class",
+    "description": "Suggested IFC entity class for BIM export.",
+    "type": "text",
+    "unit": null,
+    "default": null,
+    "min": null,
+    "max": null,
+    "options": null,
+    "uiControl": "text_input",
+    "toolbarGroup": "classification",
+    "validation": {
+      "required": false,
+      "positive": false
+    }
+  },
+  "flowDirection": {
+    "name": "flowDirection",
+    "label": "Flow Direction",
+    "description": "Direction of air or fluid flow.",
+    "type": "text",
+    "unit": null,
+    "default": null,
+    "min": null,
+    "max": null,
+    "options": [
+      "in",
+      "out",
+      "bidirectional",
+      "unknown"
+    ],
+    "uiControl": "select",
+    "toolbarGroup": "mep",
+    "validation": {
+      "required": false,
+      "positive": false
+    }
+  },
+  "connectionType": {
+    "name": "connectionType",
+    "label": "Connection Type",
+    "description": "Connector or fitting style.",
+    "type": "text",
+    "unit": null,
+    "default": null,
+    "min": null,
+    "max": null,
+    "options": null,
+    "uiControl": "text_input",
+    "toolbarGroup": "mep",
+    "validation": {
+      "required": false,
+      "positive": false
+    }
+  },
+  "pressureClass": {
+    "name": "pressureClass",
+    "label": "Pressure Class",
+    "description": "Pressure rating or class.",
+    "type": "text",
+    "unit": null,
+    "default": null,
+    "min": null,
+    "max": null,
+    "options": null,
+    "uiControl": "text_input",
+    "toolbarGroup": "mep",
+    "validation": {
+      "required": false,
+      "positive": false
+    }
+  },
+  "ductShape": {
+    "name": "ductShape",
+    "label": "Duct Shape",
+    "description": "Duct cross-section shape.",
+    "type": "text",
+    "unit": null,
+    "default": null,
+    "min": null,
+    "max": null,
+    "options": [
+      "round",
+      "rectangular",
+      "oval",
+      "flex",
+      "unknown"
+    ],
+    "uiControl": "select",
+    "toolbarGroup": "mep",
+    "validation": {
+      "required": false,
+      "positive": false
+    }
+  },
+  "pipeSchedule": {
+    "name": "pipeSchedule",
+    "label": "Pipe Schedule",
+    "description": "Pipe wall schedule or class.",
+    "type": "text",
+    "unit": null,
+    "default": null,
+    "min": null,
+    "max": null,
+    "options": null,
+    "uiControl": "text_input",
+    "toolbarGroup": "mep",
+    "validation": {
+      "required": false,
+      "positive": false
+    }
+  },
+  "insulationThickness": {
+    "name": "insulationThickness",
+    "label": "Insulation Thickness",
+    "description": "Thickness of thermal or acoustic insulation.",
+    "type": "number",
+    "unit": "mm",
+    "default": null,
+    "min": 0,
+    "max": null,
+    "options": null,
+    "uiControl": "number_input",
+    "toolbarGroup": "mep",
+    "validation": {
+      "required": false,
+      "positive": true
+    }
+  },
+  "manufacturer": {
+    "name": "manufacturer",
+    "label": "Manufacturer",
+    "description": "Manufacturer or content author.",
+    "type": "text",
+    "unit": null,
+    "default": null,
+    "min": null,
+    "max": null,
+    "options": null,
+    "uiControl": "text_input",
+    "toolbarGroup": "metadata",
+    "validation": {
+      "required": false,
+      "positive": false
+    }
+  },
+  "model": {
+    "name": "model",
+    "label": "Model",
+    "description": "Manufacturer model name or number.",
+    "type": "text",
+    "unit": null,
+    "default": null,
+    "min": null,
+    "max": null,
+    "options": null,
+    "uiControl": "text_input",
+    "toolbarGroup": "metadata",
+    "validation": {
+      "required": false,
+      "positive": false
+    }
+  },
+  "description": {
+    "name": "description",
+    "label": "Description",
+    "description": "Human-readable asset description.",
+    "type": "text",
+    "unit": null,
+    "default": null,
+    "min": null,
+    "max": null,
+    "options": null,
+    "uiControl": "textarea",
+    "toolbarGroup": "metadata",
+    "validation": {
+      "required": false,
+      "positive": false
+    }
+  },
+  "tags": {
+    "name": "tags",
+    "label": "Tags",
+    "description": "Search tags for filtering and discovery.",
+    "type": "list",
+    "unit": null,
+    "default": null,
+    "min": null,
+    "max": null,
+    "options": null,
+    "uiControl": "tag_input",
+    "toolbarGroup": "metadata",
+    "validation": {
+      "required": false,
+      "positive": false
+    }
+  },
+  "sourceLicense": {
+    "name": "sourceLicense",
+    "label": "Source License",
+    "description": "License information for the source asset.",
+    "type": "text",
+    "unit": null,
+    "default": null,
+    "min": null,
+    "max": null,
+    "options": null,
+    "uiControl": "text_input",
+    "toolbarGroup": "metadata",
+    "validation": {
+      "required": false,
+      "positive": false
+    }
+  },
+  "sourceUrl": {
+    "name": "sourceUrl",
+    "label": "Source URL",
+    "description": "Original source or documentation URL.",
+    "type": "url",
+    "unit": null,
+    "default": null,
+    "min": null,
+    "max": null,
+    "options": null,
+    "uiControl": "url_input",
+    "toolbarGroup": "metadata",
+    "validation": {
+      "required": false,
+      "positive": false
+    }
+  },
+  "glazingType": {
+    "name": "glazingType",
+    "label": "Glazing Type",
+    "description": "Type of glazing or glass assembly.",
+    "type": "text",
+    "unit": null,
+    "default": null,
+    "min": null,
+    "max": null,
+    "options": null,
+    "uiControl": "text_input",
+    "toolbarGroup": "materials",
+    "validation": {
+      "required": false,
+      "positive": false
+    }
+  },
+  "profileType": {
+    "name": "profileType",
+    "label": "Profile Type",
+    "description": "Structural or geometric profile type.",
+    "type": "text",
+    "unit": null,
+    "default": null,
+    "min": null,
+    "max": null,
+    "options": null,
+    "uiControl": "text_input",
+    "toolbarGroup": "classification",
+    "validation": {
+      "required": false,
+      "positive": false
+    }
+  },
+  "species": {
+    "name": "species",
+    "label": "Species",
+    "description": "Plant species or vegetation type.",
+    "type": "text",
+    "unit": null,
+    "default": null,
+    "min": null,
+    "max": null,
+    "options": null,
+    "uiControl": "text_input",
+    "toolbarGroup": "metadata",
+    "validation": {
+      "required": false,
+      "positive": false
+    }
+  }
+}

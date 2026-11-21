@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "phase3.v1",
+  "description": "Manifest describing how a Phase 3 placeholder geometry asset was generated.",
+  "requiredFields": [
+    "assetId",
+    "elementType",
+    "generatorName",
+    "generatorVersion",
+    "inputTemplate",
+    "outputs",
+    "status",
+    "limitations"
+  ],
+  "allowedStatuses": [
+    "generated",
+    "skipped",
+    "failed"
+  ],
+  "outputs": {
+    "geometryJson": "geometry.json when JSON output is requested.",
+    "obj": "preview.obj when OBJ output is requested.",
+    "stl": "preview.stl when STL output is requested."
+  }
+}

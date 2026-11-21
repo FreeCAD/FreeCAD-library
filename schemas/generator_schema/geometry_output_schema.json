@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "phase3.v1",
+  "description": "Neutral placeholder mesh geometry output written by Phase 3 generators.",
+  "requiredFields": [
+    "assetId",
+    "elementType",
+    "category",
+    "units",
+    "parametersUsed",
+    "geometryType",
+    "vertices",
+    "faces",
+    "metadata"
+  ],
+  "meshFormat": {
+    "vertices": "Array of [x, y, z] coordinates in millimeters.",
+    "faces": "Array of triangle index lists referencing zero-based vertices."
+  },
+  "metadataRequiredFields": [
+    "generator",
+    "phase",
+    "isPlaceholderGeometry",
+    "notes"
+  ]
+}
